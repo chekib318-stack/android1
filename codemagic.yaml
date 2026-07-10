@@ -1,0 +1,42 @@
+workflows:
+  android-workflow:
+    name: Arabia Edu - Android APK
+    max_build_duration: 60
+    environment:
+      flutter: stable
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+    scripts:
+      - name: توليد مجلد android/ تلقائيا إذا كان ناقصا
+        script: |
+          if [ ! -f "android/app/build.gradle" ]; then
+            echo "android/ غير موجود — يتم توليده الآن عبر flutter create"
+            flutter create . --platforms=android --org tn.gov.education --project-name arabia_edu
+          else
+            echo "android/ موجود مسبقا، تخطي التوليد"
+          fi
+      - name: تصحيح اسم التطبيق وإضافة صلاحية الميكروفون
+        script: python3 -c 'import re; p="android/app/src/main/AndroidManifest.xml"; s=open(p,encoding="utf-8").read(); s=re.sub("android:label=\"[^\"]*\"", "android:label=\"\u062a\u0639\u0644\u064a\u0645 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 - \u062a\u062d\u0636\u064a\u0631\u064a\"", s); s = s if "RECORD_AUDIO" in s else re.sub("(<manifest[^>]*>)", "\\1\n    <uses-permission android:name=\"android.permission.RECORD_AUDIO\" />\n    <uses-permission android:name=\"android.permission.INTERNET\" />", s, count=1); s = s if "RECOGNITION_SERVICE" in s else s.replace("</application>", "</application>\n    <queries>\n        <intent>\n            <action android:name=\"android.speech.RecognitionService\" />\n        </intent>\n    </queries>", 1); open(p,"w",encoding="utf-8").write(s); print("Manifest patched OK")'
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: إصلاح jcenter المهجور في حزمة speech_to_text
+        script: |
+          find "$HOME/.pub-cache/hosted/pub.dev" -maxdepth 1 -type d -name "speech_to_text-*" -exec sh -c 'f="$1/android/build.gradle"; if [ -f "$f" ]; then sed -i.bak "s/jcenter()/mavenCentral()/g" "$f"; rm -f "$f.bak"; echo patched "$f"; fi' _ {} \;
+      - name: Analyze
+        script: flutter analyze || true
+      - name: Build APK (release)
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/**/*.apk
+      - build/app/outputs/**/mapping.txt
+    publishing:
+      email:
+        recipients:
+          - chekib318@gmail.com
+        notify:
+          success: true
+          failure: true

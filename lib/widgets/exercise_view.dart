@@ -22,12 +22,20 @@ class ExerciseView extends StatefulWidget {
 }
 
 class _ExerciseViewState extends State<ExerciseView> {
+  // جمل تحفيزية تونسية تُختار عشوائيا عند كل إجابة صحيحة
+  static const List<String> _correctPhrases = [
+    'جواب صحيح',
+    'صحيتك، إجابة صحيحة',
+    'يعطيك الصحة',
+  ];
+
   String? _selectedOption; // chooseImage / listenChoose / fillBlank
   final List<String> _builtSentence = []; // arrangeWords
   final Set<int> _usedWordIndexes = {};
   int? _selectedWordIndex; // matchPairs: كلمة مختارة بانتظار المطابقة
   final Map<int, bool> _matchedPairs = {}; // matchPairs: index -> صحيح/خطأ نهائي
   bool _revealedAudio = false; // listenChoose: هل ضغط على زر الاستماع
+  String _correctPhrase = _correctPhrases.first; // الجملة المختارة لهذه المرة
   bool? _isCorrect; // null = لم يتحقق بعد
   bool _checked = false;
   late final List<String> _shuffledOptions; // خيارات مخلوطة عشوائيا (تُحسب مرة واحدة فقط)
@@ -85,13 +93,16 @@ class _ExerciseViewState extends State<ExerciseView> {
         correct = !_matchedPairs.values.contains(false);
         break;
     }
+    if (correct) {
+      _correctPhrase = (List<String>.from(_correctPhrases)..shuffle()).first;
+    }
     setState(() {
       _isCorrect = correct;
       _checked = true;
     });
 
     if (correct) {
-      AudioService.instance.speakCorrect();
+      AudioService.instance.speakCorrect(_correctPhrase);
     } else {
       AudioService.instance.speakWrong();
       // نعرض شاشة كاملة تثبّت الإجابة الصحيحة، وننتقل للتمرين التالي
@@ -149,7 +160,7 @@ class _ExerciseViewState extends State<ExerciseView> {
 
   Widget _buildFeedbackBanner() {
     final correct = _isCorrect ?? false;
-    if (correct) return const MascotCelebration();
+    if (correct) return MascotCelebration(phrase: _correctPhrase);
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

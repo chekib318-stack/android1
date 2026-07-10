@@ -122,19 +122,15 @@ class AudioService {
   }
 
   /// تعليق تحفيزي عند الإجابة الصحيحة، بنبرة مرحة أعلى قليلا من المعتاد.
-  Future<void> speakCorrect() async {
-    final assetPath = 'assets/audio/correct.mp3';
-    if (await _assetExists(assetPath)) {
-      try {
-        await _player.stop();
-        await _player.play(AssetSource('audio/correct.mp3'));
-        return;
-      } catch (_) {}
-    }
+  /// [phrase] الجملة المراد نطقها (تُختار عشوائيا من عدة جمل في الواجهة).
+  /// ملاحظة: لا يستعمل ملفات صوتية ثابتة هنا لأن الجملة تتغير في كل مرة؛
+  /// عند توفر تسجيلات حقيقية لاحقا، يمكن تسجيل نسخة لكل جملة على حدة
+  /// وتوسيع هذه الدالة لتختار الملف المطابق للجملة المختارة.
+  Future<void> speakCorrect(String phrase) async {
     if (!_ready) await _init();
     await _tts.stop();
     await _tts.setPitch(1.15);
-    await _tts.speak('إجابة صحيحة');
+    await _tts.speak(phrase);
     await _tts.setPitch(_defaultPitch);
   }
 

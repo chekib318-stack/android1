@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/exercise.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
+import 'mascot_celebration.dart';
 import 'wrong_answer_screen.dart';
 
 /// عارض تمرين واحد. يدير الاختيار الداخلي ثم يعرض تغذية راجعة فورية
@@ -148,7 +149,7 @@ class _ExerciseViewState extends State<ExerciseView> {
 
   Widget _buildFeedbackBanner() {
     final correct = _isCorrect ?? false;
-    if (correct) return _buildMascotCelebration();
+    if (correct) return const MascotCelebration();
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -167,63 +168,6 @@ class _ExerciseViewState extends State<ExerciseView> {
                 color: AppColors.harissa,
                 fontWeight: FontWeight.w700,
               ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// شخصية "عمّي الياسمين" — رجل تونسي بمشموم (زهرة الياسمين التقليدية)
-  /// يظهر ليشكر التلميذ عند كل إجابة صحيحة. ملاحظة: الشخصية ممثّلة حاليا
-  /// برموز تعبيرية (شاشية + ياسمين)، ويمكن استبدالها لاحقا برسمة توضيحية
-  /// حقيقية إذا رغبتم في تصميم مخصص.
-  Widget _buildMascotCelebration() {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-      decoration: BoxDecoration(
-        color: AppColors.zellige.withOpacity(0.12),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppColors.zellige.withOpacity(0.3)),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 52,
-            height: 52,
-            decoration: const BoxDecoration(
-              color: AppColors.zellige,
-              shape: BoxShape.circle,
-            ),
-            alignment: Alignment.center,
-            child: const Text('👳🏽‍♂️', style: TextStyle(fontSize: 26)),
-          ),
-          Transform.translate(
-            offset: const Offset(-10, -14),
-            child: const Text('🌼', style: TextStyle(fontSize: 20)),
-          ),
-          const SizedBox(width: 6),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'عمّي الياسمين',
-                  style: TextStyle(
-                    color: AppColors.zellige,
-                    fontWeight: FontWeight.w800,
-                    fontSize: 13,
-                  ),
-                ),
-                const Text(
-                  'أحسنت يا بطل! شكرا لك 🌼',
-                  style: TextStyle(
-                    color: AppColors.zellige,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
             ),
           ),
         ],

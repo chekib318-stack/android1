@@ -115,6 +115,22 @@ final LearningUnit unit01Unit = LearningUnit(
         ),
       ],
     ),
+    Lesson(
+      id: 'lesson_23',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_111',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: أبي يقود الـــــ إلى العمل',
+          targetWord: 'أبي يقود السيارة إلى العمل',
+          options: ['السيارة', 'الحقيبة', 'الكتاب'],
+          correctAnswer: 'السيارة',
+        ),
+      ],
+    ),
   ],
 );
 
@@ -223,6 +239,22 @@ final LearningUnit unit02Unit = LearningUnit(
           targetWord: 'قمر',
           options: ['قمر', 'ماء', 'وردة'],
           correctAnswer: 'قمر',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'lesson_24',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_112',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: القمر أصغر من الـــــ',
+          targetWord: 'القمر أصغر من الشمس',
+          options: ['الشمس', 'النجمة', 'السحابة'],
+          correctAnswer: 'الشمس',
         ),
       ],
     ),
@@ -337,6 +369,22 @@ final LearningUnit unit03Unit = LearningUnit(
         ),
       ],
     ),
+    Lesson(
+      id: 'lesson_25',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_113',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: الـــــ تعطينا الحليب اللذيذ',
+          targetWord: 'البقرة تعطينا الحليب اللذيذ',
+          options: ['البقرة', 'الحصان', 'الخروف'],
+          correctAnswer: 'البقرة',
+        ),
+      ],
+    ),
   ],
 );
 
@@ -445,6 +493,22 @@ final LearningUnit unit04Unit = LearningUnit(
           targetWord: 'فيل',
           options: ['فيل', 'زرافة', 'نمر'],
           correctAnswer: 'فيل',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'lesson_26',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_114',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: أكبر حيوان بين هذه الحيوانات هو الـــــ',
+          targetWord: 'أكبر حيوان بين هذه الحيوانات هو الفيل',
+          options: ['الفيل', 'الأرنب', 'القرد'],
+          correctAnswer: 'الفيل',
         ),
       ],
     ),
@@ -559,6 +623,22 @@ final LearningUnit unit05Unit = LearningUnit(
         ),
       ],
     ),
+    Lesson(
+      id: 'lesson_27',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_115',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: لون الطماطم الناضجة ـــــ',
+          targetWord: 'لون الطماطم الناضجة أحمر',
+          options: ['أحمر', 'أخضر', 'أصفر'],
+          correctAnswer: 'أحمر',
+        ),
+      ],
+    ),
   ],
 );
 
@@ -667,6 +747,22 @@ final LearningUnit unit06Unit = LearningUnit(
           targetWord: 'مربع',
           options: ['مربع', 'نجمة', 'معين'],
           correctAnswer: 'مربع',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'lesson_28',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_116',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: شكل عجلة السيارة يشبه الـــــ',
+          targetWord: 'شكل عجلة السيارة يشبه الدائرة',
+          options: ['الدائرة', 'المربع', 'المثلث'],
+          correctAnswer: 'الدائرة',
         ),
       ],
     ),
@@ -781,6 +877,22 @@ final LearningUnit unit07Unit = LearningUnit(
         ),
       ],
     ),
+    Lesson(
+      id: 'lesson_29',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_117',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: القرد يحب أكل الـــــ',
+          targetWord: 'القرد يحب أكل الموزة',
+          options: ['الموزة', 'البطيخ', 'العنب'],
+          correctAnswer: 'الموزة',
+        ),
+      ],
+    ),
   ],
 );
 
@@ -889,6 +1001,22 @@ final LearningUnit unit08Unit = LearningUnit(
           targetWord: 'طماطم',
           options: ['طماطم', 'باذنجان', 'فلفل'],
           correctAnswer: 'طماطم',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'lesson_30',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_118',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: الأرنب يحب أكل الـــــ الطازجة',
+          targetWord: 'الأرنب يحب أكل الجزرة الطازجة',
+          options: ['الجزرة', 'الفلفل', 'الباذنجان'],
+          correctAnswer: 'الجزرة',
         ),
       ],
     ),
@@ -1003,6 +1131,22 @@ final LearningUnit unit09Unit = LearningUnit(
         ),
       ],
     ),
+    Lesson(
+      id: 'lesson_31',
+      title: 'جملة المراجعة',
+      icon: '📝',
+      xpReward: 15,
+      exercises: const [
+        Exercise(
+          id: 'ex_119',
+          type: ExerciseType.fillBlank,
+          prompt: 'أكمل الجملة: والد أبي هو ـــــ',
+          targetWord: 'والد أبي هو جدي',
+          options: ['جدي', 'أخي', 'أبي'],
+          correctAnswer: 'جدي',
+        ),
+      ],
+    ),
   ],
 );
 
@@ -1114,110 +1258,19 @@ final LearningUnit unit10Unit = LearningUnit(
         ),
       ],
     ),
-  ],
-);
-
-/// محور إضافي: أكمل الجملة — مراجعة شاملة تستعمل كلمات تعلمها التلميذ
-/// في المحاور السابقة، بتمارين إكمال الفراغ فقط.
-final LearningUnit sentencesUnit = LearningUnit(
-  id: 'unit_11',
-  title: 'أكمل الجملة',
-  description: 'مراجعة الكلمات في جمل جديدة',
-  gradeLevel: 'تحضيري',
-  lessons: [
     Lesson(
-      id: 'lesson_21',
-      title: 'جمل من حولي',
+      id: 'lesson_32',
+      title: 'جملة المراجعة',
       icon: '📝',
-      xpReward: 25,
+      xpReward: 15,
       exercises: const [
         Exercise(
-          id: 'ex_101',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: أكبر حيوان بين هذه الحيوانات هو الـــــ',
-          targetWord: 'أكبر حيوان بين هذه الحيوانات هو الفيل',
-          options: ['الفيل', 'الأرنب', 'القطة'],
-          correctAnswer: 'الفيل',
-        ),
-        Exercise(
-          id: 'ex_102',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: لون السماء في النهار ـــــ',
-          targetWord: 'لون السماء في النهار أزرق',
-          options: ['أزرق', 'أحمر', 'أصفر'],
-          correctAnswer: 'أزرق',
-        ),
-        Exercise(
-          id: 'ex_103',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: أخي يحب أكل الـــــ الحمراء',
-          targetWord: 'أخي يحب أكل التفاحة الحمراء',
-          options: ['التفاحة', 'الجزرة', 'الخيار'],
-          correctAnswer: 'التفاحة',
-        ),
-        Exercise(
-          id: 'ex_104',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: جدتي تحب رائحة الـــــ',
-          targetWord: 'جدتي تحب رائحة الوردة',
-          options: ['الوردة', 'الكتاب', 'السيارة'],
-          correctAnswer: 'الوردة',
-        ),
-        Exercise(
-          id: 'ex_105',
+          id: 'ex_120',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: بعد الرقم ثلاثة يأتي الرقم ـــــ',
           targetWord: 'بعد الرقم ثلاثة يأتي الرقم أربعة',
           options: ['أربعة', 'خمسة', 'اثنان'],
           correctAnswer: 'أربعة',
-        ),
-      ],
-    ),
-    Lesson(
-      id: 'lesson_22',
-      title: 'جمل جديدة',
-      icon: '📚',
-      xpReward: 30,
-      exercises: const [
-        Exercise(
-          id: 'ex_106',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: شكل عجلة السيارة يشبه الـــــ',
-          targetWord: 'شكل عجلة السيارة يشبه الدائرة',
-          options: ['الدائرة', 'المربع', 'المثلث'],
-          correctAnswer: 'الدائرة',
-        ),
-        Exercise(
-          id: 'ex_107',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: أبي يقود الـــــ إلى العمل',
-          targetWord: 'أبي يقود السيارة إلى العمل',
-          options: ['السيارة', 'الحقيبة', 'الكتاب'],
-          correctAnswer: 'السيارة',
-        ),
-        Exercise(
-          id: 'ex_108',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: القمر أصغر من الـــــ',
-          targetWord: 'القمر أصغر من الشمس',
-          options: ['الشمس', 'النجمة', 'السحابة'],
-          correctAnswer: 'الشمس',
-        ),
-        Exercise(
-          id: 'ex_109',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: القرد يحب أكل الـــــ',
-          targetWord: 'القرد يحب أكل الموزة',
-          options: ['الموزة', 'البطيخ', 'العنب'],
-          correctAnswer: 'الموزة',
-        ),
-        Exercise(
-          id: 'ex_110',
-          type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: لون الطماطم الناضجة ـــــ',
-          targetWord: 'لون الطماطم الناضجة أحمر',
-          options: ['أحمر', 'أخضر', 'أصفر'],
-          correctAnswer: 'أحمر',
         ),
       ],
     ),
@@ -1236,5 +1289,4 @@ final List<LearningUnit> kindergartenUnits = [
   unit08Unit,
   unit09Unit,
   unit10Unit,
-  sentencesUnit,
 ];

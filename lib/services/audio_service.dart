@@ -134,7 +134,7 @@ class AudioService {
     if (!_ready) await _init();
     await _tts.stop();
     await _tts.setPitch(1.15);
-    await _tts.speak('أحسنت، شكرا لك');
+    await _tts.speak('إجابة صحيحة');
     await _tts.setPitch(_defaultPitch);
   }
 

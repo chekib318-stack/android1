@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../models/exercise.dart';
 import '../theme/app_theme.dart';
+import 'official_badge.dart';
 
 /// تُعرض على كامل الشاشة عند إجابة خاطئة (فوق شريط التطبيق أيضًا)، لتثبيت
 /// الإجابة الصحيحة في ذهن المتعلم قبل المتابعة للتمرين التالي. تظهر فيها
@@ -55,6 +56,7 @@ class _WrongAnswerScreenState extends State<WrongAnswerScreen>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              const OfficialBadge(light: true, compact: true),
               const Spacer(),
               Center(child: _animatedTeacher()),
               const SizedBox(height: 10),

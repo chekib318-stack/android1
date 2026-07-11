@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/official_badge.dart';
 
 /// تعرض كل الأصوات العربية المتوفرة فعليا على جهاز المستخدم (تختلف من
 /// هاتف لآخر)، وتسمح بتجربة كل صوت واختيار المفضّل. الاختيار يُحفظ
@@ -41,7 +42,10 @@ class _VoiceSettingsScreenState extends State<VoiceSettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('اختيار صوت القراءة')),
+      appBar: AppBar(
+        title: const Text('اختيار صوت القراءة'),
+        bottom: const OfficialAppBarBottom(),
+      ),
       body: SafeArea(
         child: _loading
             ? const Center(child: CircularProgressIndicator())

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import '../models/lesson.dart';
+import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/official_badge.dart';
 import 'home_screen.dart';
 
-class LessonCompleteScreen extends StatelessWidget {
+class LessonCompleteScreen extends StatefulWidget {
   final Lesson lesson;
   final int correctCount;
 
@@ -14,9 +16,28 @@ class LessonCompleteScreen extends StatelessWidget {
   });
 
   @override
+  State<LessonCompleteScreen> createState() => _LessonCompleteScreenState();
+}
+
+class _LessonCompleteScreenState extends State<LessonCompleteScreen> {
+  late final int _total = widget.lesson.exercises.length;
+  // إن كانت النتيجة 5 من 7 فما فوق: صورة ضاحكة، وإلا صورة حزينة (بما فيها 4 وأقل)
+  late final bool _isHappy = widget.correctCount >= 5;
+
+  @override
+  void initState() {
+    super.initState();
+    final message = _isHappy
+        ? 'أحسنت! حصلت على ${widget.correctCount} من $_total'
+        : 'حاول مرة أخرى، حصلت على ${widget.correctCount} من $_total';
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      AudioService.instance.speak(message);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final total = lesson.exercises.length;
-    final accuracy = total == 0 ? 0 : ((correctCount / total) * 100).round();
+    final accuracy = _total == 0 ? 0 : ((widget.correctCount / _total) * 100).round();
 
     return Scaffold(
       body: SafeArea(
@@ -25,24 +46,42 @@ class LessonCompleteScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('🎉', style: TextStyle(fontSize: 72)),
+              const OfficialBadge(compact: true),
+              const SizedBox(height: 12),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: Image.asset(
+                  _isHappy
+                      ? 'assets/images/teacher_happy.png'
+                      : 'assets/images/teacher_angry.png',
+                  width: 150,
+                  height: 180,
+                  fit: BoxFit.cover,
+                  alignment: const Alignment(0.0, -0.5),
+                ),
+              ),
               const SizedBox(height: 16),
               Text(
-                'أحسنت!',
+                _isHappy ? 'أحسنت!' : 'حاول مرة أخرى',
                 style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                      color: AppColors.sidiBlue,
+                      color: _isHappy ? AppColors.sidiBlue : AppColors.harissa,
                     ),
               ),
               const SizedBox(height: 8),
               Text(
-                'أنهيت درس «${lesson.title}»',
+                'أنهيت درس «${widget.lesson.title}»',
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
               const SizedBox(height: 32),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _resultCard('⭐', '${lesson.xpReward}', 'نقطة خبرة', AppColors.zellige),
+                  _resultCard(
+                    '✅',
+                    '${widget.correctCount} / $_total',
+                    'الإجابات الصحيحة',
+                    _isHappy ? AppColors.zellige : AppColors.harissa,
+                  ),
                   const SizedBox(width: 16),
                   _resultCard('🎯', '$accuracy%', 'نسبة الإتقان', AppColors.ochre),
                 ],

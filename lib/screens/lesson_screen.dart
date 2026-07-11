@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/lesson.dart';
 import '../providers/progress_provider.dart';
-import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/exercise_view.dart';
+import '../widgets/official_badge.dart';
 import 'lesson_complete_screen.dart';
 
 class LessonScreen extends StatefulWidget {
@@ -19,23 +19,6 @@ class LessonScreen extends StatefulWidget {
 class _LessonScreenState extends State<LessonScreen> {
   int _index = 0;
   int _correctCount = 0;
-  bool _announcementDone = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _announceLesson();
-  }
-
-  Future<void> _announceLesson() async {
-    // إعلان صوتي تلقائي عند فتح الدرس: "الدرس الأول: الحيوانات الأليفة"
-    // ننتظر انتهاءه كاملا قبل عرض أول تمرين، حتى لا يقطعه نطق السؤال فورا.
-    final announcement = widget.ordinal != null
-        ? 'الدرس ${widget.ordinal}: ${widget.lesson.title}'
-        : widget.lesson.title;
-    await AudioService.instance.speak(announcement);
-    if (mounted) setState(() => _announcementDone = true);
-  }
 
   void _onExerciseComplete(bool correct) {
     if (correct) _correctCount++;
@@ -69,6 +52,7 @@ class _LessonScreenState extends State<LessonScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(widget.lesson.title),
+        bottom: const OfficialAppBarBottom(),
       ),
       body: SafeArea(
         child: Padding(
@@ -87,14 +71,12 @@ class _LessonScreenState extends State<LessonScreen> {
               ),
               const SizedBox(height: 24),
               Expanded(
-                child: !_announcementDone
-                    ? const Center(child: CircularProgressIndicator())
-                    // مفتاح فريد لكل تمرين لضمان إعادة بناء الحالة الداخلية عند الانتقال
-                    : ExerciseView(
-                        key: ValueKey(widget.lesson.exercises[_index].id),
-                        exercise: widget.lesson.exercises[_index],
-                        onComplete: _onExerciseComplete,
-                      ),
+                // مفتاح فريد لكل تمرين لضمان إعادة بناء الحالة الداخلية عند الانتقال
+                child: ExerciseView(
+                  key: ValueKey(widget.lesson.exercises[_index].id),
+                  exercise: widget.lesson.exercises[_index],
+                  onComplete: _onExerciseComplete,
+                ),
               ),
             ],
           ),

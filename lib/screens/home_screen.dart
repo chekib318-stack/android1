@@ -6,8 +6,9 @@ import '../providers/progress_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/lesson_node.dart';
 import '../widgets/stat_pill.dart';
-import 'lesson_screen.dart';
+import 'lesson_intro_screen.dart';
 import 'voice_settings_screen.dart';
+import '../widgets/official_badge.dart';
 
 /// الأعداد الترتيبية العربية (الأول، الثاني...) لتسمية الدروس فى القائمة.
 const List<String> arabicOrdinals = [
@@ -45,6 +46,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('تعليم العربية — تحضيري'),
+        bottom: const OfficialAppBarBottom(),
         actions: [
           IconButton(
             tooltip: 'اختيار صوت القراءة',
@@ -103,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                     : () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => LessonScreen(lesson: lesson, ordinal: ordinal),
+                            builder: (_) => LessonIntroScreen(lesson: lesson, ordinal: ordinal),
                           ),
                         );
                       },

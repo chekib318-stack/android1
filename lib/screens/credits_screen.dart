@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../widgets/official_badge.dart';
 import 'welcome_name_screen.dart';
 
 /// شاشة تعريفية قصيرة بمطوّر التطبيق، تُعرض مرة واحدة بعد شاشة الترحيب
@@ -47,6 +48,7 @@ class _CreditsScreenState extends State<CreditsScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const OfficialBadge(light: true, compact: true),
                   const Spacer(),
                   // حلقة زخرفية حول أيقونة التطوير
                   Container(

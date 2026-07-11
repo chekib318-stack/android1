@@ -20,6 +20,14 @@ final LearningUnit lesson01Unit = LearningUnit(
       title: 'الحيوانات الأليفة',
       icon: '🐱',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'قطة', emoji: '🐱', soundEffect: 'cat_meow'),
+        IntroItem(word: 'كلب', emoji: '🐶', soundEffect: 'dog_bark'),
+        IntroItem(word: 'أرنب', emoji: '🐰'),
+        IntroItem(word: 'سمكة', emoji: '🐟'),
+        IntroItem(word: 'ببغاء', emoji: '🦜', soundEffect: 'parrot_squawk'),
+        IntroItem(word: 'حمامة', emoji: '🕊️', soundEffect: 'pigeon_coo'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex01_001',
@@ -102,6 +110,14 @@ final LearningUnit lesson02Unit = LearningUnit(
       title: 'حيوانات المزرعة',
       icon: '🐄',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'بقرة', emoji: '🐄', soundEffect: 'cow_moo'),
+        IntroItem(word: 'خروف', emoji: '🐑', soundEffect: 'sheep_baa'),
+        IntroItem(word: 'حصان', emoji: '🐴', soundEffect: 'horse_neigh'),
+        IntroItem(word: 'دجاجة', emoji: '🐔', soundEffect: 'chicken_cluck'),
+        IntroItem(word: 'بطة', emoji: '🦆', soundEffect: 'duck_quack'),
+        IntroItem(word: 'عنزة', emoji: '🐐', soundEffect: 'goat_bleat'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex02_008',
@@ -186,6 +202,14 @@ final LearningUnit lesson03Unit = LearningUnit(
       title: 'حيوانات الغابة',
       icon: '🦁',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'أسد', emoji: '🦁', soundEffect: 'lion_roar'),
+        IntroItem(word: 'فيل', emoji: '🐘', soundEffect: 'elephant_trumpet'),
+        IntroItem(word: 'نمر', emoji: '🐯', soundEffect: 'tiger_growl'),
+        IntroItem(word: 'زرافة', emoji: '🦒'),
+        IntroItem(word: 'قرد', emoji: '🐵', soundEffect: 'monkey_screech'),
+        IntroItem(word: 'دب', emoji: '🐻', soundEffect: 'bear_growl'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex03_015',
@@ -269,6 +293,14 @@ final LearningUnit lesson04Unit = LearningUnit(
       title: 'حيوانات إضافية',
       icon: '🦊',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'ثعلب', emoji: '🦊'),
+        IntroItem(word: 'ذئب', emoji: '🐺', soundEffect: 'wolf_howl'),
+        IntroItem(word: 'تمساح', emoji: '🐊'),
+        IntroItem(word: 'ثعبان', emoji: '🐍', soundEffect: 'snake_hiss'),
+        IntroItem(word: 'سلحفاة', emoji: '🐢'),
+        IntroItem(word: 'خنزير', emoji: '🐷', soundEffect: 'pig_oink'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex04_022',
@@ -350,6 +382,14 @@ final LearningUnit lesson05Unit = LearningUnit(
       title: 'الأشياء من حولي',
       icon: '🏠',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'بيت', emoji: '🏠'),
+        IntroItem(word: 'قلم', emoji: '✏️'),
+        IntroItem(word: 'كتاب', emoji: '📖'),
+        IntroItem(word: 'باب', emoji: '🚪'),
+        IntroItem(word: 'سيارة', emoji: '🚗', soundEffect: 'car_horn'),
+        IntroItem(word: 'حقيبة', emoji: '🎒'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex05_029',
@@ -429,6 +469,14 @@ final LearningUnit lesson06Unit = LearningUnit(
       title: 'أدوات المنزل',
       icon: '🔑',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'ساعة', emoji: '⌚'),
+        IntroItem(word: 'مفتاح', emoji: '🔑'),
+        IntroItem(word: 'هاتف', emoji: '📱'),
+        IntroItem(word: 'مصباح', emoji: '💡'),
+        IntroItem(word: 'كرسي', emoji: '🪑'),
+        IntroItem(word: 'نافذة', emoji: '🪟'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex06_036',
@@ -507,6 +555,14 @@ final LearningUnit lesson07Unit = LearningUnit(
       title: 'الطبيعة',
       icon: '☀️',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'شمس', emoji: '☀️'),
+        IntroItem(word: 'قمر', emoji: '🌙'),
+        IntroItem(word: 'نجمة', emoji: '⭐'),
+        IntroItem(word: 'سحابة', emoji: '☁️'),
+        IntroItem(word: 'ماء', emoji: '💧'),
+        IntroItem(word: 'وردة', emoji: '🌹'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex07_043',
@@ -585,6 +641,14 @@ final LearningUnit lesson08Unit = LearningUnit(
       title: 'مظاهر الطبيعة',
       icon: '🌧️',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'مطر', emoji: '🌧️'),
+        IntroItem(word: 'جبل', emoji: '⛰️'),
+        IntroItem(word: 'بحر', emoji: '🌊'),
+        IntroItem(word: 'شجرة', emoji: '🌳'),
+        IntroItem(word: 'ثلج', emoji: '❄️'),
+        IntroItem(word: 'قوس قزح', emoji: '🌈'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex08_050',
@@ -663,6 +727,14 @@ final LearningUnit lesson09Unit = LearningUnit(
       title: 'الألوان الأساسية',
       icon: '🎨',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'أحمر', emoji: '🔴'),
+        IntroItem(word: 'أصفر', emoji: '🟡'),
+        IntroItem(word: 'أزرق', emoji: '🔵'),
+        IntroItem(word: 'أخضر', emoji: '🟢'),
+        IntroItem(word: 'برتقالي', emoji: '🟠'),
+        IntroItem(word: 'أبيض', emoji: '⚪'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex09_057',
@@ -741,6 +813,14 @@ final LearningUnit lesson10Unit = LearningUnit(
       title: 'ألوان إضافية',
       icon: '🌈',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'وردي', emoji: '🩷'),
+        IntroItem(word: 'بنفسجي', emoji: '💜'),
+        IntroItem(word: 'بني', emoji: '🟤'),
+        IntroItem(word: 'أسود', emoji: '⚫'),
+        IntroItem(word: 'رمادي', emoji: '🔘'),
+        IntroItem(word: 'ذهبي', emoji: '🟨'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex10_064',
@@ -819,6 +899,14 @@ final LearningUnit lesson11Unit = LearningUnit(
       title: 'الأشكال الهندسية',
       icon: '⭕',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'دائرة', emoji: '⭕'),
+        IntroItem(word: 'مربع', emoji: '⬛'),
+        IntroItem(word: 'مثلث', emoji: '🔺'),
+        IntroItem(word: 'قلب', emoji: '❤️'),
+        IntroItem(word: 'نجمة', emoji: '⭐'),
+        IntroItem(word: 'معين', emoji: '🔷'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex11_071',
@@ -897,6 +985,14 @@ final LearningUnit lesson12Unit = LearningUnit(
       title: 'الفواكه',
       icon: '🍌',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'موزة', emoji: '🍌'),
+        IntroItem(word: 'تفاحة', emoji: '🍎'),
+        IntroItem(word: 'برتقالة', emoji: '🍊'),
+        IntroItem(word: 'عنب', emoji: '🍇'),
+        IntroItem(word: 'فراولة', emoji: '🍓'),
+        IntroItem(word: 'بطيخ', emoji: '🍉'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex12_078',
@@ -975,6 +1071,14 @@ final LearningUnit lesson13Unit = LearningUnit(
       title: 'فواكه إضافية',
       icon: '🍍',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'أناناس', emoji: '🍍'),
+        IntroItem(word: 'خوخ', emoji: '🍑'),
+        IntroItem(word: 'كرز', emoji: '🍒'),
+        IntroItem(word: 'ليمون', emoji: '🍋'),
+        IntroItem(word: 'جوز الهند', emoji: '🥥'),
+        IntroItem(word: 'مانجو', emoji: '🥭'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex13_085',
@@ -1053,6 +1157,14 @@ final LearningUnit lesson14Unit = LearningUnit(
       title: 'الخضروات',
       icon: '🥕',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'جزرة', emoji: '🥕'),
+        IntroItem(word: 'طماطم', emoji: '🍅'),
+        IntroItem(word: 'بطاطا', emoji: '🥔'),
+        IntroItem(word: 'خيار', emoji: '🥒'),
+        IntroItem(word: 'باذنجان', emoji: '🍆'),
+        IntroItem(word: 'فلفل', emoji: '🫑'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex14_092',
@@ -1131,6 +1243,14 @@ final LearningUnit lesson15Unit = LearningUnit(
       title: 'أفراد العائلة',
       icon: '👨',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'أب', emoji: '👨'),
+        IntroItem(word: 'أم', emoji: '👩'),
+        IntroItem(word: 'أخ', emoji: '👦'),
+        IntroItem(word: 'أخت', emoji: '👧'),
+        IntroItem(word: 'جد', emoji: '👴'),
+        IntroItem(word: 'جدة', emoji: '👵'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex15_099',
@@ -1209,6 +1329,14 @@ final LearningUnit lesson16Unit = LearningUnit(
       title: 'أفراد العائلة الممتدة',
       icon: '👨‍👩‍👧',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'عم', emoji: '👨‍🦱'),
+        IntroItem(word: 'عمة', emoji: '👩‍🦱'),
+        IntroItem(word: 'خال', emoji: '🧔'),
+        IntroItem(word: 'خالة', emoji: '👩‍🦰'),
+        IntroItem(word: 'طفل', emoji: '👶'),
+        IntroItem(word: 'صديق', emoji: '🧑'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex16_106',
@@ -1287,6 +1415,14 @@ final LearningUnit lesson17Unit = LearningUnit(
       title: 'الأرقام من 0 إلى 5',
       icon: '1️⃣',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'صفر', emoji: '0️⃣'),
+        IntroItem(word: 'واحد', emoji: '1️⃣'),
+        IntroItem(word: 'اثنان', emoji: '2️⃣'),
+        IntroItem(word: 'ثلاثة', emoji: '3️⃣'),
+        IntroItem(word: 'أربعة', emoji: '4️⃣'),
+        IntroItem(word: 'خمسة', emoji: '5️⃣'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex17_113',
@@ -1365,6 +1501,14 @@ final LearningUnit lesson18Unit = LearningUnit(
       title: 'الأرقام من 6 إلى 10',
       icon: '🔟',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'ستة', emoji: '6️⃣'),
+        IntroItem(word: 'سبعة', emoji: '7️⃣'),
+        IntroItem(word: 'ثمانية', emoji: '8️⃣'),
+        IntroItem(word: 'تسعة', emoji: '9️⃣'),
+        IntroItem(word: 'عشرة', emoji: '🔟'),
+        IntroItem(word: 'عشرون', emoji: '2️⃣0️⃣'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex18_120',
@@ -1443,6 +1587,14 @@ final LearningUnit lesson19Unit = LearningUnit(
       title: 'وسائل النقل',
       icon: '🚗',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'سيارة', emoji: '🚗', soundEffect: 'car_horn'),
+        IntroItem(word: 'طائرة', emoji: '✈️', soundEffect: 'airplane_engine'),
+        IntroItem(word: 'قطار', emoji: '🚆', soundEffect: 'train_horn'),
+        IntroItem(word: 'دراجة', emoji: '🚲', soundEffect: 'bike_bell'),
+        IntroItem(word: 'سفينة', emoji: '🚢', soundEffect: 'ship_horn'),
+        IntroItem(word: 'حافلة', emoji: '🚌', soundEffect: 'bus_horn'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex19_127',
@@ -1527,6 +1679,14 @@ final LearningUnit lesson20Unit = LearningUnit(
       title: 'المهن',
       icon: '👨‍⚕️',
       xpReward: 25,
+      introItems: const [
+        IntroItem(word: 'طبيب', emoji: '👨‍⚕️'),
+        IntroItem(word: 'معلم', emoji: '👨‍🏫'),
+        IntroItem(word: 'شرطي', emoji: '👮'),
+        IntroItem(word: 'طباخ', emoji: '👨‍🍳'),
+        IntroItem(word: 'مزارع', emoji: '🧑‍🌾'),
+        IntroItem(word: 'عامل', emoji: '👷'),
+      ],
       exercises: const [
         Exercise(
           id: 'ex20_134',

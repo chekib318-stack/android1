@@ -4,6 +4,7 @@ import '../providers/progress_provider.dart';
 import '../services/audio_service.dart';
 import '../services/speech_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/official_badge.dart';
 import 'home_screen.dart';
 
 /// شاشة تُعرض مرة واحدة بعد شاشتي الترحيب الرسميتين: ترحيب بالقسم
@@ -86,7 +87,12 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(28),
-          child: Center(child: _buildStage()),
+          child: Column(
+            children: [
+              const OfficialBadge(),
+              Expanded(child: Center(child: _buildStage())),
+            ],
+          ),
         ),
       ),
     );

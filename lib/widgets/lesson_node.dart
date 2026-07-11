@@ -30,6 +30,7 @@ class LessonNode extends StatefulWidget {
   final String title;
   final LessonNodeState state;
   final VoidCallback? onTap;
+  final bool showTitle;
 
   const LessonNode({
     super.key,
@@ -37,6 +38,7 @@ class LessonNode extends StatefulWidget {
     required this.title,
     required this.state,
     this.onTap,
+    this.showTitle = true,
   });
 
   @override
@@ -120,25 +122,27 @@ class _LessonNodeState extends State<LessonNode>
       onTap: isLocked ? null : widget.onTap,
       child: Opacity(
         opacity: isLocked ? 0.55 : 1,
-        child: Column(
-          children: [
-            node,
-            const SizedBox(height: 6),
-            SizedBox(
-              width: 96,
-              child: Text(
-                widget.title,
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: AppColors.ink,
-                      fontWeight: FontWeight.w600,
+        child: widget.showTitle
+            ? Column(
+                children: [
+                  node,
+                  const SizedBox(height: 6),
+                  SizedBox(
+                    width: 96,
+                    child: Text(
+                      widget.title,
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.ink,
+                            fontWeight: FontWeight.w600,
+                          ),
                     ),
-              ),
-            ),
-          ],
-        ),
+                  ),
+                ],
+              )
+            : node,
       ),
     );
   }

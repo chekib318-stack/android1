@@ -63,6 +63,7 @@ class _ExerciseViewState extends State<ExerciseView> {
         widget.exercise.prompt,
     };
     await AudioService.instance.speakForExercise(widget.exercise.id, fallbackText);
+    await AudioService.instance.playSoundEffect(widget.exercise.soundEffect);
   }
 
   bool get _canCheck {

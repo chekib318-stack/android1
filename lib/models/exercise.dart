@@ -18,6 +18,7 @@ class Exercise {
   final String correctAnswer; // الإجابة الصحيحة من ضمن options أو targetWord
   final List<String>? scrambledWords; // للكلمات المبعثرة (ترتيب) أو الرموز المخلوطة (مطابقة)
   final List<String>? pairAnswers; // الرمز الصحيح المقابل لكل عنصر في options (لتمرين المطابقة فقط)
+  final String? soundEffect; // اسم ملف تأثير صوتي حقيقي (مثال: 'dog_bark') يُشغَّل مع الكلمة إن وُجد
 
   const Exercise({
     required this.id,
@@ -29,5 +30,6 @@ class Exercise {
     this.options = const [],
     this.scrambledWords,
     this.pairAnswers,
+    this.soundEffect,
   });
 }

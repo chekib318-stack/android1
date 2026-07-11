@@ -9,11 +9,19 @@ import '../widgets/stat_pill.dart';
 import 'lesson_screen.dart';
 import 'voice_settings_screen.dart';
 
+/// الأعداد الترتيبية العربية (الأول، الثاني...) لتسمية الدروس فى القائمة.
+const List<String> arabicOrdinals = [
+  'الأول', 'الثاني', 'الثالث', 'الرابع', 'الخامس',
+  'السادس', 'السابع', 'الثامن', 'التاسع', 'العاشر',
+  'الحادي عشر', 'الثاني عشر', 'الثالث عشر', 'الرابع عشر', 'الخامس عشر',
+  'السادس عشر', 'السابع عشر', 'الثامن عشر', 'التاسع عشر', 'العشرون',
+];
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  /// كل الدروس مرتبة عبر كل الوحدات، لحساب القفل/الفتح بشكل متسلسل
-  /// حتى عبر حدود الوحدات (آخر درس في وحدة يفتح أول درس في الوحدة التالية)
+  /// كل الدروس مرتبة (كل وحدة تحتوي درسا واحدا في هذه النسخة)، لحساب
+  /// القفل/الفتح بشكل متسلسل: كل درس يفتح الدرس الذي يليه مباشرة.
   List<Lesson> get _allLessons =>
       kindergartenUnits.expand((unit) => unit.lessons).toList();
 
@@ -33,7 +41,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final progress = context.watch<ProgressProvider>();
     final lessons = _allLessons;
-    int globalIndex = 0;
 
     return Scaffold(
       appBar: AppBar(
@@ -61,106 +68,122 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-        child: ListView(
+        child: ListView.builder(
           padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
-          children: [
-            if (progress.studentName.isNotEmpty) ...[
-              Row(
-                children: [
-                  const Text('🕊️', style: TextStyle(fontSize: 28)),
-                  const SizedBox(width: 10),
-                  Text(
-                    'مرحبا ${progress.studentName}',
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          color: AppColors.sidiBlue,
-                        ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-            ],
-            for (final unit in kindergartenUnits) ...[
-              Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: AppColors.sidiBlue,
-                  borderRadius: BorderRadius.circular(24),
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.sidiBlue.withOpacity(0.25),
-                      blurRadius: 16,
-                      offset: const Offset(0, 6),
+          itemCount: lessons.length + (progress.studentName.isNotEmpty ? 1 : 0),
+          itemBuilder: (context, index) {
+            final hasGreeting = progress.studentName.isNotEmpty;
+            if (hasGreeting && index == 0) {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Row(
+                  children: [
+                    const Text('🕊️', style: TextStyle(fontSize: 28)),
+                    const SizedBox(width: 10),
+                    Text(
+                      'مرحبا ${progress.studentName}',
+                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                            color: AppColors.sidiBlue,
+                          ),
                     ),
                   ],
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          unit.title,
-                          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                                color: AppColors.jasmine,
-                              ),
-                        ),
-                        const SizedBox(width: 10),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: AppColors.jasmine.withOpacity(0.18),
-                            borderRadius: BorderRadius.circular(10),
+              );
+            }
+            final i = hasGreeting ? index - 1 : index;
+            final lesson = lessons[i];
+            final state = _stateFor(lesson, i, progress);
+            final ordinal = i < arabicOrdinals.length ? arabicOrdinals[i] : '${i + 1}';
+
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 14),
+              child: GestureDetector(
+                onTap: state == LessonNodeState.locked
+                    ? null
+                    : () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => LessonScreen(lesson: lesson, ordinal: ordinal),
                           ),
-                          child: Text(
-                            unit.gradeLevel,
-                            style: const TextStyle(
-                              color: AppColors.jasmine,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 12,
-                            ),
-                          ),
+                        );
+                      },
+                child: Opacity(
+                  opacity: state == LessonNodeState.locked ? 0.5 : 1,
+                  child: Container(
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: state == LessonNodeState.completed
+                          ? AppColors.zellige.withOpacity(0.1)
+                          : AppColors.jasmineDim,
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: state == LessonNodeState.completed
+                            ? AppColors.zellige.withOpacity(0.4)
+                            : Colors.transparent,
+                        width: 1.5,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.ink.withOpacity(0.06),
+                          blurRadius: 8,
+                          offset: const Offset(0, 3),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 6),
-                    Text(
-                      unit.description,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: AppColors.jasmine.withOpacity(0.85),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 60,
+                          height: 60,
+                          child: FittedBox(
+                            child: LessonNode(
+                              icon: lesson.icon,
+                              title: '',
+                              state: state,
+                              onTap: null,
+                              showTitle: false,
+                            ),
                           ),
+                        ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'الدرس $ordinal',
+                                style: TextStyle(
+                                  color: AppColors.inkFaint,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                lesson.title,
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Icon(
+                          state == LessonNodeState.completed
+                              ? Icons.check_circle
+                              : Icons.chevron_left,
+                          color: state == LessonNodeState.completed
+                              ? AppColors.zellige
+                              : AppColors.inkFaint,
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-              const SizedBox(height: 36),
-              ...unit.lessons.map((lesson) {
-                final i = globalIndex++;
-                final state = _stateFor(lesson, i, progress);
-                final alignRight = i.isOdd;
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 32),
-                  child: Row(
-                    mainAxisAlignment:
-                        alignRight ? MainAxisAlignment.end : MainAxisAlignment.start,
-                    children: [
-                      LessonNode(
-                        icon: lesson.icon,
-                        title: lesson.title,
-                        state: state,
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) => LessonScreen(lesson: lesson),
-                            ),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                );
-              }),
-            ],
-          ],
+            );
+          },
         ),
       ),
     );

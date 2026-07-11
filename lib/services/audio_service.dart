@@ -73,6 +73,20 @@ class AudioService {
 
   bool _assetExists(String assetPath) => _availableAssets.contains(assetPath);
 
+  /// يشغّل تأثيرا صوتيا حقيقيا (نباح، صهيل، بوق سيارة...) إن وُجد ملفه في
+  /// assets/sounds/، بلا أي خطأ أو تأخير إذا لم يوجد بعد (تجاهل صامت).
+  Future<void> playSoundEffect(String? effectName) async {
+    if (effectName == null || effectName.isEmpty) return;
+    if (!_ready) await _init();
+    final assetPath = 'assets/sounds/$effectName.mp3';
+    if (!_assetExists(assetPath)) return;
+    try {
+      await _player.play(AssetSource('sounds/$effectName.mp3'));
+    } catch (_) {
+      // تجاهل صامت إن فشل التشغيل
+    }
+  }
+
   /// النقطة الموحّدة لنطق تمرين محدد: تجرب أولا الملف الصوتي الحقيقي
   /// المطابق لمعرّف التمرين، وإن لم يوجد ترجع تلقائيا لـTTS العادي.
   Future<void> speakForExercise(String exerciseId, String fallbackText) async {

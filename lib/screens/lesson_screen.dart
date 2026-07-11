@@ -24,9 +24,12 @@ class _LessonScreenState extends State<LessonScreen> {
     if (correct) _correctCount++;
     final isLast = _index == widget.lesson.exercises.length - 1;
     if (isLast) {
-      context
-          .read<ProgressProvider>()
-          .completeLesson(widget.lesson.id, widget.lesson.xpReward);
+      context.read<ProgressProvider>().completeLesson(
+            widget.lesson.id,
+            widget.lesson.xpReward,
+            correctCount: _correctCount,
+            totalExercises: widget.lesson.exercises.length,
+          );
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => LessonCompleteScreen(

@@ -25,8 +25,9 @@ class _ExerciseViewState extends State<ExerciseView> {
   // جمل تحفيزية تونسية تُختار عشوائيا عند كل إجابة صحيحة
   static const List<String> _correctPhrases = [
     'نعم، إجابتك صحيحة',
-    'إجابة صحيحة يا عبقري',
+    'أحسنت، إجابتك صحيحة',
     'ممتاز، جواب صحيح',
+    'واصل، الجواب صحيح',
   ];
 
   String? _selectedOption; // chooseImage / listenChoose / fillBlank

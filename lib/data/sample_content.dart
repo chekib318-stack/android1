@@ -205,7 +205,7 @@ final LearningUnit lesson03Unit = LearningUnit(
       introItems: const [
         IntroItem(word: 'أسد', emoji: '🦁', soundEffect: 'lion_roar'),
         IntroItem(word: 'فيل', emoji: '🐘', soundEffect: 'elephant_trumpet'),
-        IntroItem(word: 'نمر', emoji: '🐯', soundEffect: 'tiger_growl'),
+        IntroItem(word: 'فهد', emoji: '🐆'),
         IntroItem(word: 'زرافة', emoji: '🦒'),
         IntroItem(word: 'قرد', emoji: '🐵', soundEffect: 'monkey_screech'),
         IntroItem(word: 'دب', emoji: '🐻', soundEffect: 'bear_growl'),
@@ -217,7 +217,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: أسد',
           targetWord: 'أسد',
           emoji: '🦁',
-          options: ['🦁', '🐘', '🐯', '🦒'],
+          options: ['🦁', '🐘', '🐆', '🦒'],
           correctAnswer: '🦁',
           soundEffect: 'lion_roar',
         ),
@@ -227,19 +227,18 @@ final LearningUnit lesson03Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: فيل',
           targetWord: 'فيل',
           emoji: '🐘',
-          options: ['🐘', '🦁', '🐯', '🦒'],
+          options: ['🐘', '🦁', '🐆', '🦒'],
           correctAnswer: '🐘',
           soundEffect: 'elephant_trumpet',
         ),
         Exercise(
           id: 'ex03_017',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: نمر',
-          targetWord: 'نمر',
-          emoji: '🐯',
-          options: ['🐯', '🦁', '🐘', '🦒'],
-          correctAnswer: '🐯',
-          soundEffect: 'tiger_growl',
+          prompt: 'اختر الصورة المناسبة لكلمة: فهد',
+          targetWord: 'فهد',
+          emoji: '🐆',
+          options: ['🐆', '🦁', '🐘', '🦒'],
+          correctAnswer: '🐆',
         ),
         Exercise(
           id: 'ex03_018',
@@ -247,7 +246,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: زرافة',
           targetWord: 'زرافة',
           emoji: '🦒',
-          options: ['🦒', '🦁', '🐘', '🐯'],
+          options: ['🦒', '🦁', '🐘', '🐆'],
           correctAnswer: '🦒',
         ),
         Exercise(
@@ -281,16 +280,16 @@ final LearningUnit lesson03Unit = LearningUnit(
   ],
 );
 
-/// الدرس 4: حيوانات إضافية
+/// الدرس 4: حيوانات أخرى
 final LearningUnit lesson04Unit = LearningUnit(
   id: 'unit_04',
-  title: 'حيوانات إضافية',
+  title: 'حيوانات أخرى',
   description: 'الدرس رقم 4',
   gradeLevel: 'تحضيري',
   lessons: [
     Lesson(
       id: 'lesson_04',
-      title: 'حيوانات إضافية',
+      title: 'حيوانات أخرى',
       icon: '🦊',
       xpReward: 25,
       introItems: const [
@@ -801,20 +800,20 @@ final LearningUnit lesson09Unit = LearningUnit(
   ],
 );
 
-/// الدرس 10: ألوان إضافية
+/// الدرس 10: ألوان أخرى
 final LearningUnit lesson10Unit = LearningUnit(
   id: 'unit_10',
-  title: 'ألوان إضافية',
+  title: 'ألوان أخرى',
   description: 'الدرس رقم 10',
   gradeLevel: 'تحضيري',
   lessons: [
     Lesson(
       id: 'lesson_10',
-      title: 'ألوان إضافية',
+      title: 'ألوان أخرى',
       icon: '🌈',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'وردي', emoji: '🩷'),
+        IntroItem(word: 'برتقالي', emoji: '🧡'),
         IntroItem(word: 'بنفسجي', emoji: '💜'),
         IntroItem(word: 'بني', emoji: '🟤'),
         IntroItem(word: 'أسود', emoji: '⚫'),
@@ -825,11 +824,11 @@ final LearningUnit lesson10Unit = LearningUnit(
         Exercise(
           id: 'ex10_064',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: وردي',
-          targetWord: 'وردي',
-          emoji: '🩷',
-          options: ['🩷', '💜', '🟤', '⚫'],
-          correctAnswer: '🩷',
+          prompt: 'اختر الصورة المناسبة لكلمة: برتقالي',
+          targetWord: 'برتقالي',
+          emoji: '🧡',
+          options: ['🧡', '💜', '🟤', '⚫'],
+          correctAnswer: '🧡',
         ),
         Exercise(
           id: 'ex10_065',
@@ -837,7 +836,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: بنفسجي',
           targetWord: 'بنفسجي',
           emoji: '💜',
-          options: ['💜', '🩷', '🟤', '⚫'],
+          options: ['💜', '🧡', '🟤', '⚫'],
           correctAnswer: '💜',
         ),
         Exercise(
@@ -846,7 +845,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: بني',
           targetWord: 'بني',
           emoji: '🟤',
-          options: ['🟤', '🩷', '💜', '⚫'],
+          options: ['🟤', '🧡', '💜', '⚫'],
           correctAnswer: '🟤',
         ),
         Exercise(
@@ -855,7 +854,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: أسود',
           targetWord: 'أسود',
           emoji: '⚫',
-          options: ['⚫', '🩷', '💜', '🟤'],
+          options: ['⚫', '🧡', '💜', '🟤'],
           correctAnswer: '⚫',
         ),
         Exercise(
@@ -863,7 +862,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'رمادي',
-          options: ['رمادي', 'وردي', 'بنفسجي'],
+          options: ['رمادي', 'برتقالي', 'بنفسجي'],
           correctAnswer: 'رمادي',
         ),
         Exercise(
@@ -871,7 +870,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'ذهبي',
-          options: ['ذهبي', 'وردي', 'بنفسجي'],
+          options: ['ذهبي', 'برتقالي', 'بنفسجي'],
           correctAnswer: 'ذهبي',
         ),
         Exercise(
@@ -879,7 +878,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: لون الليل ـــــ',
           targetWord: 'لون الليل أسود',
-          options: ['أسود', 'وردي', 'ذهبي'],
+          options: ['أسود', 'برتقالي', 'ذهبي'],
           correctAnswer: 'أسود',
         ),
       ],
@@ -905,7 +904,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         IntroItem(word: 'مثلث', emoji: '🔺'),
         IntroItem(word: 'قلب', emoji: '❤️'),
         IntroItem(word: 'نجمة', emoji: '⭐'),
-        IntroItem(word: 'معين', emoji: '🔷'),
+        IntroItem(word: 'مكعب', emoji: '🧊'),
       ],
       exercises: const [
         Exercise(
@@ -956,9 +955,9 @@ final LearningUnit lesson11Unit = LearningUnit(
           id: 'ex11_076',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
-          targetWord: 'معين',
-          options: ['معين', 'دائرة', 'مربع'],
-          correctAnswer: 'معين',
+          targetWord: 'مكعب',
+          options: ['مكعب', 'دائرة', 'مربع'],
+          correctAnswer: 'مكعب',
         ),
         Exercise(
           id: 'ex11_077',
@@ -1059,25 +1058,25 @@ final LearningUnit lesson12Unit = LearningUnit(
   ],
 );
 
-/// الدرس 13: فواكه إضافية
+/// الدرس 13: فواكه أخرى
 final LearningUnit lesson13Unit = LearningUnit(
   id: 'unit_13',
-  title: 'فواكه إضافية',
+  title: 'فواكه أخرى',
   description: 'الدرس رقم 13',
   gradeLevel: 'تحضيري',
   lessons: [
     Lesson(
       id: 'lesson_13',
-      title: 'فواكه إضافية',
+      title: 'فواكه أخرى',
       icon: '🍍',
       xpReward: 25,
       introItems: const [
         IntroItem(word: 'أناناس', emoji: '🍍'),
         IntroItem(word: 'خوخ', emoji: '🍑'),
-        IntroItem(word: 'كرز', emoji: '🍒'),
+        IntroItem(word: 'توت', emoji: '🫐'),
         IntroItem(word: 'ليمون', emoji: '🍋'),
         IntroItem(word: 'جوز الهند', emoji: '🥥'),
-        IntroItem(word: 'مانجو', emoji: '🥭'),
+        IntroItem(word: 'إجاص', emoji: '🍐'),
       ],
       exercises: const [
         Exercise(
@@ -1086,7 +1085,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: أناناس',
           targetWord: 'أناناس',
           emoji: '🍍',
-          options: ['🍍', '🍑', '🍒', '🍋'],
+          options: ['🍍', '🍑', '🫐', '🍋'],
           correctAnswer: '🍍',
         ),
         Exercise(
@@ -1095,17 +1094,17 @@ final LearningUnit lesson13Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: خوخ',
           targetWord: 'خوخ',
           emoji: '🍑',
-          options: ['🍑', '🍍', '🍒', '🍋'],
+          options: ['🍑', '🍍', '🫐', '🍋'],
           correctAnswer: '🍑',
         ),
         Exercise(
           id: 'ex13_087',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: كرز',
-          targetWord: 'كرز',
-          emoji: '🍒',
-          options: ['🍒', '🍍', '🍑', '🍋'],
-          correctAnswer: '🍒',
+          prompt: 'اختر الصورة المناسبة لكلمة: توت',
+          targetWord: 'توت',
+          emoji: '🫐',
+          options: ['🫐', '🍍', '🍑', '🍋'],
+          correctAnswer: '🫐',
         ),
         Exercise(
           id: 'ex13_088',
@@ -1113,7 +1112,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: ليمون',
           targetWord: 'ليمون',
           emoji: '🍋',
-          options: ['🍋', '🍍', '🍑', '🍒'],
+          options: ['🍋', '🍍', '🍑', '🫐'],
           correctAnswer: '🍋',
         ),
         Exercise(
@@ -1128,9 +1127,9 @@ final LearningUnit lesson13Unit = LearningUnit(
           id: 'ex13_090',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
-          targetWord: 'مانجو',
-          options: ['مانجو', 'أناناس', 'خوخ'],
-          correctAnswer: 'مانجو',
+          targetWord: 'إجاص',
+          options: ['إجاص', 'أناناس', 'خوخ'],
+          correctAnswer: 'إجاص',
         ),
         Exercise(
           id: 'ex13_091',
@@ -1244,7 +1243,7 @@ final LearningUnit lesson15Unit = LearningUnit(
       icon: '👨',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'أب', emoji: '👨'),
+        IntroItem(word: 'أب', emoji: '🧔‍♂️'),
         IntroItem(word: 'أم', emoji: '👩'),
         IntroItem(word: 'أخ', emoji: '👦'),
         IntroItem(word: 'أخت', emoji: '👧'),
@@ -1257,9 +1256,9 @@ final LearningUnit lesson15Unit = LearningUnit(
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أب',
           targetWord: 'أب',
-          emoji: '👨',
-          options: ['👨', '👩', '👦', '👧'],
-          correctAnswer: '👨',
+          emoji: '🧔‍♂️',
+          options: ['🧔\u200d♂️', '👩', '👦', '👧'],
+          correctAnswer: '🧔‍♂️',
         ),
         Exercise(
           id: 'ex15_100',
@@ -1267,7 +1266,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: أم',
           targetWord: 'أم',
           emoji: '👩',
-          options: ['👩', '👨', '👦', '👧'],
+          options: ['👩', '🧔\u200d♂️', '👦', '👧'],
           correctAnswer: '👩',
         ),
         Exercise(
@@ -1276,7 +1275,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: أخ',
           targetWord: 'أخ',
           emoji: '👦',
-          options: ['👦', '👨', '👩', '👧'],
+          options: ['👦', '🧔\u200d♂️', '👩', '👧'],
           correctAnswer: '👦',
         ),
         Exercise(
@@ -1285,7 +1284,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           prompt: 'اختر الصورة المناسبة لكلمة: أخت',
           targetWord: 'أخت',
           emoji: '👧',
-          options: ['👧', '👨', '👩', '👦'],
+          options: ['👧', '🧔\u200d♂️', '👩', '👦'],
           correctAnswer: '👧',
         ),
         Exercise(
@@ -1317,86 +1316,86 @@ final LearningUnit lesson15Unit = LearningUnit(
   ],
 );
 
-/// الدرس 16: أفراد العائلة الممتدة
+/// الدرس 16: الرياضات
 final LearningUnit lesson16Unit = LearningUnit(
   id: 'unit_16',
-  title: 'أفراد العائلة الممتدة',
+  title: 'الرياضات',
   description: 'الدرس رقم 16',
   gradeLevel: 'تحضيري',
   lessons: [
     Lesson(
       id: 'lesson_16',
-      title: 'أفراد العائلة الممتدة',
-      icon: '👨‍👩‍👧',
+      title: 'الرياضات',
+      icon: '⚽',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'عم', emoji: '👨‍🦱'),
-        IntroItem(word: 'عمة', emoji: '👩‍🦱'),
-        IntroItem(word: 'خال', emoji: '🧔'),
-        IntroItem(word: 'خالة', emoji: '👩‍🦰'),
-        IntroItem(word: 'طفل', emoji: '👶'),
-        IntroItem(word: 'صديق', emoji: '🧑'),
+        IntroItem(word: 'كرة القدم', emoji: '⚽'),
+        IntroItem(word: 'كرة السلة', emoji: '🏀'),
+        IntroItem(word: 'كرة الطائرة', emoji: '🏐'),
+        IntroItem(word: 'السباحة', emoji: '🏊'),
+        IntroItem(word: 'الجري', emoji: '🏃'),
+        IntroItem(word: 'التزلج', emoji: '⛷️'),
       ],
       exercises: const [
         Exercise(
           id: 'ex16_106',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: عم',
-          targetWord: 'عم',
-          emoji: '👨‍🦱',
-          options: ['👨\u200d🦱', '👩\u200d🦱', '🧔', '👩\u200d🦰'],
-          correctAnswer: '👨‍🦱',
+          prompt: 'اختر الصورة المناسبة لكلمة: كرة القدم',
+          targetWord: 'كرة القدم',
+          emoji: '⚽',
+          options: ['⚽', '🏀', '🏐', '🏊'],
+          correctAnswer: '⚽',
         ),
         Exercise(
           id: 'ex16_107',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: عمة',
-          targetWord: 'عمة',
-          emoji: '👩‍🦱',
-          options: ['👩\u200d🦱', '👨\u200d🦱', '🧔', '👩\u200d🦰'],
-          correctAnswer: '👩‍🦱',
+          prompt: 'اختر الصورة المناسبة لكلمة: كرة السلة',
+          targetWord: 'كرة السلة',
+          emoji: '🏀',
+          options: ['🏀', '⚽', '🏐', '🏊'],
+          correctAnswer: '🏀',
         ),
         Exercise(
           id: 'ex16_108',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: خال',
-          targetWord: 'خال',
-          emoji: '🧔',
-          options: ['🧔', '👨\u200d🦱', '👩\u200d🦱', '👩\u200d🦰'],
-          correctAnswer: '🧔',
+          prompt: 'اختر الصورة المناسبة لكلمة: كرة الطائرة',
+          targetWord: 'كرة الطائرة',
+          emoji: '🏐',
+          options: ['🏐', '⚽', '🏀', '🏊'],
+          correctAnswer: '🏐',
         ),
         Exercise(
           id: 'ex16_109',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: خالة',
-          targetWord: 'خالة',
-          emoji: '👩‍🦰',
-          options: ['👩\u200d🦰', '👨\u200d🦱', '👩\u200d🦱', '🧔'],
-          correctAnswer: '👩‍🦰',
+          prompt: 'اختر الصورة المناسبة لكلمة: السباحة',
+          targetWord: 'السباحة',
+          emoji: '🏊',
+          options: ['🏊', '⚽', '🏀', '🏐'],
+          correctAnswer: '🏊',
         ),
         Exercise(
           id: 'ex16_110',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
-          targetWord: 'طفل',
-          options: ['طفل', 'عم', 'عمة'],
-          correctAnswer: 'طفل',
+          targetWord: 'الجري',
+          options: ['الجري', 'كرة القدم', 'كرة السلة'],
+          correctAnswer: 'الجري',
         ),
         Exercise(
           id: 'ex16_111',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
-          targetWord: 'صديق',
-          options: ['صديق', 'عم', 'عمة'],
-          correctAnswer: 'صديق',
+          targetWord: 'التزلج',
+          options: ['التزلج', 'كرة القدم', 'كرة السلة'],
+          correctAnswer: 'التزلج',
         ),
         Exercise(
           id: 'ex16_112',
           type: ExerciseType.fillBlank,
-          prompt: 'أكمل الجملة: أخو أبي هو ـــــ',
-          targetWord: 'أخو أبي هو عمي',
-          options: ['عمي', 'خالي', 'صديقي'],
-          correctAnswer: 'عمي',
+          prompt: 'أكمل الجملة: ألعب ـــــ مع أصدقائي في الملعب',
+          targetWord: 'ألعب كرة القدم مع أصدقائي في الملعب',
+          options: ['كرة القدم', 'كرة السلة', 'السباحة'],
+          correctAnswer: 'كرة القدم',
         ),
       ],
     ),
@@ -1489,16 +1488,16 @@ final LearningUnit lesson17Unit = LearningUnit(
   ],
 );
 
-/// الدرس 18: الأرقام من 6 إلى 10
+/// الدرس 18: الأرقام من 6 إلى 11
 final LearningUnit lesson18Unit = LearningUnit(
   id: 'unit_18',
-  title: 'الأرقام من 6 إلى 10',
+  title: 'الأرقام من 6 إلى 11',
   description: 'الدرس رقم 18',
   gradeLevel: 'تحضيري',
   lessons: [
     Lesson(
       id: 'lesson_18',
-      title: 'الأرقام من 6 إلى 10',
+      title: 'الأرقام من 6 إلى 11',
       icon: '🔟',
       xpReward: 25,
       introItems: const [
@@ -1507,7 +1506,7 @@ final LearningUnit lesson18Unit = LearningUnit(
         IntroItem(word: 'ثمانية', emoji: '8️⃣'),
         IntroItem(word: 'تسعة', emoji: '9️⃣'),
         IntroItem(word: 'عشرة', emoji: '🔟'),
-        IntroItem(word: 'عشرون', emoji: '2️⃣0️⃣'),
+        IntroItem(word: 'أحد عشر', emoji: '1️⃣1️⃣'),
       ],
       exercises: const [
         Exercise(
@@ -1558,9 +1557,9 @@ final LearningUnit lesson18Unit = LearningUnit(
           id: 'ex18_125',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
-          targetWord: 'عشرون',
-          options: ['عشرون', 'ستة', 'سبعة'],
-          correctAnswer: 'عشرون',
+          targetWord: 'أحد عشر',
+          options: ['أحد عشر', 'ستة', 'سبعة'],
+          correctAnswer: 'أحد عشر',
         ),
         Exercise(
           id: 'ex18_126',

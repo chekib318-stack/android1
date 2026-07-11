@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/progress_provider.dart';
@@ -24,6 +26,7 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
   _Stage _stage = _Stage.welcome;
   String _liveText = '';
   String _confirmedName = '';
+  Timer? _autoSkipTimer;
 
   @override
   void initState() {
@@ -31,11 +34,26 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
     _runWelcomeSequence();
   }
 
+  @override
+  void dispose() {
+    _autoSkipTimer?.cancel();
+    super.dispose();
+  }
+
   Future<void> _runWelcomeSequence() async {
     await AudioService.instance.speak('مرحبا بك في القسم التحضيري');
     if (!mounted) return;
     setState(() => _stage = _Stage.readyToListen);
     await AudioService.instance.speak('ما اسمك؟');
+    // إذا لم يُسجَّل الاسم خلال 10 ثوانٍ، يمر التطبيق تلقائيا للدروس
+    _autoSkipTimer = Timer(const Duration(seconds: 10), _autoSkipToHome);
+  }
+
+  void _autoSkipToHome() {
+    if (!mounted || _stage == _Stage.greeting) return;
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => const HomeScreen()),
+    );
   }
 
   Future<void> _startListening() async {
@@ -61,6 +79,7 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
   }
 
   Future<void> _acceptName() async {
+    _autoSkipTimer?.cancel();
     await context.read<ProgressProvider>().setStudentName(_confirmedName);
     if (!mounted) return;
     setState(() => _stage = _Stage.greeting);

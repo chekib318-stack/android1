@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../data/sample_content.dart';
 import '../models/lesson.dart';
+import '../providers/progress_provider.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/official_badge.dart';
+import 'final_report_screen.dart';
 import 'home_screen.dart';
 
 class LessonCompleteScreen extends StatefulWidget {
@@ -88,10 +92,25 @@ class _LessonCompleteScreenState extends State<LessonCompleteScreen> {
               ),
               const Spacer(),
               ElevatedButton(
-                onPressed: () => Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(builder: (_) => const HomeScreen()),
-                  (route) => false,
-                ),
+                onPressed: () {
+                  final progress = context.read<ProgressProvider>();
+                  final allLessonsCount =
+                      kindergartenUnits.expand((u) => u.lessons).length;
+                  final allDone = progress.completedLessonIds.length >= allLessonsCount;
+                  if (allDone) {
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(
+                        builder: (_) => FinalReportScreen(progress: progress),
+                      ),
+                      (route) => false,
+                    );
+                  } else {
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (_) => const HomeScreen()),
+                      (route) => false,
+                    );
+                  }
+                },
                 child: const Text('متابعة'),
               ),
             ],

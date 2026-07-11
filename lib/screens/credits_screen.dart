@@ -123,6 +123,16 @@ class _CreditsScreenState extends State<CreditsScreen> {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 14),
+                  Text(
+                    'هذا التطبيق تم تطويره في وزارة التربية التونسية\nمن طرف المهندس شكيب الوسلاتي\nديوان السيد وزير التربية\nكل الحقوق محفوظة',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: AppColors.jasmine.withOpacity(0.8),
+                      fontSize: 12,
+                      height: 1.6,
+                    ),
+                  ),
                   const Spacer(),
                   // علم تونس في الأسفل
                   Image.asset('assets/images/flag_tunisia.png', height: 60),

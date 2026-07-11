@@ -63,13 +63,19 @@ class _LessonIntroScreenState extends State<LessonIntroScreen>
     if (_index + 1 < items.length) {
       _goToIndex(_index + 1);
     } else {
-      // انتهت كل المفردات التمهيدية → الانتقال لتمارين الدرس
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (_) => LessonScreen(lesson: widget.lesson, ordinal: widget.ordinal),
-        ),
-      );
+      _goToExercises();
     }
+  }
+
+  Future<void> _goToExercises() async {
+    // انتهت كل المفردات التمهيدية → إعلان صوتي ثم الانتقال لتمارين الدرس
+    await AudioService.instance.speak('سنمر الآن إلى التمارين');
+    if (!mounted) return;
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (_) => LessonScreen(lesson: widget.lesson, ordinal: widget.ordinal),
+      ),
+    );
   }
 
   void _replay() {

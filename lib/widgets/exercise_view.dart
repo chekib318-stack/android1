@@ -55,9 +55,9 @@ class _ExerciseViewState extends State<ExerciseView> {
 
   Future<void> _speakPrompt() async {
     final fallbackText = switch (widget.exercise.type) {
-      ExerciseType.listenChoose ||
-      ExerciseType.chooseImage =>
+      ExerciseType.listenChoose =>
         widget.exercise.targetWord ?? widget.exercise.prompt,
+      ExerciseType.chooseImage ||
       ExerciseType.fillBlank ||
       ExerciseType.arrangeWords ||
       ExerciseType.matchPairs =>

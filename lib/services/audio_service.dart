@@ -4,6 +4,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../data/diacritics_dictionary.dart';
 
 /// خدمة تشغيل الصوت. تعتمد إستراتيجية بأولويتين:
 ///   1) ملف صوتي حقيقي موحّد (نفس الملف على كل الهواتف) من assets/audio/،
@@ -73,6 +74,32 @@ class AudioService {
 
   bool _assetExists(String assetPath) => _availableAssets.contains(assetPath);
 
+  /// يستبدل كل كلمة معروفة في القاموس بنسختها المشكولة (لتصحيح النطق)،
+  /// مع مراعاة "ال" التعريف الملتصقة بالكلمة. لا يغيّر أي نص غير موجود
+  /// في القاموس (يبقى كما هو، عادي بلا تشكيل).
+  String _applyDiacritics(String text) {
+    final words = text.split(' ');
+    final result = words.map((word) {
+      // نشيل علامات الترقيم الملتصقة (مثل ؟ ، .) مؤقتا للمطابقة الصحيحة
+      final match = RegExp(r'^([\u0621-\u064A]+)(.*)$').firstMatch(word);
+      if (match == null) return word;
+      final core = match.group(1)!;
+      final suffix = match.group(2)!;
+
+      if (wordDiacritics.containsKey(core)) {
+        return wordDiacritics[core]! + suffix;
+      }
+      if (core.startsWith('ال') && core.length > 2) {
+        final withoutAl = core.substring(2);
+        if (wordDiacritics.containsKey(withoutAl)) {
+          return 'ال${wordDiacritics[withoutAl]!}$suffix';
+        }
+      }
+      return word;
+    });
+    return result.join(' ');
+  }
+
   /// يشغّل تأثيرا صوتيا حقيقيا (نباح، صهيل، بوق سيارة...) إن وُجد ملفه في
   /// assets/sounds/، بلا أي خطأ أو تأخير إذا لم يوجد بعد (تجاهل صامت).
   Future<void> playSoundEffect(String? effectName) async {
@@ -110,7 +137,7 @@ class AudioService {
     if (text.isEmpty) return;
     if (!_ready) await _init();
     await _tts.stop();
-    await _tts.speak(text);
+    await _tts.speak(_applyDiacritics(text));
   }
 
   /// يرجع قائمة كل الأصوات العربية المتوفرة فعليا على جهاز المستخدم
@@ -156,7 +183,7 @@ class AudioService {
     if (!_ready) await _init();
     await _tts.stop();
     await _tts.setPitch(1.15);
-    await _tts.speak(phrase);
+    await _tts.speak(_applyDiacritics(phrase));
     await _tts.setPitch(_defaultPitch);
   }
 
@@ -175,7 +202,7 @@ class AudioService {
     await _tts.stop();
     await _tts.setPitch(0.82);
     await _tts.setSpeechRate(0.36);
-    await _tts.speak('خطأ، حاول مرة أخرى');
+    await _tts.speak(_applyDiacritics('خطأ، حاول مرة أخرى'));
     await _tts.setPitch(_defaultPitch);
     await _tts.setSpeechRate(_defaultRate);
   }

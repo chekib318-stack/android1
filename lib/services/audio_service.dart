@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_tts/flutter_tts.dart';
@@ -12,6 +14,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// لإضافة الأصوات الموحدة: ضع ملفات MP3 مسمّاة بمعرّف التمرين
 /// (مثال: assets/audio/ex_001.mp3) — التطبيق يكتشفها تلقائيا بلا أي
 /// تعديل إضافي على الكود. راجع assets/audio/README.md للتفاصيل.
+///
+/// ملاحظة أداء مهمة: التحقق من وجود ملف يتم مرة واحدة فقط عند بدء
+/// التطبيق (عبر فهرس الأصول AssetManifest.json)، وليس بمحاولة تحميل
+/// الملف في كل استدعاء — هذا يفادي أي بطء ملحوظ في القراءة، خاصة عندما
+/// لا توجد بعد ملفات صوتية حقيقية (الحالة الافتراضية حاليا).
 class AudioService {
   AudioService._internal() {
     _init();
@@ -21,6 +28,7 @@ class AudioService {
   final FlutterTts _tts = FlutterTts();
   final AudioPlayer _player = AudioPlayer();
   bool _ready = false;
+  Set<String> _availableAssets = {};
 
   static const double _defaultPitch = 1.0;
   static const double _defaultRate = 0.42;
@@ -32,8 +40,22 @@ class AudioService {
     await _tts.setSpeechRate(_defaultRate); // أبطأ قليلا لملاءمة المتعلمين الصغار
     await _tts.setPitch(_defaultPitch);
     await _tts.awaitSpeakCompletion(true); // ينتظر speak() حتى ينتهي النطق فعليا
+    await _loadAssetManifest();
     await _applySavedVoiceIfAny();
     _ready = true;
+  }
+
+  /// يحمّل فهرس كل ملفات الأصول مرة واحدة فقط عند بدء التطبيق، ليصير
+  /// التحقق من وجود ملف صوتي معين عملية فورية (بحث في Set) بدل عملية
+  /// تحميل فعلية مكلفة في كل مرة.
+  Future<void> _loadAssetManifest() async {
+    try {
+      final manifestStr = await rootBundle.loadString('AssetManifest.json');
+      final Map<String, dynamic> manifest = json.decode(manifestStr);
+      _availableAssets = manifest.keys.toSet();
+    } catch (_) {
+      _availableAssets = {};
+    }
   }
 
   Future<void> _applySavedVoiceIfAny() async {
@@ -49,21 +71,14 @@ class AudioService {
     }
   }
 
-  /// يتحقق هل ملف الأصول موجود فعليا (بدون رمي استثناء إن لم يكن).
-  Future<bool> _assetExists(String assetPath) async {
-    try {
-      await rootBundle.load(assetPath);
-      return true;
-    } catch (_) {
-      return false;
-    }
-  }
+  bool _assetExists(String assetPath) => _availableAssets.contains(assetPath);
 
   /// النقطة الموحّدة لنطق تمرين محدد: تجرب أولا الملف الصوتي الحقيقي
   /// المطابق لمعرّف التمرين، وإن لم يوجد ترجع تلقائيا لـTTS العادي.
   Future<void> speakForExercise(String exerciseId, String fallbackText) async {
+    if (!_ready) await _init();
     final assetPath = 'assets/audio/$exerciseId.mp3';
-    if (await _assetExists(assetPath)) {
+    if (_assetExists(assetPath)) {
       try {
         await _player.stop();
         await _player.play(AssetSource('audio/$exerciseId.mp3'));
@@ -123,9 +138,6 @@ class AudioService {
 
   /// تعليق تحفيزي عند الإجابة الصحيحة، بنبرة مرحة أعلى قليلا من المعتاد.
   /// [phrase] الجملة المراد نطقها (تُختار عشوائيا من عدة جمل في الواجهة).
-  /// ملاحظة: لا يستعمل ملفات صوتية ثابتة هنا لأن الجملة تتغير في كل مرة؛
-  /// عند توفر تسجيلات حقيقية لاحقا، يمكن تسجيل نسخة لكل جملة على حدة
-  /// وتوسيع هذه الدالة لتختار الملف المطابق للجملة المختارة.
   Future<void> speakCorrect(String phrase) async {
     if (!_ready) await _init();
     await _tts.stop();
@@ -137,15 +149,15 @@ class AudioService {
   /// تعليق عند الإجابة الخاطئة، بنبرة أهدأ وأبطأ قليلا (نغمة حزينة لطيفة)
   /// دون أن تكون محبطة للمتعلم الصغير.
   Future<void> speakWrong() async {
+    if (!_ready) await _init();
     final assetPath = 'assets/audio/wrong.mp3';
-    if (await _assetExists(assetPath)) {
+    if (_assetExists(assetPath)) {
       try {
         await _player.stop();
         await _player.play(AssetSource('audio/wrong.mp3'));
         return;
       } catch (_) {}
     }
-    if (!_ready) await _init();
     await _tts.stop();
     await _tts.setPitch(0.82);
     await _tts.setSpeechRate(0.36);

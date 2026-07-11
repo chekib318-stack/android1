@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 
-/// شخصية "عمّي التونسي" — معلّم تونسي بمعطف أبيض وشارة العلم التونسي،
-/// بصورة حقيقية (assets/images/ami_tounsi.png). تدخل البطاقة بحركة
+/// شخصية "المدرس" — معلّم تونسي بمعطف أبيض وشارة العلم التونسي،
+/// بصورة حقيقية (assets/images/teacher_happy.png). تدخل البطاقة بحركة
 /// انزلاق وتلاشي، بينما تهتز صورة الشخصية بلطف باستمرار وتنبض بسرعة
 /// أثناء نطق الجملة لتبدو وكأنها "تتكلم".
 class MascotCelebration extends StatefulWidget {
@@ -79,7 +79,7 @@ class _MascotCelebrationState extends State<MascotCelebration>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'عمّي التونسي',
+                      'المدرس',
                       style: TextStyle(
                         color: AppColors.zellige,
                         fontWeight: FontWeight.w800,
@@ -122,7 +122,7 @@ class _MascotCelebrationState extends State<MascotCelebration>
       child: ClipRRect(
         borderRadius: BorderRadius.circular(18),
         child: Image.asset(
-          'assets/images/ami_tounsi.png',
+          'assets/images/teacher_happy.png',
           width: 92,
           height: 110,
           fit: BoxFit.cover,

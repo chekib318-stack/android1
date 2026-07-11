@@ -24,7 +24,7 @@ class ExerciseView extends StatefulWidget {
 class _ExerciseViewState extends State<ExerciseView> {
   // جمل تحفيزية تونسية تُختار عشوائيا عند كل إجابة صحيحة
   static const List<String> _correctPhrases = [
-    'أحسنت، إجابتك صحيحة',
+    'نعم، إجابتك صحيحة',
     'إجابة صحيحة يا عبقري',
     'ممتاز، جواب صحيح',
   ];

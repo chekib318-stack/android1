@@ -32,7 +32,7 @@ class _LessonCompleteScreenState extends State<LessonCompleteScreen> {
   void initState() {
     super.initState();
     final message = _isHappy
-        ? 'أحسنت! حصلت على ${widget.correctCount} من $_total'
+        ? 'ممتاز! حصلت على ${widget.correctCount} من $_total'
         : 'حاول مرة أخرى، حصلت على ${widget.correctCount} من $_total';
     WidgetsBinding.instance.addPostFrameCallback((_) {
       AudioService.instance.speak(message);
@@ -66,7 +66,7 @@ class _LessonCompleteScreenState extends State<LessonCompleteScreen> {
               ),
               const SizedBox(height: 16),
               Text(
-                _isHappy ? 'أحسنت!' : 'حاول مرة أخرى',
+                _isHappy ? 'ممتاز!' : 'حاول مرة أخرى',
                 style: Theme.of(context).textTheme.displayLarge?.copyWith(
                       color: _isHappy ? AppColors.sidiBlue : AppColors.harissa,
                     ),

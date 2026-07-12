@@ -106,7 +106,7 @@ class _LessonCompleteScreenState extends State<LessonCompleteScreen> {
                     );
                   } else {
                     Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(builder: (_) => const HomeScreen()),
+                      MaterialPageRoute(builder: (_) => const HomeScreen(announceNext: true)),
                       (route) => false,
                     );
                   }

@@ -21,18 +21,18 @@ final LearningUnit lesson01Unit = LearningUnit(
       icon: '🐱',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'قطة', emoji: '🐱', soundEffect: 'cat_meow'),
-        IntroItem(word: 'كلب', emoji: '🐶', soundEffect: 'dog_bark'),
-        IntroItem(word: 'أرنب', emoji: '🐰'),
-        IntroItem(word: 'سمكة', emoji: '🐟'),
-        IntroItem(word: 'ببغاء', emoji: '🦜', soundEffect: 'parrot_squawk'),
-        IntroItem(word: 'حمامة', emoji: '🕊️', soundEffect: 'pigeon_coo'),
+        IntroItem(word: 'هذه قطة', emoji: '🐱', soundEffect: 'cat_meow'),
+        IntroItem(word: 'هذا كلب', emoji: '🐶', soundEffect: 'dog_bark'),
+        IntroItem(word: 'هذا أرنب', emoji: '🐰'),
+        IntroItem(word: 'هذه سمكة', emoji: '🐟'),
+        IntroItem(word: 'هذا ببغاء', emoji: '🦜', soundEffect: 'parrot_squawk'),
+        IntroItem(word: 'هذه حمامة', emoji: '🕊️', soundEffect: 'pigeon_coo'),
       ],
       exercises: const [
         Exercise(
           id: 'ex01_001',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: قطة',
+          prompt: 'اختر الصورة المناسبة لـ هذه قطة',
           targetWord: 'قطة',
           emoji: '🐱',
           options: ['🐱', '🐶', '🐰', '🐟'],
@@ -42,7 +42,7 @@ final LearningUnit lesson01Unit = LearningUnit(
         Exercise(
           id: 'ex01_002',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: كلب',
+          prompt: 'اختر الصورة المناسبة لـ هذا كلب',
           targetWord: 'كلب',
           emoji: '🐶',
           options: ['🐶', '🐱', '🐰', '🐟'],
@@ -52,7 +52,7 @@ final LearningUnit lesson01Unit = LearningUnit(
         Exercise(
           id: 'ex01_003',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: أرنب',
+          prompt: 'اختر الصورة المناسبة لـ هذا أرنب',
           targetWord: 'أرنب',
           emoji: '🐰',
           options: ['🐰', '🐱', '🐶', '🐟'],
@@ -61,7 +61,7 @@ final LearningUnit lesson01Unit = LearningUnit(
         Exercise(
           id: 'ex01_004',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: سمكة',
+          prompt: 'اختر الصورة المناسبة لـ هذه سمكة',
           targetWord: 'سمكة',
           emoji: '🐟',
           options: ['🐟', '🐱', '🐶', '🐰'],
@@ -75,6 +75,7 @@ final LearningUnit lesson01Unit = LearningUnit(
           options: ['ببغاء', 'قطة', 'كلب'],
           correctAnswer: 'ببغاء',
           soundEffect: 'parrot_squawk',
+          spokenText: 'هذا ببغاء',
         ),
         Exercise(
           id: 'ex01_006',
@@ -84,6 +85,7 @@ final LearningUnit lesson01Unit = LearningUnit(
           options: ['حمامة', 'قطة', 'كلب'],
           correctAnswer: 'حمامة',
           soundEffect: 'pigeon_coo',
+          spokenText: 'هذه حمامة',
         ),
         Exercise(
           id: 'ex01_007',
@@ -119,18 +121,18 @@ final LearningUnit lesson02Unit = LearningUnit(
       icon: '🐄',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'بقرة', emoji: '🐄', soundEffect: 'cow_moo'),
-        IntroItem(word: 'خروف', emoji: '🐑', soundEffect: 'sheep_baa'),
-        IntroItem(word: 'حصان', emoji: '🐴', soundEffect: 'horse_neigh'),
-        IntroItem(word: 'دجاجة', emoji: '🐔', soundEffect: 'chicken_cluck'),
-        IntroItem(word: 'بطة', emoji: '🦆', soundEffect: 'duck_quack'),
-        IntroItem(word: 'عنزة', emoji: '🐐', soundEffect: 'goat_bleat'),
+        IntroItem(word: 'هذه بقرة', emoji: '🐄', soundEffect: 'cow_moo'),
+        IntroItem(word: 'هذا خروف', emoji: '🐑', soundEffect: 'sheep_baa'),
+        IntroItem(word: 'هذا حصان', emoji: '🐴', soundEffect: 'horse_neigh'),
+        IntroItem(word: 'هذه دجاجة', emoji: '🐔', soundEffect: 'chicken_cluck'),
+        IntroItem(word: 'هذه بطة', emoji: '🦆', soundEffect: 'duck_quack'),
+        IntroItem(word: 'هذه عنزة', emoji: '🐐', soundEffect: 'goat_bleat'),
       ],
       exercises: const [
         Exercise(
           id: 'ex02_009',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: بقرة',
+          prompt: 'اختر الصورة المناسبة لـ هذه بقرة',
           targetWord: 'بقرة',
           emoji: '🐄',
           options: ['🐄', '🐑', '🐴', '🐔'],
@@ -140,7 +142,7 @@ final LearningUnit lesson02Unit = LearningUnit(
         Exercise(
           id: 'ex02_010',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: خروف',
+          prompt: 'اختر الصورة المناسبة لـ هذا خروف',
           targetWord: 'خروف',
           emoji: '🐑',
           options: ['🐑', '🐄', '🐴', '🐔'],
@@ -150,7 +152,7 @@ final LearningUnit lesson02Unit = LearningUnit(
         Exercise(
           id: 'ex02_011',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: حصان',
+          prompt: 'اختر الصورة المناسبة لـ هذا حصان',
           targetWord: 'حصان',
           emoji: '🐴',
           options: ['🐴', '🐄', '🐑', '🐔'],
@@ -160,7 +162,7 @@ final LearningUnit lesson02Unit = LearningUnit(
         Exercise(
           id: 'ex02_012',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: دجاجة',
+          prompt: 'اختر الصورة المناسبة لـ هذه دجاجة',
           targetWord: 'دجاجة',
           emoji: '🐔',
           options: ['🐔', '🐄', '🐑', '🐴'],
@@ -175,6 +177,7 @@ final LearningUnit lesson02Unit = LearningUnit(
           options: ['بطة', 'بقرة', 'خروف'],
           correctAnswer: 'بطة',
           soundEffect: 'duck_quack',
+          spokenText: 'هذه بطة',
         ),
         Exercise(
           id: 'ex02_014',
@@ -184,6 +187,7 @@ final LearningUnit lesson02Unit = LearningUnit(
           options: ['عنزة', 'بقرة', 'خروف'],
           correctAnswer: 'عنزة',
           soundEffect: 'goat_bleat',
+          spokenText: 'هذه عنزة',
         ),
         Exercise(
           id: 'ex02_015',
@@ -219,18 +223,18 @@ final LearningUnit lesson03Unit = LearningUnit(
       icon: '🦁',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'أسد', emoji: '🦁', soundEffect: 'lion_roar'),
-        IntroItem(word: 'فيل', emoji: '🐘', soundEffect: 'elephant_trumpet'),
-        IntroItem(word: 'فهد', emoji: '🐆'),
-        IntroItem(word: 'زرافة', emoji: '🦒'),
-        IntroItem(word: 'قرد', emoji: '🐵', soundEffect: 'monkey_screech'),
-        IntroItem(word: 'دب', emoji: '🐻', soundEffect: 'bear_growl'),
+        IntroItem(word: 'هذا أسد', emoji: '🦁', soundEffect: 'lion_roar'),
+        IntroItem(word: 'هذا فيل', emoji: '🐘', soundEffect: 'elephant_trumpet'),
+        IntroItem(word: 'هذا فهد', emoji: '🐆'),
+        IntroItem(word: 'هذه زرافة', emoji: '🦒'),
+        IntroItem(word: 'هذا قرد', emoji: '🐵', soundEffect: 'monkey_screech'),
+        IntroItem(word: 'هذا دب', emoji: '🐻', soundEffect: 'bear_growl'),
       ],
       exercises: const [
         Exercise(
           id: 'ex03_017',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: أسد',
+          prompt: 'اختر الصورة المناسبة لـ هذا أسد',
           targetWord: 'أسد',
           emoji: '🦁',
           options: ['🦁', '🐘', '🐆', '🦒'],
@@ -240,7 +244,7 @@ final LearningUnit lesson03Unit = LearningUnit(
         Exercise(
           id: 'ex03_018',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: فيل',
+          prompt: 'اختر الصورة المناسبة لـ هذا فيل',
           targetWord: 'فيل',
           emoji: '🐘',
           options: ['🐘', '🦁', '🐆', '🦒'],
@@ -250,7 +254,7 @@ final LearningUnit lesson03Unit = LearningUnit(
         Exercise(
           id: 'ex03_019',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: فهد',
+          prompt: 'اختر الصورة المناسبة لـ هذا فهد',
           targetWord: 'فهد',
           emoji: '🐆',
           options: ['🐆', '🦁', '🐘', '🦒'],
@@ -259,7 +263,7 @@ final LearningUnit lesson03Unit = LearningUnit(
         Exercise(
           id: 'ex03_020',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: زرافة',
+          prompt: 'اختر الصورة المناسبة لـ هذه زرافة',
           targetWord: 'زرافة',
           emoji: '🦒',
           options: ['🦒', '🦁', '🐘', '🐆'],
@@ -273,6 +277,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           options: ['قرد', 'أسد', 'فيل'],
           correctAnswer: 'قرد',
           soundEffect: 'monkey_screech',
+          spokenText: 'هذا قرد',
         ),
         Exercise(
           id: 'ex03_022',
@@ -282,6 +287,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           options: ['دب', 'أسد', 'فيل'],
           correctAnswer: 'دب',
           soundEffect: 'bear_growl',
+          spokenText: 'هذا دب',
         ),
         Exercise(
           id: 'ex03_023',
@@ -317,18 +323,18 @@ final LearningUnit lesson04Unit = LearningUnit(
       icon: '🦊',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'ثعلب', emoji: '🦊'),
-        IntroItem(word: 'ذئب', emoji: '🐺', soundEffect: 'wolf_howl'),
-        IntroItem(word: 'تمساح', emoji: '🐊'),
-        IntroItem(word: 'ثعبان', emoji: '🐍', soundEffect: 'snake_hiss'),
-        IntroItem(word: 'سلحفاة', emoji: '🐢'),
-        IntroItem(word: 'خنزير', emoji: '🐷', soundEffect: 'pig_oink'),
+        IntroItem(word: 'هذا ثعلب', emoji: '🦊'),
+        IntroItem(word: 'هذا ذئب', emoji: '🐺', soundEffect: 'wolf_howl'),
+        IntroItem(word: 'هذا تمساح', emoji: '🐊'),
+        IntroItem(word: 'هذا ثعبان', emoji: '🐍', soundEffect: 'snake_hiss'),
+        IntroItem(word: 'هذه سلحفاة', emoji: '🐢'),
+        IntroItem(word: 'هذا خنزير', emoji: '🐷', soundEffect: 'pig_oink'),
       ],
       exercises: const [
         Exercise(
           id: 'ex04_025',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: ثعلب',
+          prompt: 'اختر الصورة المناسبة لـ هذا ثعلب',
           targetWord: 'ثعلب',
           emoji: '🦊',
           options: ['🦊', '🐺', '🐊', '🐍'],
@@ -337,7 +343,7 @@ final LearningUnit lesson04Unit = LearningUnit(
         Exercise(
           id: 'ex04_026',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: ذئب',
+          prompt: 'اختر الصورة المناسبة لـ هذا ذئب',
           targetWord: 'ذئب',
           emoji: '🐺',
           options: ['🐺', '🦊', '🐊', '🐍'],
@@ -347,7 +353,7 @@ final LearningUnit lesson04Unit = LearningUnit(
         Exercise(
           id: 'ex04_027',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: تمساح',
+          prompt: 'اختر الصورة المناسبة لـ هذا تمساح',
           targetWord: 'تمساح',
           emoji: '🐊',
           options: ['🐊', '🦊', '🐺', '🐍'],
@@ -356,7 +362,7 @@ final LearningUnit lesson04Unit = LearningUnit(
         Exercise(
           id: 'ex04_028',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: ثعبان',
+          prompt: 'اختر الصورة المناسبة لـ هذا ثعبان',
           targetWord: 'ثعبان',
           emoji: '🐍',
           options: ['🐍', '🦊', '🐺', '🐊'],
@@ -370,6 +376,7 @@ final LearningUnit lesson04Unit = LearningUnit(
           targetWord: 'سلحفاة',
           options: ['سلحفاة', 'ثعلب', 'ذئب'],
           correctAnswer: 'سلحفاة',
+          spokenText: 'هذه سلحفاة',
         ),
         Exercise(
           id: 'ex04_030',
@@ -379,6 +386,7 @@ final LearningUnit lesson04Unit = LearningUnit(
           options: ['خنزير', 'ثعلب', 'ذئب'],
           correctAnswer: 'خنزير',
           soundEffect: 'pig_oink',
+          spokenText: 'هذا خنزير',
         ),
         Exercise(
           id: 'ex04_031',
@@ -414,18 +422,18 @@ final LearningUnit lesson05Unit = LearningUnit(
       icon: '🏠',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'بيت', emoji: '🏠'),
-        IntroItem(word: 'قلم', emoji: '✏️'),
-        IntroItem(word: 'كتاب', emoji: '📖'),
-        IntroItem(word: 'باب', emoji: '🚪'),
-        IntroItem(word: 'سيارة', emoji: '🚗', soundEffect: 'car_horn'),
-        IntroItem(word: 'حقيبة', emoji: '🎒'),
+        IntroItem(word: 'هذا بيت', emoji: '🏠'),
+        IntroItem(word: 'هذا قلم', emoji: '✏️'),
+        IntroItem(word: 'هذا كتاب', emoji: '📖'),
+        IntroItem(word: 'هذا باب', emoji: '🚪'),
+        IntroItem(word: 'هذه سيارة', emoji: '🚗', soundEffect: 'car_horn'),
+        IntroItem(word: 'هذه حقيبة', emoji: '🎒'),
       ],
       exercises: const [
         Exercise(
           id: 'ex05_033',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: بيت',
+          prompt: 'اختر الصورة المناسبة لـ هذا بيت',
           targetWord: 'بيت',
           emoji: '🏠',
           options: ['🏠', '✏️', '📖', '🚪'],
@@ -434,7 +442,7 @@ final LearningUnit lesson05Unit = LearningUnit(
         Exercise(
           id: 'ex05_034',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: قلم',
+          prompt: 'اختر الصورة المناسبة لـ هذا قلم',
           targetWord: 'قلم',
           emoji: '✏️',
           options: ['✏️', '🏠', '📖', '🚪'],
@@ -443,7 +451,7 @@ final LearningUnit lesson05Unit = LearningUnit(
         Exercise(
           id: 'ex05_035',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: كتاب',
+          prompt: 'اختر الصورة المناسبة لـ هذا كتاب',
           targetWord: 'كتاب',
           emoji: '📖',
           options: ['📖', '🏠', '✏️', '🚪'],
@@ -452,7 +460,7 @@ final LearningUnit lesson05Unit = LearningUnit(
         Exercise(
           id: 'ex05_036',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: باب',
+          prompt: 'اختر الصورة المناسبة لـ هذا باب',
           targetWord: 'باب',
           emoji: '🚪',
           options: ['🚪', '🏠', '✏️', '📖'],
@@ -466,6 +474,7 @@ final LearningUnit lesson05Unit = LearningUnit(
           options: ['سيارة', 'بيت', 'قلم'],
           correctAnswer: 'سيارة',
           soundEffect: 'car_horn',
+          spokenText: 'هذه سيارة',
         ),
         Exercise(
           id: 'ex05_038',
@@ -474,6 +483,7 @@ final LearningUnit lesson05Unit = LearningUnit(
           targetWord: 'حقيبة',
           options: ['حقيبة', 'بيت', 'قلم'],
           correctAnswer: 'حقيبة',
+          spokenText: 'هذه حقيبة',
         ),
         Exercise(
           id: 'ex05_039',
@@ -509,18 +519,18 @@ final LearningUnit lesson06Unit = LearningUnit(
       icon: '🔑',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'ساعة', emoji: '⌚'),
-        IntroItem(word: 'مفتاح', emoji: '🔑'),
-        IntroItem(word: 'هاتف', emoji: '📱'),
-        IntroItem(word: 'مصباح', emoji: '💡'),
-        IntroItem(word: 'كرسي', emoji: '🪑'),
-        IntroItem(word: 'نافذة', emoji: '🪟'),
+        IntroItem(word: 'هذه ساعة', emoji: '⌚'),
+        IntroItem(word: 'هذا مفتاح', emoji: '🔑'),
+        IntroItem(word: 'هذا هاتف', emoji: '📱'),
+        IntroItem(word: 'هذا مصباح', emoji: '💡'),
+        IntroItem(word: 'هذا كرسي', emoji: '🪑'),
+        IntroItem(word: 'هذه نافذة', emoji: '🪟'),
       ],
       exercises: const [
         Exercise(
           id: 'ex06_041',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: ساعة',
+          prompt: 'اختر الصورة المناسبة لـ هذه ساعة',
           targetWord: 'ساعة',
           emoji: '⌚',
           options: ['⌚', '🔑', '📱', '💡'],
@@ -529,7 +539,7 @@ final LearningUnit lesson06Unit = LearningUnit(
         Exercise(
           id: 'ex06_042',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: مفتاح',
+          prompt: 'اختر الصورة المناسبة لـ هذا مفتاح',
           targetWord: 'مفتاح',
           emoji: '🔑',
           options: ['🔑', '⌚', '📱', '💡'],
@@ -538,7 +548,7 @@ final LearningUnit lesson06Unit = LearningUnit(
         Exercise(
           id: 'ex06_043',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: هاتف',
+          prompt: 'اختر الصورة المناسبة لـ هذا هاتف',
           targetWord: 'هاتف',
           emoji: '📱',
           options: ['📱', '⌚', '🔑', '💡'],
@@ -547,7 +557,7 @@ final LearningUnit lesson06Unit = LearningUnit(
         Exercise(
           id: 'ex06_044',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: مصباح',
+          prompt: 'اختر الصورة المناسبة لـ هذا مصباح',
           targetWord: 'مصباح',
           emoji: '💡',
           options: ['💡', '⌚', '🔑', '📱'],
@@ -560,6 +570,7 @@ final LearningUnit lesson06Unit = LearningUnit(
           targetWord: 'كرسي',
           options: ['كرسي', 'ساعة', 'مفتاح'],
           correctAnswer: 'كرسي',
+          spokenText: 'هذا كرسي',
         ),
         Exercise(
           id: 'ex06_046',
@@ -568,6 +579,7 @@ final LearningUnit lesson06Unit = LearningUnit(
           targetWord: 'نافذة',
           options: ['نافذة', 'ساعة', 'مفتاح'],
           correctAnswer: 'نافذة',
+          spokenText: 'هذه نافذة',
         ),
         Exercise(
           id: 'ex06_047',
@@ -603,18 +615,18 @@ final LearningUnit lesson07Unit = LearningUnit(
       icon: '☀️',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'شمس', emoji: '☀️'),
-        IntroItem(word: 'قمر', emoji: '🌙'),
-        IntroItem(word: 'نجمة', emoji: '⭐'),
-        IntroItem(word: 'سحابة', emoji: '☁️'),
-        IntroItem(word: 'ماء', emoji: '💧'),
-        IntroItem(word: 'وردة', emoji: '🌹'),
+        IntroItem(word: 'هذه شمس', emoji: '☀️'),
+        IntroItem(word: 'هذا قمر', emoji: '🌙'),
+        IntroItem(word: 'هذه نجمة', emoji: '⭐'),
+        IntroItem(word: 'هذه سحابة', emoji: '☁️'),
+        IntroItem(word: 'هذا ماء', emoji: '💧'),
+        IntroItem(word: 'هذه وردة', emoji: '🌹'),
       ],
       exercises: const [
         Exercise(
           id: 'ex07_049',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: شمس',
+          prompt: 'اختر الصورة المناسبة لـ هذه شمس',
           targetWord: 'شمس',
           emoji: '☀️',
           options: ['☀️', '🌙', '⭐', '☁️'],
@@ -623,7 +635,7 @@ final LearningUnit lesson07Unit = LearningUnit(
         Exercise(
           id: 'ex07_050',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: قمر',
+          prompt: 'اختر الصورة المناسبة لـ هذا قمر',
           targetWord: 'قمر',
           emoji: '🌙',
           options: ['🌙', '☀️', '⭐', '☁️'],
@@ -632,7 +644,7 @@ final LearningUnit lesson07Unit = LearningUnit(
         Exercise(
           id: 'ex07_051',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: نجمة',
+          prompt: 'اختر الصورة المناسبة لـ هذه نجمة',
           targetWord: 'نجمة',
           emoji: '⭐',
           options: ['⭐', '☀️', '🌙', '☁️'],
@@ -641,7 +653,7 @@ final LearningUnit lesson07Unit = LearningUnit(
         Exercise(
           id: 'ex07_052',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: سحابة',
+          prompt: 'اختر الصورة المناسبة لـ هذه سحابة',
           targetWord: 'سحابة',
           emoji: '☁️',
           options: ['☁️', '☀️', '🌙', '⭐'],
@@ -654,6 +666,7 @@ final LearningUnit lesson07Unit = LearningUnit(
           targetWord: 'ماء',
           options: ['ماء', 'شمس', 'قمر'],
           correctAnswer: 'ماء',
+          spokenText: 'هذا ماء',
         ),
         Exercise(
           id: 'ex07_054',
@@ -662,6 +675,7 @@ final LearningUnit lesson07Unit = LearningUnit(
           targetWord: 'وردة',
           options: ['وردة', 'شمس', 'قمر'],
           correctAnswer: 'وردة',
+          spokenText: 'هذه وردة',
         ),
         Exercise(
           id: 'ex07_055',
@@ -697,18 +711,18 @@ final LearningUnit lesson08Unit = LearningUnit(
       icon: '🌧️',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'مطر', emoji: '🌧️'),
-        IntroItem(word: 'جبل', emoji: '⛰️'),
-        IntroItem(word: 'بحر', emoji: '🌊'),
-        IntroItem(word: 'شجرة', emoji: '🌳'),
-        IntroItem(word: 'ثلج', emoji: '❄️'),
-        IntroItem(word: 'قوس قزح', emoji: '🌈'),
+        IntroItem(word: 'هذا مطر', emoji: '🌧️'),
+        IntroItem(word: 'هذا جبل', emoji: '⛰️'),
+        IntroItem(word: 'هذا بحر', emoji: '🌊'),
+        IntroItem(word: 'هذه شجرة', emoji: '🌳'),
+        IntroItem(word: 'هذا ثلج', emoji: '❄️'),
+        IntroItem(word: 'هذا قوس قزح', emoji: '🌈'),
       ],
       exercises: const [
         Exercise(
           id: 'ex08_057',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: مطر',
+          prompt: 'اختر الصورة المناسبة لـ هذا مطر',
           targetWord: 'مطر',
           emoji: '🌧️',
           options: ['🌧️', '⛰️', '🌊', '🌳'],
@@ -717,7 +731,7 @@ final LearningUnit lesson08Unit = LearningUnit(
         Exercise(
           id: 'ex08_058',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: جبل',
+          prompt: 'اختر الصورة المناسبة لـ هذا جبل',
           targetWord: 'جبل',
           emoji: '⛰️',
           options: ['⛰️', '🌧️', '🌊', '🌳'],
@@ -726,7 +740,7 @@ final LearningUnit lesson08Unit = LearningUnit(
         Exercise(
           id: 'ex08_059',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: بحر',
+          prompt: 'اختر الصورة المناسبة لـ هذا بحر',
           targetWord: 'بحر',
           emoji: '🌊',
           options: ['🌊', '🌧️', '⛰️', '🌳'],
@@ -735,7 +749,7 @@ final LearningUnit lesson08Unit = LearningUnit(
         Exercise(
           id: 'ex08_060',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: شجرة',
+          prompt: 'اختر الصورة المناسبة لـ هذه شجرة',
           targetWord: 'شجرة',
           emoji: '🌳',
           options: ['🌳', '🌧️', '⛰️', '🌊'],
@@ -748,6 +762,7 @@ final LearningUnit lesson08Unit = LearningUnit(
           targetWord: 'ثلج',
           options: ['ثلج', 'مطر', 'جبل'],
           correctAnswer: 'ثلج',
+          spokenText: 'هذا ثلج',
         ),
         Exercise(
           id: 'ex08_062',
@@ -756,6 +771,7 @@ final LearningUnit lesson08Unit = LearningUnit(
           targetWord: 'قوس قزح',
           options: ['قوس قزح', 'مطر', 'جبل'],
           correctAnswer: 'قوس قزح',
+          spokenText: 'هذا قوس قزح',
         ),
         Exercise(
           id: 'ex08_063',
@@ -979,18 +995,18 @@ final LearningUnit lesson11Unit = LearningUnit(
       icon: '⭕',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'دائرة', emoji: '⭕'),
-        IntroItem(word: 'مربع', emoji: '⬛'),
-        IntroItem(word: 'مثلث', emoji: '🔺'),
-        IntroItem(word: 'قلب', emoji: '❤️'),
-        IntroItem(word: 'نجمة', emoji: '⭐'),
-        IntroItem(word: 'مكعب', emoji: '🧊'),
+        IntroItem(word: 'هذه دائرة', emoji: '⭕'),
+        IntroItem(word: 'هذا مربع', emoji: '⬛'),
+        IntroItem(word: 'هذا مثلث', emoji: '🔺'),
+        IntroItem(word: 'هذا قلب', emoji: '❤️'),
+        IntroItem(word: 'هذه نجمة', emoji: '⭐'),
+        IntroItem(word: 'هذا مكعب', emoji: '🧊'),
       ],
       exercises: const [
         Exercise(
           id: 'ex11_081',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: دائرة',
+          prompt: 'اختر الصورة المناسبة لـ هذه دائرة',
           targetWord: 'دائرة',
           emoji: '⭕',
           options: ['⭕', '⬛', '🔺', '❤️'],
@@ -999,7 +1015,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         Exercise(
           id: 'ex11_082',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: مربع',
+          prompt: 'اختر الصورة المناسبة لـ هذا مربع',
           targetWord: 'مربع',
           emoji: '⬛',
           options: ['⬛', '⭕', '🔺', '❤️'],
@@ -1008,7 +1024,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         Exercise(
           id: 'ex11_083',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: مثلث',
+          prompt: 'اختر الصورة المناسبة لـ هذا مثلث',
           targetWord: 'مثلث',
           emoji: '🔺',
           options: ['🔺', '⭕', '⬛', '❤️'],
@@ -1017,7 +1033,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         Exercise(
           id: 'ex11_084',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: قلب',
+          prompt: 'اختر الصورة المناسبة لـ هذا قلب',
           targetWord: 'قلب',
           emoji: '❤️',
           options: ['❤️', '⭕', '⬛', '🔺'],
@@ -1030,6 +1046,7 @@ final LearningUnit lesson11Unit = LearningUnit(
           targetWord: 'نجمة',
           options: ['نجمة', 'دائرة', 'مربع'],
           correctAnswer: 'نجمة',
+          spokenText: 'هذه نجمة',
         ),
         Exercise(
           id: 'ex11_086',
@@ -1038,6 +1055,7 @@ final LearningUnit lesson11Unit = LearningUnit(
           targetWord: 'مكعب',
           options: ['مكعب', 'دائرة', 'مربع'],
           correctAnswer: 'مكعب',
+          spokenText: 'هذا مكعب',
         ),
         Exercise(
           id: 'ex11_087',
@@ -1073,18 +1091,18 @@ final LearningUnit lesson12Unit = LearningUnit(
       icon: '🍌',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'موزة', emoji: '🍌'),
-        IntroItem(word: 'تفاحة', emoji: '🍎'),
-        IntroItem(word: 'برتقالة', emoji: '🍊'),
-        IntroItem(word: 'عنب', emoji: '🍇'),
-        IntroItem(word: 'فراولة', emoji: '🍓'),
-        IntroItem(word: 'بطيخ', emoji: '🍉'),
+        IntroItem(word: 'هذه موزة', emoji: '🍌'),
+        IntroItem(word: 'هذه تفاحة', emoji: '🍎'),
+        IntroItem(word: 'هذه برتقالة', emoji: '🍊'),
+        IntroItem(word: 'هذا عنب', emoji: '🍇'),
+        IntroItem(word: 'هذه فراولة', emoji: '🍓'),
+        IntroItem(word: 'هذا بطيخ', emoji: '🍉'),
       ],
       exercises: const [
         Exercise(
           id: 'ex12_089',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: موزة',
+          prompt: 'اختر الصورة المناسبة لـ هذه موزة',
           targetWord: 'موزة',
           emoji: '🍌',
           options: ['🍌', '🍎', '🍊', '🍇'],
@@ -1093,7 +1111,7 @@ final LearningUnit lesson12Unit = LearningUnit(
         Exercise(
           id: 'ex12_090',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: تفاحة',
+          prompt: 'اختر الصورة المناسبة لـ هذه تفاحة',
           targetWord: 'تفاحة',
           emoji: '🍎',
           options: ['🍎', '🍌', '🍊', '🍇'],
@@ -1102,7 +1120,7 @@ final LearningUnit lesson12Unit = LearningUnit(
         Exercise(
           id: 'ex12_091',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: برتقالة',
+          prompt: 'اختر الصورة المناسبة لـ هذه برتقالة',
           targetWord: 'برتقالة',
           emoji: '🍊',
           options: ['🍊', '🍌', '🍎', '🍇'],
@@ -1111,7 +1129,7 @@ final LearningUnit lesson12Unit = LearningUnit(
         Exercise(
           id: 'ex12_092',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: عنب',
+          prompt: 'اختر الصورة المناسبة لـ هذا عنب',
           targetWord: 'عنب',
           emoji: '🍇',
           options: ['🍇', '🍌', '🍎', '🍊'],
@@ -1124,6 +1142,7 @@ final LearningUnit lesson12Unit = LearningUnit(
           targetWord: 'فراولة',
           options: ['فراولة', 'موزة', 'تفاحة'],
           correctAnswer: 'فراولة',
+          spokenText: 'هذه فراولة',
         ),
         Exercise(
           id: 'ex12_094',
@@ -1132,6 +1151,7 @@ final LearningUnit lesson12Unit = LearningUnit(
           targetWord: 'بطيخ',
           options: ['بطيخ', 'موزة', 'تفاحة'],
           correctAnswer: 'بطيخ',
+          spokenText: 'هذا بطيخ',
         ),
         Exercise(
           id: 'ex12_095',
@@ -1167,18 +1187,18 @@ final LearningUnit lesson13Unit = LearningUnit(
       icon: '🍍',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'أناناس', emoji: '🍍'),
-        IntroItem(word: 'خوخ', emoji: '🍑'),
-        IntroItem(word: 'توت', emoji: '🫐'),
-        IntroItem(word: 'ليمون', emoji: '🍋'),
-        IntroItem(word: 'جوز الهند', emoji: '🥥'),
-        IntroItem(word: 'إجاص', emoji: '🍐'),
+        IntroItem(word: 'هذا أناناس', emoji: '🍍'),
+        IntroItem(word: 'هذا خوخ', emoji: '🍑'),
+        IntroItem(word: 'هذا توت', emoji: '🫐'),
+        IntroItem(word: 'هذا ليمون', emoji: '🍋'),
+        IntroItem(word: 'هذا جوز الهند', emoji: '🥥'),
+        IntroItem(word: 'هذا إجاص', emoji: '🍐'),
       ],
       exercises: const [
         Exercise(
           id: 'ex13_097',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: أناناس',
+          prompt: 'اختر الصورة المناسبة لـ هذا أناناس',
           targetWord: 'أناناس',
           emoji: '🍍',
           options: ['🍍', '🍑', '🫐', '🍋'],
@@ -1187,7 +1207,7 @@ final LearningUnit lesson13Unit = LearningUnit(
         Exercise(
           id: 'ex13_098',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: خوخ',
+          prompt: 'اختر الصورة المناسبة لـ هذا خوخ',
           targetWord: 'خوخ',
           emoji: '🍑',
           options: ['🍑', '🍍', '🫐', '🍋'],
@@ -1196,7 +1216,7 @@ final LearningUnit lesson13Unit = LearningUnit(
         Exercise(
           id: 'ex13_099',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: توت',
+          prompt: 'اختر الصورة المناسبة لـ هذا توت',
           targetWord: 'توت',
           emoji: '🫐',
           options: ['🫐', '🍍', '🍑', '🍋'],
@@ -1205,7 +1225,7 @@ final LearningUnit lesson13Unit = LearningUnit(
         Exercise(
           id: 'ex13_100',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: ليمون',
+          prompt: 'اختر الصورة المناسبة لـ هذا ليمون',
           targetWord: 'ليمون',
           emoji: '🍋',
           options: ['🍋', '🍍', '🍑', '🫐'],
@@ -1218,6 +1238,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           targetWord: 'جوز الهند',
           options: ['جوز الهند', 'أناناس', 'خوخ'],
           correctAnswer: 'جوز الهند',
+          spokenText: 'هذا جوز الهند',
         ),
         Exercise(
           id: 'ex13_102',
@@ -1226,6 +1247,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           targetWord: 'إجاص',
           options: ['إجاص', 'أناناس', 'خوخ'],
           correctAnswer: 'إجاص',
+          spokenText: 'هذا إجاص',
         ),
         Exercise(
           id: 'ex13_103',
@@ -1261,18 +1283,18 @@ final LearningUnit lesson14Unit = LearningUnit(
       icon: '🥕',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'جزرة', emoji: '🥕'),
-        IntroItem(word: 'طماطم', emoji: '🍅'),
-        IntroItem(word: 'بطاطا', emoji: '🥔'),
-        IntroItem(word: 'خيار', emoji: '🥒'),
-        IntroItem(word: 'باذنجان', emoji: '🍆'),
-        IntroItem(word: 'فلفل', emoji: '🫑'),
+        IntroItem(word: 'هذه جزرة', emoji: '🥕'),
+        IntroItem(word: 'هذه طماطم', emoji: '🍅'),
+        IntroItem(word: 'هذه بطاطا', emoji: '🥔'),
+        IntroItem(word: 'هذا خيار', emoji: '🥒'),
+        IntroItem(word: 'هذا باذنجان', emoji: '🍆'),
+        IntroItem(word: 'هذا فلفل', emoji: '🫑'),
       ],
       exercises: const [
         Exercise(
           id: 'ex14_105',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: جزرة',
+          prompt: 'اختر الصورة المناسبة لـ هذه جزرة',
           targetWord: 'جزرة',
           emoji: '🥕',
           options: ['🥕', '🍅', '🥔', '🥒'],
@@ -1281,7 +1303,7 @@ final LearningUnit lesson14Unit = LearningUnit(
         Exercise(
           id: 'ex14_106',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: طماطم',
+          prompt: 'اختر الصورة المناسبة لـ هذه طماطم',
           targetWord: 'طماطم',
           emoji: '🍅',
           options: ['🍅', '🥕', '🥔', '🥒'],
@@ -1290,7 +1312,7 @@ final LearningUnit lesson14Unit = LearningUnit(
         Exercise(
           id: 'ex14_107',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: بطاطا',
+          prompt: 'اختر الصورة المناسبة لـ هذه بطاطا',
           targetWord: 'بطاطا',
           emoji: '🥔',
           options: ['🥔', '🥕', '🍅', '🥒'],
@@ -1299,7 +1321,7 @@ final LearningUnit lesson14Unit = LearningUnit(
         Exercise(
           id: 'ex14_108',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: خيار',
+          prompt: 'اختر الصورة المناسبة لـ هذا خيار',
           targetWord: 'خيار',
           emoji: '🥒',
           options: ['🥒', '🥕', '🍅', '🥔'],
@@ -1312,6 +1334,7 @@ final LearningUnit lesson14Unit = LearningUnit(
           targetWord: 'باذنجان',
           options: ['باذنجان', 'جزرة', 'طماطم'],
           correctAnswer: 'باذنجان',
+          spokenText: 'هذا باذنجان',
         ),
         Exercise(
           id: 'ex14_110',
@@ -1320,6 +1343,7 @@ final LearningUnit lesson14Unit = LearningUnit(
           targetWord: 'فلفل',
           options: ['فلفل', 'جزرة', 'طماطم'],
           correctAnswer: 'فلفل',
+          spokenText: 'هذا فلفل',
         ),
         Exercise(
           id: 'ex14_111',
@@ -1355,18 +1379,18 @@ final LearningUnit lesson15Unit = LearningUnit(
       icon: '👨',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'أب', emoji: '🧔‍♂️'),
-        IntroItem(word: 'أم', emoji: '👩'),
-        IntroItem(word: 'أخ', emoji: '👦'),
-        IntroItem(word: 'أخت', emoji: '👧'),
-        IntroItem(word: 'جد', emoji: '👴'),
-        IntroItem(word: 'جدة', emoji: '👵'),
+        IntroItem(word: 'هذا أب', emoji: '🧔‍♂️'),
+        IntroItem(word: 'هذه أم', emoji: '👩'),
+        IntroItem(word: 'هذا أخ', emoji: '👦'),
+        IntroItem(word: 'هذه أخت', emoji: '👧'),
+        IntroItem(word: 'هذا جد', emoji: '👴'),
+        IntroItem(word: 'هذه جدة', emoji: '👵'),
       ],
       exercises: const [
         Exercise(
           id: 'ex15_113',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: أب',
+          prompt: 'اختر الصورة المناسبة لـ هذا أب',
           targetWord: 'أب',
           emoji: '🧔‍♂️',
           options: ['🧔\u200d♂️', '👩', '👦', '👧'],
@@ -1375,7 +1399,7 @@ final LearningUnit lesson15Unit = LearningUnit(
         Exercise(
           id: 'ex15_114',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: أم',
+          prompt: 'اختر الصورة المناسبة لـ هذه أم',
           targetWord: 'أم',
           emoji: '👩',
           options: ['👩', '🧔\u200d♂️', '👦', '👧'],
@@ -1384,7 +1408,7 @@ final LearningUnit lesson15Unit = LearningUnit(
         Exercise(
           id: 'ex15_115',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: أخ',
+          prompt: 'اختر الصورة المناسبة لـ هذا أخ',
           targetWord: 'أخ',
           emoji: '👦',
           options: ['👦', '🧔\u200d♂️', '👩', '👧'],
@@ -1393,7 +1417,7 @@ final LearningUnit lesson15Unit = LearningUnit(
         Exercise(
           id: 'ex15_116',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: أخت',
+          prompt: 'اختر الصورة المناسبة لـ هذه أخت',
           targetWord: 'أخت',
           emoji: '👧',
           options: ['👧', '🧔\u200d♂️', '👩', '👦'],
@@ -1406,6 +1430,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           targetWord: 'جد',
           options: ['جد', 'أب', 'أم'],
           correctAnswer: 'جد',
+          spokenText: 'هذا جد',
         ),
         Exercise(
           id: 'ex15_118',
@@ -1414,6 +1439,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           targetWord: 'جدة',
           options: ['جدة', 'أب', 'أم'],
           correctAnswer: 'جدة',
+          spokenText: 'هذه جدة',
         ),
         Exercise(
           id: 'ex15_119',
@@ -1449,18 +1475,18 @@ final LearningUnit lesson16Unit = LearningUnit(
       icon: '⚽',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'كرة القدم', emoji: '⚽'),
-        IntroItem(word: 'كرة السلة', emoji: '🏀'),
-        IntroItem(word: 'كرة الطائرة', emoji: '🏐'),
-        IntroItem(word: 'السباحة', emoji: '🏊'),
-        IntroItem(word: 'الجري', emoji: '🏃'),
-        IntroItem(word: 'التزلج', emoji: '⛷️'),
+        IntroItem(word: 'هذه كرة القدم', emoji: '⚽'),
+        IntroItem(word: 'هذه كرة السلة', emoji: '🏀'),
+        IntroItem(word: 'هذه كرة الطائرة', emoji: '🏐'),
+        IntroItem(word: 'هذه السباحة', emoji: '🏊'),
+        IntroItem(word: 'هذا الجري', emoji: '🏃'),
+        IntroItem(word: 'هذا التزلج', emoji: '⛷️'),
       ],
       exercises: const [
         Exercise(
           id: 'ex16_121',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: كرة القدم',
+          prompt: 'اختر الصورة المناسبة لـ هذه كرة القدم',
           targetWord: 'كرة القدم',
           emoji: '⚽',
           options: ['⚽', '🏀', '🏐', '🏊'],
@@ -1469,7 +1495,7 @@ final LearningUnit lesson16Unit = LearningUnit(
         Exercise(
           id: 'ex16_122',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: كرة السلة',
+          prompt: 'اختر الصورة المناسبة لـ هذه كرة السلة',
           targetWord: 'كرة السلة',
           emoji: '🏀',
           options: ['🏀', '⚽', '🏐', '🏊'],
@@ -1478,7 +1504,7 @@ final LearningUnit lesson16Unit = LearningUnit(
         Exercise(
           id: 'ex16_123',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: كرة الطائرة',
+          prompt: 'اختر الصورة المناسبة لـ هذه كرة الطائرة',
           targetWord: 'كرة الطائرة',
           emoji: '🏐',
           options: ['🏐', '⚽', '🏀', '🏊'],
@@ -1487,7 +1513,7 @@ final LearningUnit lesson16Unit = LearningUnit(
         Exercise(
           id: 'ex16_124',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: السباحة',
+          prompt: 'اختر الصورة المناسبة لـ هذه السباحة',
           targetWord: 'السباحة',
           emoji: '🏊',
           options: ['🏊', '⚽', '🏀', '🏐'],
@@ -1500,6 +1526,7 @@ final LearningUnit lesson16Unit = LearningUnit(
           targetWord: 'الجري',
           options: ['الجري', 'كرة القدم', 'كرة السلة'],
           correctAnswer: 'الجري',
+          spokenText: 'هذا الجري',
         ),
         Exercise(
           id: 'ex16_126',
@@ -1508,6 +1535,7 @@ final LearningUnit lesson16Unit = LearningUnit(
           targetWord: 'التزلج',
           options: ['التزلج', 'كرة القدم', 'كرة السلة'],
           correctAnswer: 'التزلج',
+          spokenText: 'هذا التزلج',
         ),
         Exercise(
           id: 'ex16_127',
@@ -1731,18 +1759,18 @@ final LearningUnit lesson19Unit = LearningUnit(
       icon: '🚗',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'سيارة', emoji: '🚗', soundEffect: 'car_horn'),
-        IntroItem(word: 'طائرة', emoji: '✈️', soundEffect: 'airplane_engine'),
-        IntroItem(word: 'قطار', emoji: '🚆', soundEffect: 'train_horn'),
-        IntroItem(word: 'دراجة', emoji: '🚲', soundEffect: 'bike_bell'),
-        IntroItem(word: 'سفينة', emoji: '🚢', soundEffect: 'ship_horn'),
-        IntroItem(word: 'حافلة', emoji: '🚌', soundEffect: 'bus_horn'),
+        IntroItem(word: 'هذه سيارة', emoji: '🚗', soundEffect: 'car_horn'),
+        IntroItem(word: 'هذه طائرة', emoji: '✈️', soundEffect: 'airplane_engine'),
+        IntroItem(word: 'هذا قطار', emoji: '🚆', soundEffect: 'train_horn'),
+        IntroItem(word: 'هذه دراجة', emoji: '🚲', soundEffect: 'bike_bell'),
+        IntroItem(word: 'هذه سفينة', emoji: '🚢', soundEffect: 'ship_horn'),
+        IntroItem(word: 'هذه حافلة', emoji: '🚌', soundEffect: 'bus_horn'),
       ],
       exercises: const [
         Exercise(
           id: 'ex19_145',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: سيارة',
+          prompt: 'اختر الصورة المناسبة لـ هذه سيارة',
           targetWord: 'سيارة',
           emoji: '🚗',
           options: ['🚗', '✈️', '🚆', '🚲'],
@@ -1752,7 +1780,7 @@ final LearningUnit lesson19Unit = LearningUnit(
         Exercise(
           id: 'ex19_146',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: طائرة',
+          prompt: 'اختر الصورة المناسبة لـ هذه طائرة',
           targetWord: 'طائرة',
           emoji: '✈️',
           options: ['✈️', '🚗', '🚆', '🚲'],
@@ -1762,7 +1790,7 @@ final LearningUnit lesson19Unit = LearningUnit(
         Exercise(
           id: 'ex19_147',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: قطار',
+          prompt: 'اختر الصورة المناسبة لـ هذا قطار',
           targetWord: 'قطار',
           emoji: '🚆',
           options: ['🚆', '🚗', '✈️', '🚲'],
@@ -1772,7 +1800,7 @@ final LearningUnit lesson19Unit = LearningUnit(
         Exercise(
           id: 'ex19_148',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: دراجة',
+          prompt: 'اختر الصورة المناسبة لـ هذه دراجة',
           targetWord: 'دراجة',
           emoji: '🚲',
           options: ['🚲', '🚗', '✈️', '🚆'],
@@ -1787,6 +1815,7 @@ final LearningUnit lesson19Unit = LearningUnit(
           options: ['سفينة', 'سيارة', 'طائرة'],
           correctAnswer: 'سفينة',
           soundEffect: 'ship_horn',
+          spokenText: 'هذه سفينة',
         ),
         Exercise(
           id: 'ex19_150',
@@ -1796,6 +1825,7 @@ final LearningUnit lesson19Unit = LearningUnit(
           options: ['حافلة', 'سيارة', 'طائرة'],
           correctAnswer: 'حافلة',
           soundEffect: 'bus_horn',
+          spokenText: 'هذه حافلة',
         ),
         Exercise(
           id: 'ex19_151',
@@ -1831,18 +1861,18 @@ final LearningUnit lesson20Unit = LearningUnit(
       icon: '👨‍⚕️',
       xpReward: 25,
       introItems: const [
-        IntroItem(word: 'طبيب', emoji: '👨‍⚕️'),
-        IntroItem(word: 'معلم', emoji: '👨‍🏫'),
-        IntroItem(word: 'شرطي', emoji: '👮'),
-        IntroItem(word: 'طباخ', emoji: '👨‍🍳'),
-        IntroItem(word: 'مزارع', emoji: '🧑‍🌾'),
-        IntroItem(word: 'عامل', emoji: '👷'),
+        IntroItem(word: 'هذا طبيب', emoji: '👨‍⚕️'),
+        IntroItem(word: 'هذا معلم', emoji: '👨‍🏫'),
+        IntroItem(word: 'هذا شرطي', emoji: '👮'),
+        IntroItem(word: 'هذا طباخ', emoji: '👨‍🍳'),
+        IntroItem(word: 'هذا مزارع', emoji: '🧑‍🌾'),
+        IntroItem(word: 'هذا عامل', emoji: '👷'),
       ],
       exercises: const [
         Exercise(
           id: 'ex20_153',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: طبيب',
+          prompt: 'اختر الصورة المناسبة لـ هذا طبيب',
           targetWord: 'طبيب',
           emoji: '👨‍⚕️',
           options: ['👨\u200d⚕️', '👨\u200d🏫', '👮', '👨\u200d🍳'],
@@ -1851,7 +1881,7 @@ final LearningUnit lesson20Unit = LearningUnit(
         Exercise(
           id: 'ex20_154',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: معلم',
+          prompt: 'اختر الصورة المناسبة لـ هذا معلم',
           targetWord: 'معلم',
           emoji: '👨‍🏫',
           options: ['👨\u200d🏫', '👨\u200d⚕️', '👮', '👨\u200d🍳'],
@@ -1860,7 +1890,7 @@ final LearningUnit lesson20Unit = LearningUnit(
         Exercise(
           id: 'ex20_155',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: شرطي',
+          prompt: 'اختر الصورة المناسبة لـ هذا شرطي',
           targetWord: 'شرطي',
           emoji: '👮',
           options: ['👮', '👨\u200d⚕️', '👨\u200d🏫', '👨\u200d🍳'],
@@ -1869,7 +1899,7 @@ final LearningUnit lesson20Unit = LearningUnit(
         Exercise(
           id: 'ex20_156',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لكلمة: طباخ',
+          prompt: 'اختر الصورة المناسبة لـ هذا طباخ',
           targetWord: 'طباخ',
           emoji: '👨‍🍳',
           options: ['👨\u200d🍳', '👨\u200d⚕️', '👨\u200d🏫', '👮'],
@@ -1882,6 +1912,7 @@ final LearningUnit lesson20Unit = LearningUnit(
           targetWord: 'مزارع',
           options: ['مزارع', 'طبيب', 'معلم'],
           correctAnswer: 'مزارع',
+          spokenText: 'هذا مزارع',
         ),
         Exercise(
           id: 'ex20_158',
@@ -1890,6 +1921,7 @@ final LearningUnit lesson20Unit = LearningUnit(
           targetWord: 'عامل',
           options: ['عامل', 'طبيب', 'معلم'],
           correctAnswer: 'عامل',
+          spokenText: 'هذا عامل',
         ),
         Exercise(
           id: 'ex20_159',

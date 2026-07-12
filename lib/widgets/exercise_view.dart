@@ -56,7 +56,7 @@ class _ExerciseViewState extends State<ExerciseView> {
   Future<void> _speakPrompt() async {
     final fallbackText = switch (widget.exercise.type) {
       ExerciseType.listenChoose =>
-        widget.exercise.targetWord ?? widget.exercise.prompt,
+        widget.exercise.spokenText ?? widget.exercise.targetWord ?? widget.exercise.prompt,
       ExerciseType.chooseImage ||
       ExerciseType.fillBlank ||
       ExerciseType.arrangeWords ||
@@ -140,7 +140,7 @@ class _ExerciseViewState extends State<ExerciseView> {
               const SizedBox(width: 8),
               IconButton(
                 onPressed: () => AudioService.instance
-                    .speakForExercise(widget.exercise.id, widget.exercise.targetWord!),
+                    .speakForExercise(widget.exercise.id, widget.exercise.prompt),
                 icon: const Icon(Icons.volume_up_rounded, color: AppColors.sidiBlue),
               ),
             ],
@@ -264,8 +264,8 @@ class _ExerciseViewState extends State<ExerciseView> {
         GestureDetector(
           onTap: () {
             setState(() => _revealedAudio = true);
-            AudioService.instance
-                .speakForExercise(widget.exercise.id, widget.exercise.targetWord ?? '');
+            final text = widget.exercise.spokenText ?? widget.exercise.targetWord ?? '';
+            AudioService.instance.speakForExercise(widget.exercise.id, text);
           },
           child: Container(
             width: 90,

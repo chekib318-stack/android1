@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../data/sample_content.dart';
 import '../models/lesson.dart';
 import '../providers/progress_provider.dart';
+import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/lesson_node.dart';
 import '../widgets/stat_pill.dart';
@@ -18,8 +19,27 @@ const List<String> arabicOrdinals = [
   'السادس عشر', 'السابع عشر', 'الثامن عشر', 'التاسع عشر', 'العشرون',
 ];
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  final bool announceNext; // نطق "اختر الدرس الموالي" عند الرجوع من إنهاء درس
+
+  const HomeScreen({super.key, this.announceNext = false});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    if (widget.announceNext) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        final name = context.read<ProgressProvider>().studentName;
+        final who = name.isNotEmpty ? name : 'بطل';
+        AudioService.instance.speak('اختر الدرس الموالي يا $who');
+      });
+    }
+  }
 
   /// كل الدروس مرتبة (كل وحدة تحتوي درسا واحدا في هذه النسخة)، لحساب
   /// القفل/الفتح بشكل متسلسل: كل درس يفتح الدرس الذي يليه مباشرة.

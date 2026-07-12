@@ -54,14 +54,6 @@ class _ExercisesTransitionScreenState extends State<ExercisesTransitionScreen> {
                 Image.asset('assets/images/logo_ministere.png', height: 130),
                 const SizedBox(height: 14),
                 Image.asset('assets/images/prepedu_logo.png', height: 56),
-                const SizedBox(height: 20),
-                Text(
-                  'وزارة التربية',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        color: AppColors.sidiBlueDeep,
-                      ),
-                ),
                 const SizedBox(height: 36),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 16),

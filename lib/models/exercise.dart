@@ -19,6 +19,7 @@ class Exercise {
   final List<String>? scrambledWords; // للكلمات المبعثرة (ترتيب) أو الرموز المخلوطة (مطابقة)
   final List<String>? pairAnswers; // الرمز الصحيح المقابل لكل عنصر في options (لتمرين المطابقة فقط)
   final String? soundEffect; // اسم ملف تأثير صوتي حقيقي (مثال: 'dog_bark') يُشغَّل مع الكلمة إن وُجد
+  final String? spokenText; // نص منطوق مخصص (مثلا "هذه قطة") يختلف عن النص المقارَن للإجابة
 
   const Exercise({
     required this.id,
@@ -31,5 +32,6 @@ class Exercise {
     this.scrambledWords,
     this.pairAnswers,
     this.soundEffect,
+    this.spokenText,
   });
 }

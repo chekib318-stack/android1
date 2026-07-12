@@ -110,7 +110,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 borderRadius: BorderRadius.circular(8),
               ),
               child: const Text(
-                'build v1.1.3+28',
+                'build v1.1.4+29',
                 style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w700),
               ),
             ),

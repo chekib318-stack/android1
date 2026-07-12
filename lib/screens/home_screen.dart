@@ -33,10 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final name = context.read<ProgressProvider>().studentName;
-      final who = name.isNotEmpty ? name : 'بطل';
       final message = widget.announceNext
-          ? 'اختر الدرس الموالي يا $who'
+          ? 'الدرس الموالي'
           : 'اختر درسا من قائمة الدروس';
       AudioService.instance.speak(message);
     });

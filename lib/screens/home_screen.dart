@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../data/sample_content.dart';
 import '../models/lesson.dart';
@@ -84,6 +85,60 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  void _showSupportDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('الاتصال بالدعم'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'المهندس شكيب الوسلاتي',
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+            ),
+            const SizedBox(height: 4),
+            const Text('ديوان وزير التربية'),
+            const SizedBox(height: 14),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                color: AppColors.jasmineDim,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon(Icons.email_outlined, size: 18, color: AppColors.sidiBlue),
+                  SizedBox(width: 8),
+                  Text('chekib318@gmail.com', style: TextStyle(fontWeight: FontWeight.w600)),
+                ],
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () async {
+              await Clipboard.setData(const ClipboardData(text: 'chekib318@gmail.com'));
+              if (dialogContext.mounted) {
+                ScaffoldMessenger.of(dialogContext).showSnackBar(
+                  const SnackBar(content: Text('تم نسخ البريد الإلكتروني')),
+                );
+              }
+            },
+            child: const Text('نسخ البريد الإلكتروني'),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(dialogContext).pop(),
+            child: const Text('إغلاق'),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final progress = context.watch<ProgressProvider>();
@@ -103,19 +158,51 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         bottom: const OfficialAppBarBottom(),
         actions: [
-          IconButton(
-            tooltip: 'إعادة تصفير التقدم',
-            icon: const Icon(Icons.restart_alt_rounded),
-            onPressed: () => _confirmReset(context),
-          ),
-          IconButton(
-            tooltip: 'اختيار صوت القراءة',
-            icon: const Icon(Icons.record_voice_over_outlined),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => const VoiceSettingsScreen()),
-              );
+          PopupMenuButton<String>(
+            tooltip: 'الخيارات',
+            onSelected: (value) {
+              if (value == 'voice') {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const VoiceSettingsScreen()),
+                );
+              } else if (value == 'reset') {
+                _confirmReset(context);
+              } else if (value == 'support') {
+                _showSupportDialog(context);
+              }
             },
+            itemBuilder: (context) => const [
+              PopupMenuItem(
+                value: 'voice',
+                child: Row(
+                  children: [
+                    Icon(Icons.record_voice_over_outlined, color: AppColors.sidiBlue),
+                    SizedBox(width: 10),
+                    Text('اختيار صوت القراءة'),
+                  ],
+                ),
+              ),
+              PopupMenuItem(
+                value: 'reset',
+                child: Row(
+                  children: [
+                    Icon(Icons.restart_alt_rounded, color: AppColors.harissa),
+                    SizedBox(width: 10),
+                    Text('إعادة تصفير التقدم'),
+                  ],
+                ),
+              ),
+              PopupMenuItem(
+                value: 'support',
+                child: Row(
+                  children: [
+                    Icon(Icons.support_agent_rounded, color: AppColors.zellige),
+                    SizedBox(width: 10),
+                    Text('الاتصال بالدعم'),
+                  ],
+                ),
+              ),
+            ],
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),

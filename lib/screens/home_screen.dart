@@ -158,52 +158,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         bottom: const OfficialAppBarBottom(),
         actions: [
-          PopupMenuButton<String>(
-            tooltip: 'الخيارات',
-            onSelected: (value) {
-              if (value == 'voice') {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => const VoiceSettingsScreen()),
-                );
-              } else if (value == 'reset') {
-                _confirmReset(context);
-              } else if (value == 'support') {
-                _showSupportDialog(context);
-              }
-            },
-            itemBuilder: (context) => const [
-              PopupMenuItem(
-                value: 'voice',
-                child: Row(
-                  children: [
-                    Icon(Icons.record_voice_over_outlined, color: AppColors.sidiBlue),
-                    SizedBox(width: 10),
-                    Text('اختيار صوت القراءة'),
-                  ],
-                ),
-              ),
-              PopupMenuItem(
-                value: 'reset',
-                child: Row(
-                  children: [
-                    Icon(Icons.restart_alt_rounded, color: AppColors.harissa),
-                    SizedBox(width: 10),
-                    Text('إعادة تصفير التقدم'),
-                  ],
-                ),
-              ),
-              PopupMenuItem(
-                value: 'support',
-                child: Row(
-                  children: [
-                    Icon(Icons.support_agent_rounded, color: AppColors.zellige),
-                    SizedBox(width: 10),
-                    Text('الاتصال بالدعم'),
-                  ],
-                ),
-              ),
-            ],
-          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Row(
@@ -217,7 +171,48 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: SafeArea(
-        child: ListView.builder(
+        child: Column(
+          children: [
+            // شريط أزرار واضح في جسم الصفحة (بدل AppBar) لضمان استجابة اللمس
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: _toolbarButton(
+                      icon: Icons.restart_alt_rounded,
+                      label: 'تصفير التقدم',
+                      color: AppColors.harissa,
+                      onTap: () => _confirmReset(context),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _toolbarButton(
+                      icon: Icons.record_voice_over_outlined,
+                      label: 'صوت القراءة',
+                      color: AppColors.sidiBlue,
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const VoiceSettingsScreen()),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: _toolbarButton(
+                      icon: Icons.support_agent_rounded,
+                      label: 'الدعم',
+                      color: AppColors.zellige,
+                      onTap: () => _showSupportDialog(context),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
           padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
           itemCount: lessons.length + (progress.studentName.isNotEmpty ? 1 : 0),
           itemBuilder: (context, index) {
@@ -333,6 +328,40 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             );
           },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _toolbarButton({
+    required IconData icon,
+    required String label,
+    required Color color,
+    required VoidCallback onTap,
+  }) {
+    return Material(
+      color: color.withOpacity(0.1),
+      borderRadius: BorderRadius.circular(14),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(14),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 6),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, color: color, size: 22),
+              const SizedBox(height: 4),
+              Text(
+                label,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: color, fontSize: 11, fontWeight: FontWeight.w700),
+              ),
+            ],
+          ),
         ),
       ),
     );

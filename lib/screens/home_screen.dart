@@ -45,7 +45,16 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('تعليم العربية — تحضيري'),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset('assets/images/prepedu_logo.png', height: 34),
+            const SizedBox(width: 8),
+            const Flexible(
+              child: Text('تعليم العربية — تحضيري', overflow: TextOverflow.ellipsis),
+            ),
+          ],
+        ),
         bottom: const OfficialAppBarBottom(),
         actions: [
           IconButton(

@@ -46,23 +46,14 @@ class _CreditsScreenState extends State<CreditsScreen> {
             child: Column(
               children: [
                 const OfficialBadge(light: true, compact: true),
-                const SizedBox(height: 20),
-                // اسم المطوّر مرة واحدة، أعلى الشاشة
-                Text(
-                  'المهندس شكيب الوسلاتي',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                        fontSize: 28,
-                        color: AppColors.jasmine,
-                      ),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  'ديوان السيد وزير التربية',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: AppColors.jasmine.withOpacity(0.9),
-                      ),
+                const SizedBox(height: 16),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Image.asset('assets/images/prepedu_logo.png', height: 60),
                 ),
                 Expanded(
                   child: Center(
@@ -108,7 +99,27 @@ class _CreditsScreenState extends State<CreditsScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 18),
+                        const SizedBox(height: 20),
+                        // معلومات المطوّر: كتلة صغيرة أسفل الفقرة الرئيسية
+                        Text(
+                          'مطوّر التطبيقة: شكيب الوسلاتي',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: AppColors.jasmine.withOpacity(0.85),
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(height: 3),
+                        Text(
+                          'ديوان وزير التربية',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: AppColors.jasmine.withOpacity(0.7),
+                            fontSize: 12,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                           decoration: BoxDecoration(
@@ -119,13 +130,14 @@ class _CreditsScreenState extends State<CreditsScreen> {
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.email_outlined, color: AppColors.jasmine, size: 18),
+                              const Icon(Icons.email_outlined, color: AppColors.jasmine, size: 16),
                               const SizedBox(width: 8),
                               Text(
                                 'chekib318@gmail.com',
                                 style: TextStyle(
-                                  color: AppColors.jasmine.withOpacity(0.95),
+                                  color: AppColors.jasmine.withOpacity(0.9),
                                   fontWeight: FontWeight.w600,
+                                  fontSize: 12,
                                 ),
                               ),
                             ],

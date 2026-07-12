@@ -3,7 +3,7 @@ import '../models/lesson.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/official_badge.dart';
-import 'lesson_screen.dart';
+import 'exercises_transition_screen.dart';
 
 /// شاشة تمهيدية تُعرض قبل أسئلة كل درس: تقدّم مفردات الدرس واحدة تلو
 /// الأخرى بالصوت والصورة (رمز تعبيري كبير)، بطريقة تفاعلية مبسطة مناسبة
@@ -63,19 +63,18 @@ class _LessonIntroScreenState extends State<LessonIntroScreen>
     if (_index + 1 < items.length) {
       _goToIndex(_index + 1);
     } else {
-      _goToExercises();
+      // انتهت كل المفردات التمهيدية → فتح الشاشة الانتقالية الرسمية
+      // (الإعلان الصوتي والانتقال المباشر القديمان حُذفا؛ الشاشة الجديدة
+      // تتكفل بالإعلان الصوتي الخاص بها في ExercisesTransitionScreen)
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => ExercisesTransitionScreen(
+            lesson: widget.lesson,
+            ordinal: widget.ordinal,
+          ),
+        ),
+      );
     }
-  }
-
-  Future<void> _goToExercises() async {
-    // انتهت كل المفردات التمهيدية → إعلان صوتي ثم الانتقال لتمارين الدرس
-    await AudioService.instance.speak('سنمر الآن إلى التمارين');
-    if (!mounted) return;
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (_) => LessonScreen(lesson: widget.lesson, ordinal: widget.ordinal),
-      ),
-    );
   }
 
   void _replay() {

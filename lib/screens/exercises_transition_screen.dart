@@ -6,8 +6,8 @@ import 'lesson_screen.dart';
 
 /// شاشة انتقالية رسمية تُعرض تلقائيا بعد الدرس التمهيدي وقبل بداية
 /// التمارين: شعار وزارة التربية والعلم بحجم كبير، مع عبارة "التمارين
-/// الخاصة بدرس ..." تُقرأ صوتيا تلقائيا، ثم الانتقال لتمارين الدرس.
-/// هذه الشاشة تحل محل الإعلان الصوتي القديم "سنمر الآن إلى التمارين".
+/// الخاصة بدرس ..." تُقرأ صوتيا تلقائيا. الانتقال الفعلي للتمارين يدوي
+/// فقط عبر زر "متابعة" (بلا انتقال تلقائي بعد النطق).
 class ExercisesTransitionScreen extends StatefulWidget {
   final Lesson lesson;
   final String? ordinal;
@@ -22,17 +22,11 @@ class _ExercisesTransitionScreenState extends State<ExercisesTransitionScreen> {
   @override
   void initState() {
     super.initState();
-    _announceThenProceed();
+    _announce();
   }
 
-  Future<void> _announceThenProceed() async {
+  Future<void> _announce() async {
     await AudioService.instance.speak('التمارين الخاصة بدرس ${widget.lesson.title}');
-    if (!mounted) return;
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (_) => LessonScreen(lesson: widget.lesson, ordinal: widget.ordinal),
-      ),
-    );
   }
 
   void _skip() {
@@ -87,6 +81,14 @@ class _ExercisesTransitionScreenState extends State<ExercisesTransitionScreen> {
                 ),
                 const SizedBox(height: 36),
                 Image.asset('assets/images/flag_tunisia.png', height: 80),
+                const SizedBox(height: 28),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: _skip,
+                    child: const Text('متابعة'),
+                  ),
+                ),
               ],
             ),
           ),

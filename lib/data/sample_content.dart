@@ -93,6 +93,14 @@ final LearningUnit lesson01Unit = LearningUnit(
           options: ['الكلب', 'الأرنب', 'السمكة'],
           correctAnswer: 'الكلب',
         ),
+        Exercise(
+          id: 'ex01_008',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'القطة تحب اللعب',
+          scrambledWords: ['اللعب', 'تحب', 'القطة'],
+          correctAnswer: 'القطة تحب اللعب',
+        ),
       ],
     ),
   ],
@@ -120,7 +128,7 @@ final LearningUnit lesson02Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex02_008',
+          id: 'ex02_009',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: بقرة',
           targetWord: 'بقرة',
@@ -130,7 +138,7 @@ final LearningUnit lesson02Unit = LearningUnit(
           soundEffect: 'cow_moo',
         ),
         Exercise(
-          id: 'ex02_009',
+          id: 'ex02_010',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: خروف',
           targetWord: 'خروف',
@@ -140,7 +148,7 @@ final LearningUnit lesson02Unit = LearningUnit(
           soundEffect: 'sheep_baa',
         ),
         Exercise(
-          id: 'ex02_010',
+          id: 'ex02_011',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: حصان',
           targetWord: 'حصان',
@@ -150,7 +158,7 @@ final LearningUnit lesson02Unit = LearningUnit(
           soundEffect: 'horse_neigh',
         ),
         Exercise(
-          id: 'ex02_011',
+          id: 'ex02_012',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: دجاجة',
           targetWord: 'دجاجة',
@@ -160,7 +168,7 @@ final LearningUnit lesson02Unit = LearningUnit(
           soundEffect: 'chicken_cluck',
         ),
         Exercise(
-          id: 'ex02_012',
+          id: 'ex02_013',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'بطة',
@@ -169,7 +177,7 @@ final LearningUnit lesson02Unit = LearningUnit(
           soundEffect: 'duck_quack',
         ),
         Exercise(
-          id: 'ex02_013',
+          id: 'ex02_014',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'عنزة',
@@ -178,12 +186,20 @@ final LearningUnit lesson02Unit = LearningUnit(
           soundEffect: 'goat_bleat',
         ),
         Exercise(
-          id: 'ex02_014',
+          id: 'ex02_015',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: الـــــ تعطينا الحليب',
           targetWord: 'البقرة تعطينا الحليب',
           options: ['البقرة', 'الخروف', 'الحصان'],
           correctAnswer: 'البقرة',
+        ),
+        Exercise(
+          id: 'ex02_016',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'البقرة تعطينا الحليب',
+          scrambledWords: ['الحليب', 'تعطينا', 'البقرة'],
+          correctAnswer: 'البقرة تعطينا الحليب',
         ),
       ],
     ),
@@ -212,7 +228,7 @@ final LearningUnit lesson03Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex03_015',
+          id: 'ex03_017',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أسد',
           targetWord: 'أسد',
@@ -222,7 +238,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           soundEffect: 'lion_roar',
         ),
         Exercise(
-          id: 'ex03_016',
+          id: 'ex03_018',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: فيل',
           targetWord: 'فيل',
@@ -232,7 +248,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           soundEffect: 'elephant_trumpet',
         ),
         Exercise(
-          id: 'ex03_017',
+          id: 'ex03_019',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: فهد',
           targetWord: 'فهد',
@@ -241,7 +257,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           correctAnswer: '🐆',
         ),
         Exercise(
-          id: 'ex03_018',
+          id: 'ex03_020',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: زرافة',
           targetWord: 'زرافة',
@@ -250,7 +266,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           correctAnswer: '🦒',
         ),
         Exercise(
-          id: 'ex03_019',
+          id: 'ex03_021',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'قرد',
@@ -259,7 +275,7 @@ final LearningUnit lesson03Unit = LearningUnit(
           soundEffect: 'monkey_screech',
         ),
         Exercise(
-          id: 'ex03_020',
+          id: 'ex03_022',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'دب',
@@ -268,12 +284,20 @@ final LearningUnit lesson03Unit = LearningUnit(
           soundEffect: 'bear_growl',
         ),
         Exercise(
-          id: 'ex03_021',
+          id: 'ex03_023',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: ملك الغابة هو الـــــ',
           targetWord: 'ملك الغابة هو الأسد',
           options: ['الأسد', 'الفيل', 'الدب'],
           correctAnswer: 'الأسد',
+        ),
+        Exercise(
+          id: 'ex03_024',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الأسد ملك الغابة',
+          scrambledWords: ['الغابة', 'ملك', 'الأسد'],
+          correctAnswer: 'الأسد ملك الغابة',
         ),
       ],
     ),
@@ -302,7 +326,7 @@ final LearningUnit lesson04Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex04_022',
+          id: 'ex04_025',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ثعلب',
           targetWord: 'ثعلب',
@@ -311,7 +335,7 @@ final LearningUnit lesson04Unit = LearningUnit(
           correctAnswer: '🦊',
         ),
         Exercise(
-          id: 'ex04_023',
+          id: 'ex04_026',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ذئب',
           targetWord: 'ذئب',
@@ -321,7 +345,7 @@ final LearningUnit lesson04Unit = LearningUnit(
           soundEffect: 'wolf_howl',
         ),
         Exercise(
-          id: 'ex04_024',
+          id: 'ex04_027',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: تمساح',
           targetWord: 'تمساح',
@@ -330,7 +354,7 @@ final LearningUnit lesson04Unit = LearningUnit(
           correctAnswer: '🐊',
         ),
         Exercise(
-          id: 'ex04_025',
+          id: 'ex04_028',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ثعبان',
           targetWord: 'ثعبان',
@@ -340,7 +364,7 @@ final LearningUnit lesson04Unit = LearningUnit(
           soundEffect: 'snake_hiss',
         ),
         Exercise(
-          id: 'ex04_026',
+          id: 'ex04_029',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'سلحفاة',
@@ -348,7 +372,7 @@ final LearningUnit lesson04Unit = LearningUnit(
           correctAnswer: 'سلحفاة',
         ),
         Exercise(
-          id: 'ex04_027',
+          id: 'ex04_030',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'خنزير',
@@ -357,12 +381,20 @@ final LearningUnit lesson04Unit = LearningUnit(
           soundEffect: 'pig_oink',
         ),
         Exercise(
-          id: 'ex04_028',
+          id: 'ex04_031',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: الـــــ يمشي ببطء شديد',
           targetWord: 'السلحفاة تمشي ببطء شديد',
           options: ['السلحفاة', 'الثعلب', 'الذئب'],
           correctAnswer: 'السلحفاة',
+        ),
+        Exercise(
+          id: 'ex04_032',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الثعلب ماكر جدا',
+          scrambledWords: ['جدا', 'ماكر', 'الثعلب'],
+          correctAnswer: 'الثعلب ماكر جدا',
         ),
       ],
     ),
@@ -391,7 +423,7 @@ final LearningUnit lesson05Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex05_029',
+          id: 'ex05_033',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: بيت',
           targetWord: 'بيت',
@@ -400,7 +432,7 @@ final LearningUnit lesson05Unit = LearningUnit(
           correctAnswer: '🏠',
         ),
         Exercise(
-          id: 'ex05_030',
+          id: 'ex05_034',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: قلم',
           targetWord: 'قلم',
@@ -409,7 +441,7 @@ final LearningUnit lesson05Unit = LearningUnit(
           correctAnswer: '✏️',
         ),
         Exercise(
-          id: 'ex05_031',
+          id: 'ex05_035',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: كتاب',
           targetWord: 'كتاب',
@@ -418,7 +450,7 @@ final LearningUnit lesson05Unit = LearningUnit(
           correctAnswer: '📖',
         ),
         Exercise(
-          id: 'ex05_032',
+          id: 'ex05_036',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: باب',
           targetWord: 'باب',
@@ -427,7 +459,7 @@ final LearningUnit lesson05Unit = LearningUnit(
           correctAnswer: '🚪',
         ),
         Exercise(
-          id: 'ex05_033',
+          id: 'ex05_037',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'سيارة',
@@ -436,7 +468,7 @@ final LearningUnit lesson05Unit = LearningUnit(
           soundEffect: 'car_horn',
         ),
         Exercise(
-          id: 'ex05_034',
+          id: 'ex05_038',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'حقيبة',
@@ -444,12 +476,20 @@ final LearningUnit lesson05Unit = LearningUnit(
           correctAnswer: 'حقيبة',
         ),
         Exercise(
-          id: 'ex05_035',
+          id: 'ex05_039',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: أبي يقود الـــــ إلى العمل',
           targetWord: 'أبي يقود السيارة إلى العمل',
           options: ['السيارة', 'الحقيبة', 'الكتاب'],
           correctAnswer: 'السيارة',
+        ),
+        Exercise(
+          id: 'ex05_040',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'هذا بيت جميل',
+          scrambledWords: ['جميل', 'بيت', 'هذا'],
+          correctAnswer: 'هذا بيت جميل',
         ),
       ],
     ),
@@ -478,7 +518,7 @@ final LearningUnit lesson06Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex06_036',
+          id: 'ex06_041',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ساعة',
           targetWord: 'ساعة',
@@ -487,7 +527,7 @@ final LearningUnit lesson06Unit = LearningUnit(
           correctAnswer: '⌚',
         ),
         Exercise(
-          id: 'ex06_037',
+          id: 'ex06_042',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: مفتاح',
           targetWord: 'مفتاح',
@@ -496,7 +536,7 @@ final LearningUnit lesson06Unit = LearningUnit(
           correctAnswer: '🔑',
         ),
         Exercise(
-          id: 'ex06_038',
+          id: 'ex06_043',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: هاتف',
           targetWord: 'هاتف',
@@ -505,7 +545,7 @@ final LearningUnit lesson06Unit = LearningUnit(
           correctAnswer: '📱',
         ),
         Exercise(
-          id: 'ex06_039',
+          id: 'ex06_044',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: مصباح',
           targetWord: 'مصباح',
@@ -514,7 +554,7 @@ final LearningUnit lesson06Unit = LearningUnit(
           correctAnswer: '💡',
         ),
         Exercise(
-          id: 'ex06_040',
+          id: 'ex06_045',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'كرسي',
@@ -522,7 +562,7 @@ final LearningUnit lesson06Unit = LearningUnit(
           correctAnswer: 'كرسي',
         ),
         Exercise(
-          id: 'ex06_041',
+          id: 'ex06_046',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'نافذة',
@@ -530,12 +570,20 @@ final LearningUnit lesson06Unit = LearningUnit(
           correctAnswer: 'نافذة',
         ),
         Exercise(
-          id: 'ex06_042',
+          id: 'ex06_047',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: أجلس على الـــــ لأدرس',
           targetWord: 'أجلس على الكرسي لأدرس',
           options: ['الكرسي', 'المفتاح', 'المصباح'],
           correctAnswer: 'الكرسي',
+        ),
+        Exercise(
+          id: 'ex06_048',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الساعة تحت النافذة',
+          scrambledWords: ['النافذة', 'تحت', 'الساعة'],
+          correctAnswer: 'الساعة تحت النافذة',
         ),
       ],
     ),
@@ -564,7 +612,7 @@ final LearningUnit lesson07Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex07_043',
+          id: 'ex07_049',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: شمس',
           targetWord: 'شمس',
@@ -573,7 +621,7 @@ final LearningUnit lesson07Unit = LearningUnit(
           correctAnswer: '☀️',
         ),
         Exercise(
-          id: 'ex07_044',
+          id: 'ex07_050',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: قمر',
           targetWord: 'قمر',
@@ -582,7 +630,7 @@ final LearningUnit lesson07Unit = LearningUnit(
           correctAnswer: '🌙',
         ),
         Exercise(
-          id: 'ex07_045',
+          id: 'ex07_051',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: نجمة',
           targetWord: 'نجمة',
@@ -591,7 +639,7 @@ final LearningUnit lesson07Unit = LearningUnit(
           correctAnswer: '⭐',
         ),
         Exercise(
-          id: 'ex07_046',
+          id: 'ex07_052',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: سحابة',
           targetWord: 'سحابة',
@@ -600,7 +648,7 @@ final LearningUnit lesson07Unit = LearningUnit(
           correctAnswer: '☁️',
         ),
         Exercise(
-          id: 'ex07_047',
+          id: 'ex07_053',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'ماء',
@@ -608,7 +656,7 @@ final LearningUnit lesson07Unit = LearningUnit(
           correctAnswer: 'ماء',
         ),
         Exercise(
-          id: 'ex07_048',
+          id: 'ex07_054',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'وردة',
@@ -616,12 +664,20 @@ final LearningUnit lesson07Unit = LearningUnit(
           correctAnswer: 'وردة',
         ),
         Exercise(
-          id: 'ex07_049',
+          id: 'ex07_055',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: الـــــ مشرقة في السماء',
           targetWord: 'الشمس مشرقة في السماء',
           options: ['الشمس', 'القمر', 'الماء'],
           correctAnswer: 'الشمس',
+        ),
+        Exercise(
+          id: 'ex07_056',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الشمس نجمة كبيرة',
+          scrambledWords: ['كبيرة', 'نجمة', 'الشمس'],
+          correctAnswer: 'الشمس نجمة كبيرة',
         ),
       ],
     ),
@@ -650,7 +706,7 @@ final LearningUnit lesson08Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex08_050',
+          id: 'ex08_057',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: مطر',
           targetWord: 'مطر',
@@ -659,7 +715,7 @@ final LearningUnit lesson08Unit = LearningUnit(
           correctAnswer: '🌧️',
         ),
         Exercise(
-          id: 'ex08_051',
+          id: 'ex08_058',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: جبل',
           targetWord: 'جبل',
@@ -668,7 +724,7 @@ final LearningUnit lesson08Unit = LearningUnit(
           correctAnswer: '⛰️',
         ),
         Exercise(
-          id: 'ex08_052',
+          id: 'ex08_059',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: بحر',
           targetWord: 'بحر',
@@ -677,7 +733,7 @@ final LearningUnit lesson08Unit = LearningUnit(
           correctAnswer: '🌊',
         ),
         Exercise(
-          id: 'ex08_053',
+          id: 'ex08_060',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: شجرة',
           targetWord: 'شجرة',
@@ -686,7 +742,7 @@ final LearningUnit lesson08Unit = LearningUnit(
           correctAnswer: '🌳',
         ),
         Exercise(
-          id: 'ex08_054',
+          id: 'ex08_061',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'ثلج',
@@ -694,7 +750,7 @@ final LearningUnit lesson08Unit = LearningUnit(
           correctAnswer: 'ثلج',
         ),
         Exercise(
-          id: 'ex08_055',
+          id: 'ex08_062',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'قوس قزح',
@@ -702,12 +758,20 @@ final LearningUnit lesson08Unit = LearningUnit(
           correctAnswer: 'قوس قزح',
         ),
         Exercise(
-          id: 'ex08_056',
+          id: 'ex08_063',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: تسقط قطرات الـــــ من السحاب',
           targetWord: 'تسقط قطرات المطر من السحاب',
           options: ['المطر', 'الثلج', 'البحر'],
           correctAnswer: 'المطر',
+        ),
+        Exercise(
+          id: 'ex08_064',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الجبل عال جدا',
+          scrambledWords: ['جدا', 'عال', 'الجبل'],
+          correctAnswer: 'الجبل عال جدا',
         ),
       ],
     ),
@@ -736,7 +800,7 @@ final LearningUnit lesson09Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex09_057',
+          id: 'ex09_065',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أحمر',
           targetWord: 'أحمر',
@@ -745,7 +809,7 @@ final LearningUnit lesson09Unit = LearningUnit(
           correctAnswer: '🔴',
         ),
         Exercise(
-          id: 'ex09_058',
+          id: 'ex09_066',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أصفر',
           targetWord: 'أصفر',
@@ -754,7 +818,7 @@ final LearningUnit lesson09Unit = LearningUnit(
           correctAnswer: '🟡',
         ),
         Exercise(
-          id: 'ex09_059',
+          id: 'ex09_067',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أزرق',
           targetWord: 'أزرق',
@@ -763,7 +827,7 @@ final LearningUnit lesson09Unit = LearningUnit(
           correctAnswer: '🔵',
         ),
         Exercise(
-          id: 'ex09_060',
+          id: 'ex09_068',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أخضر',
           targetWord: 'أخضر',
@@ -772,7 +836,7 @@ final LearningUnit lesson09Unit = LearningUnit(
           correctAnswer: '🟢',
         ),
         Exercise(
-          id: 'ex09_061',
+          id: 'ex09_069',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'برتقالي',
@@ -780,7 +844,7 @@ final LearningUnit lesson09Unit = LearningUnit(
           correctAnswer: 'برتقالي',
         ),
         Exercise(
-          id: 'ex09_062',
+          id: 'ex09_070',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'أبيض',
@@ -788,12 +852,20 @@ final LearningUnit lesson09Unit = LearningUnit(
           correctAnswer: 'أبيض',
         ),
         Exercise(
-          id: 'ex09_063',
+          id: 'ex09_071',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: لون السماء ـــــ',
           targetWord: 'لون السماء أزرق',
           options: ['أزرق', 'أحمر', 'أصفر'],
           correctAnswer: 'أزرق',
+        ),
+        Exercise(
+          id: 'ex09_072',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'السماء لون أزرق',
+          scrambledWords: ['أزرق', 'لون', 'السماء'],
+          correctAnswer: 'السماء لون أزرق',
         ),
       ],
     ),
@@ -822,7 +894,7 @@ final LearningUnit lesson10Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex10_064',
+          id: 'ex10_073',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: برتقالي',
           targetWord: 'برتقالي',
@@ -831,7 +903,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           correctAnswer: '🧡',
         ),
         Exercise(
-          id: 'ex10_065',
+          id: 'ex10_074',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: بنفسجي',
           targetWord: 'بنفسجي',
@@ -840,7 +912,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           correctAnswer: '💜',
         ),
         Exercise(
-          id: 'ex10_066',
+          id: 'ex10_075',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: بني',
           targetWord: 'بني',
@@ -849,7 +921,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           correctAnswer: '🟤',
         ),
         Exercise(
-          id: 'ex10_067',
+          id: 'ex10_076',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أسود',
           targetWord: 'أسود',
@@ -858,7 +930,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           correctAnswer: '⚫',
         ),
         Exercise(
-          id: 'ex10_068',
+          id: 'ex10_077',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'رمادي',
@@ -866,7 +938,7 @@ final LearningUnit lesson10Unit = LearningUnit(
           correctAnswer: 'رمادي',
         ),
         Exercise(
-          id: 'ex10_069',
+          id: 'ex10_078',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'ذهبي',
@@ -874,12 +946,20 @@ final LearningUnit lesson10Unit = LearningUnit(
           correctAnswer: 'ذهبي',
         ),
         Exercise(
-          id: 'ex10_070',
+          id: 'ex10_079',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: لون الليل ـــــ',
           targetWord: 'لون الليل أسود',
           options: ['أسود', 'برتقالي', 'ذهبي'],
           correctAnswer: 'أسود',
+        ),
+        Exercise(
+          id: 'ex10_080',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الليل لون أسود',
+          scrambledWords: ['أسود', 'لون', 'الليل'],
+          correctAnswer: 'الليل لون أسود',
         ),
       ],
     ),
@@ -908,7 +988,7 @@ final LearningUnit lesson11Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex11_071',
+          id: 'ex11_081',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: دائرة',
           targetWord: 'دائرة',
@@ -917,7 +997,7 @@ final LearningUnit lesson11Unit = LearningUnit(
           correctAnswer: '⭕',
         ),
         Exercise(
-          id: 'ex11_072',
+          id: 'ex11_082',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: مربع',
           targetWord: 'مربع',
@@ -926,7 +1006,7 @@ final LearningUnit lesson11Unit = LearningUnit(
           correctAnswer: '⬛',
         ),
         Exercise(
-          id: 'ex11_073',
+          id: 'ex11_083',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: مثلث',
           targetWord: 'مثلث',
@@ -935,7 +1015,7 @@ final LearningUnit lesson11Unit = LearningUnit(
           correctAnswer: '🔺',
         ),
         Exercise(
-          id: 'ex11_074',
+          id: 'ex11_084',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: قلب',
           targetWord: 'قلب',
@@ -944,7 +1024,7 @@ final LearningUnit lesson11Unit = LearningUnit(
           correctAnswer: '❤️',
         ),
         Exercise(
-          id: 'ex11_075',
+          id: 'ex11_085',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'نجمة',
@@ -952,7 +1032,7 @@ final LearningUnit lesson11Unit = LearningUnit(
           correctAnswer: 'نجمة',
         ),
         Exercise(
-          id: 'ex11_076',
+          id: 'ex11_086',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'مكعب',
@@ -960,12 +1040,20 @@ final LearningUnit lesson11Unit = LearningUnit(
           correctAnswer: 'مكعب',
         ),
         Exercise(
-          id: 'ex11_077',
+          id: 'ex11_087',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: شكل عجلة السيارة يشبه الـــــ',
           targetWord: 'شكل عجلة السيارة يشبه الدائرة',
           options: ['الدائرة', 'المربع', 'المثلث'],
           correctAnswer: 'الدائرة',
+        ),
+        Exercise(
+          id: 'ex11_088',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'القلب شكل جميل',
+          scrambledWords: ['جميل', 'شكل', 'القلب'],
+          correctAnswer: 'القلب شكل جميل',
         ),
       ],
     ),
@@ -994,7 +1082,7 @@ final LearningUnit lesson12Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex12_078',
+          id: 'ex12_089',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: موزة',
           targetWord: 'موزة',
@@ -1003,7 +1091,7 @@ final LearningUnit lesson12Unit = LearningUnit(
           correctAnswer: '🍌',
         ),
         Exercise(
-          id: 'ex12_079',
+          id: 'ex12_090',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: تفاحة',
           targetWord: 'تفاحة',
@@ -1012,7 +1100,7 @@ final LearningUnit lesson12Unit = LearningUnit(
           correctAnswer: '🍎',
         ),
         Exercise(
-          id: 'ex12_080',
+          id: 'ex12_091',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: برتقالة',
           targetWord: 'برتقالة',
@@ -1021,7 +1109,7 @@ final LearningUnit lesson12Unit = LearningUnit(
           correctAnswer: '🍊',
         ),
         Exercise(
-          id: 'ex12_081',
+          id: 'ex12_092',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: عنب',
           targetWord: 'عنب',
@@ -1030,7 +1118,7 @@ final LearningUnit lesson12Unit = LearningUnit(
           correctAnswer: '🍇',
         ),
         Exercise(
-          id: 'ex12_082',
+          id: 'ex12_093',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'فراولة',
@@ -1038,7 +1126,7 @@ final LearningUnit lesson12Unit = LearningUnit(
           correctAnswer: 'فراولة',
         ),
         Exercise(
-          id: 'ex12_083',
+          id: 'ex12_094',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'بطيخ',
@@ -1046,12 +1134,20 @@ final LearningUnit lesson12Unit = LearningUnit(
           correctAnswer: 'بطيخ',
         ),
         Exercise(
-          id: 'ex12_084',
+          id: 'ex12_095',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: لون التفاحة الناضجة ـــــ',
           targetWord: 'لون التفاحة الناضجة أحمر',
           options: ['أحمر', 'أخضر', 'أصفر'],
           correctAnswer: 'أحمر',
+        ),
+        Exercise(
+          id: 'ex12_096',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الموزة فاكهة صفراء',
+          scrambledWords: ['صفراء', 'فاكهة', 'الموزة'],
+          correctAnswer: 'الموزة فاكهة صفراء',
         ),
       ],
     ),
@@ -1080,7 +1176,7 @@ final LearningUnit lesson13Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex13_085',
+          id: 'ex13_097',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أناناس',
           targetWord: 'أناناس',
@@ -1089,7 +1185,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           correctAnswer: '🍍',
         ),
         Exercise(
-          id: 'ex13_086',
+          id: 'ex13_098',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: خوخ',
           targetWord: 'خوخ',
@@ -1098,7 +1194,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           correctAnswer: '🍑',
         ),
         Exercise(
-          id: 'ex13_087',
+          id: 'ex13_099',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: توت',
           targetWord: 'توت',
@@ -1107,7 +1203,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           correctAnswer: '🫐',
         ),
         Exercise(
-          id: 'ex13_088',
+          id: 'ex13_100',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ليمون',
           targetWord: 'ليمون',
@@ -1116,7 +1212,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           correctAnswer: '🍋',
         ),
         Exercise(
-          id: 'ex13_089',
+          id: 'ex13_101',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'جوز الهند',
@@ -1124,7 +1220,7 @@ final LearningUnit lesson13Unit = LearningUnit(
           correctAnswer: 'جوز الهند',
         ),
         Exercise(
-          id: 'ex13_090',
+          id: 'ex13_102',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'إجاص',
@@ -1132,12 +1228,20 @@ final LearningUnit lesson13Unit = LearningUnit(
           correctAnswer: 'إجاص',
         ),
         Exercise(
-          id: 'ex13_091',
+          id: 'ex13_103',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: طعم الـــــ حامض',
           targetWord: 'طعم الليمون حامض',
           options: ['الليمون', 'الموز', 'العنب'],
           correctAnswer: 'الليمون',
+        ),
+        Exercise(
+          id: 'ex13_104',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الليمون طعمه حامض',
+          scrambledWords: ['حامض', 'طعمه', 'الليمون'],
+          correctAnswer: 'الليمون طعمه حامض',
         ),
       ],
     ),
@@ -1166,7 +1270,7 @@ final LearningUnit lesson14Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex14_092',
+          id: 'ex14_105',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: جزرة',
           targetWord: 'جزرة',
@@ -1175,7 +1279,7 @@ final LearningUnit lesson14Unit = LearningUnit(
           correctAnswer: '🥕',
         ),
         Exercise(
-          id: 'ex14_093',
+          id: 'ex14_106',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: طماطم',
           targetWord: 'طماطم',
@@ -1184,7 +1288,7 @@ final LearningUnit lesson14Unit = LearningUnit(
           correctAnswer: '🍅',
         ),
         Exercise(
-          id: 'ex14_094',
+          id: 'ex14_107',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: بطاطا',
           targetWord: 'بطاطا',
@@ -1193,7 +1297,7 @@ final LearningUnit lesson14Unit = LearningUnit(
           correctAnswer: '🥔',
         ),
         Exercise(
-          id: 'ex14_095',
+          id: 'ex14_108',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: خيار',
           targetWord: 'خيار',
@@ -1202,7 +1306,7 @@ final LearningUnit lesson14Unit = LearningUnit(
           correctAnswer: '🥒',
         ),
         Exercise(
-          id: 'ex14_096',
+          id: 'ex14_109',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'باذنجان',
@@ -1210,7 +1314,7 @@ final LearningUnit lesson14Unit = LearningUnit(
           correctAnswer: 'باذنجان',
         ),
         Exercise(
-          id: 'ex14_097',
+          id: 'ex14_110',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'فلفل',
@@ -1218,12 +1322,20 @@ final LearningUnit lesson14Unit = LearningUnit(
           correctAnswer: 'فلفل',
         ),
         Exercise(
-          id: 'ex14_098',
+          id: 'ex14_111',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: الأرنب يحب أكل الـــــ',
           targetWord: 'الأرنب يحب أكل الجزرة',
           options: ['الجزرة', 'الفلفل', 'الباذنجان'],
           correctAnswer: 'الجزرة',
+        ),
+        Exercise(
+          id: 'ex14_112',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الجزرة خضار مفيد',
+          scrambledWords: ['مفيد', 'خضار', 'الجزرة'],
+          correctAnswer: 'الجزرة خضار مفيد',
         ),
       ],
     ),
@@ -1252,7 +1364,7 @@ final LearningUnit lesson15Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex15_099',
+          id: 'ex15_113',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أب',
           targetWord: 'أب',
@@ -1261,7 +1373,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           correctAnswer: '🧔‍♂️',
         ),
         Exercise(
-          id: 'ex15_100',
+          id: 'ex15_114',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أم',
           targetWord: 'أم',
@@ -1270,7 +1382,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           correctAnswer: '👩',
         ),
         Exercise(
-          id: 'ex15_101',
+          id: 'ex15_115',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أخ',
           targetWord: 'أخ',
@@ -1279,7 +1391,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           correctAnswer: '👦',
         ),
         Exercise(
-          id: 'ex15_102',
+          id: 'ex15_116',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: أخت',
           targetWord: 'أخت',
@@ -1288,7 +1400,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           correctAnswer: '👧',
         ),
         Exercise(
-          id: 'ex15_103',
+          id: 'ex15_117',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'جد',
@@ -1296,7 +1408,7 @@ final LearningUnit lesson15Unit = LearningUnit(
           correctAnswer: 'جد',
         ),
         Exercise(
-          id: 'ex15_104',
+          id: 'ex15_118',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'جدة',
@@ -1304,12 +1416,20 @@ final LearningUnit lesson15Unit = LearningUnit(
           correctAnswer: 'جدة',
         ),
         Exercise(
-          id: 'ex15_105',
+          id: 'ex15_119',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: والد أبي هو ـــــ',
           targetWord: 'والد أبي هو جدي',
           options: ['جدي', 'أخي', 'أبي'],
           correctAnswer: 'جدي',
+        ),
+        Exercise(
+          id: 'ex15_120',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'أمي تحب أبي',
+          scrambledWords: ['أبي', 'تحب', 'أمي'],
+          correctAnswer: 'أمي تحب أبي',
         ),
       ],
     ),
@@ -1338,7 +1458,7 @@ final LearningUnit lesson16Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex16_106',
+          id: 'ex16_121',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: كرة القدم',
           targetWord: 'كرة القدم',
@@ -1347,7 +1467,7 @@ final LearningUnit lesson16Unit = LearningUnit(
           correctAnswer: '⚽',
         ),
         Exercise(
-          id: 'ex16_107',
+          id: 'ex16_122',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: كرة السلة',
           targetWord: 'كرة السلة',
@@ -1356,7 +1476,7 @@ final LearningUnit lesson16Unit = LearningUnit(
           correctAnswer: '🏀',
         ),
         Exercise(
-          id: 'ex16_108',
+          id: 'ex16_123',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: كرة الطائرة',
           targetWord: 'كرة الطائرة',
@@ -1365,7 +1485,7 @@ final LearningUnit lesson16Unit = LearningUnit(
           correctAnswer: '🏐',
         ),
         Exercise(
-          id: 'ex16_109',
+          id: 'ex16_124',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: السباحة',
           targetWord: 'السباحة',
@@ -1374,7 +1494,7 @@ final LearningUnit lesson16Unit = LearningUnit(
           correctAnswer: '🏊',
         ),
         Exercise(
-          id: 'ex16_110',
+          id: 'ex16_125',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'الجري',
@@ -1382,7 +1502,7 @@ final LearningUnit lesson16Unit = LearningUnit(
           correctAnswer: 'الجري',
         ),
         Exercise(
-          id: 'ex16_111',
+          id: 'ex16_126',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'التزلج',
@@ -1390,12 +1510,20 @@ final LearningUnit lesson16Unit = LearningUnit(
           correctAnswer: 'التزلج',
         ),
         Exercise(
-          id: 'ex16_112',
+          id: 'ex16_127',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: ألعب ـــــ مع أصدقائي في الملعب',
           targetWord: 'ألعب كرة القدم مع أصدقائي في الملعب',
           options: ['كرة القدم', 'كرة السلة', 'السباحة'],
           correctAnswer: 'كرة القدم',
+        ),
+        Exercise(
+          id: 'ex16_128',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'أحب كرة القدم',
+          scrambledWords: ['القدم', 'كرة', 'أحب'],
+          correctAnswer: 'أحب كرة القدم',
         ),
       ],
     ),
@@ -1424,7 +1552,7 @@ final LearningUnit lesson17Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex17_113',
+          id: 'ex17_129',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: صفر',
           targetWord: 'صفر',
@@ -1433,7 +1561,7 @@ final LearningUnit lesson17Unit = LearningUnit(
           correctAnswer: '0️⃣',
         ),
         Exercise(
-          id: 'ex17_114',
+          id: 'ex17_130',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: واحد',
           targetWord: 'واحد',
@@ -1442,7 +1570,7 @@ final LearningUnit lesson17Unit = LearningUnit(
           correctAnswer: '1️⃣',
         ),
         Exercise(
-          id: 'ex17_115',
+          id: 'ex17_131',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: اثنان',
           targetWord: 'اثنان',
@@ -1451,7 +1579,7 @@ final LearningUnit lesson17Unit = LearningUnit(
           correctAnswer: '2️⃣',
         ),
         Exercise(
-          id: 'ex17_116',
+          id: 'ex17_132',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ثلاثة',
           targetWord: 'ثلاثة',
@@ -1460,7 +1588,7 @@ final LearningUnit lesson17Unit = LearningUnit(
           correctAnswer: '3️⃣',
         ),
         Exercise(
-          id: 'ex17_117',
+          id: 'ex17_133',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'أربعة',
@@ -1468,7 +1596,7 @@ final LearningUnit lesson17Unit = LearningUnit(
           correctAnswer: 'أربعة',
         ),
         Exercise(
-          id: 'ex17_118',
+          id: 'ex17_134',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'خمسة',
@@ -1476,12 +1604,20 @@ final LearningUnit lesson17Unit = LearningUnit(
           correctAnswer: 'خمسة',
         ),
         Exercise(
-          id: 'ex17_119',
+          id: 'ex17_135',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: بعد الرقم اثنين يأتي الرقم ـــــ',
           targetWord: 'بعد الرقم اثنين يأتي الرقم ثلاثة',
           options: ['ثلاثة', 'أربعة', 'واحد'],
           correctAnswer: 'ثلاثة',
+        ),
+        Exercise(
+          id: 'ex17_136',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'العد يبدأ بواحد',
+          scrambledWords: ['بواحد', 'يبدأ', 'العد'],
+          correctAnswer: 'العد يبدأ بواحد',
         ),
       ],
     ),
@@ -1510,7 +1646,7 @@ final LearningUnit lesson18Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex18_120',
+          id: 'ex18_137',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ستة',
           targetWord: 'ستة',
@@ -1519,7 +1655,7 @@ final LearningUnit lesson18Unit = LearningUnit(
           correctAnswer: '6️⃣',
         ),
         Exercise(
-          id: 'ex18_121',
+          id: 'ex18_138',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: سبعة',
           targetWord: 'سبعة',
@@ -1528,7 +1664,7 @@ final LearningUnit lesson18Unit = LearningUnit(
           correctAnswer: '7️⃣',
         ),
         Exercise(
-          id: 'ex18_122',
+          id: 'ex18_139',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: ثمانية',
           targetWord: 'ثمانية',
@@ -1537,7 +1673,7 @@ final LearningUnit lesson18Unit = LearningUnit(
           correctAnswer: '8️⃣',
         ),
         Exercise(
-          id: 'ex18_123',
+          id: 'ex18_140',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: تسعة',
           targetWord: 'تسعة',
@@ -1546,7 +1682,7 @@ final LearningUnit lesson18Unit = LearningUnit(
           correctAnswer: '9️⃣',
         ),
         Exercise(
-          id: 'ex18_124',
+          id: 'ex18_141',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'عشرة',
@@ -1554,7 +1690,7 @@ final LearningUnit lesson18Unit = LearningUnit(
           correctAnswer: 'عشرة',
         ),
         Exercise(
-          id: 'ex18_125',
+          id: 'ex18_142',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'أحد عشر',
@@ -1562,12 +1698,20 @@ final LearningUnit lesson18Unit = LearningUnit(
           correctAnswer: 'أحد عشر',
         ),
         Exercise(
-          id: 'ex18_126',
+          id: 'ex18_143',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: بعد الرقم تسعة يأتي الرقم ـــــ',
           targetWord: 'بعد الرقم تسعة يأتي الرقم عشرة',
           options: ['عشرة', 'ثمانية', 'سبعة'],
           correctAnswer: 'عشرة',
+        ),
+        Exercise(
+          id: 'ex18_144',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'عشرة أكبر رقم',
+          scrambledWords: ['رقم', 'أكبر', 'عشرة'],
+          correctAnswer: 'عشرة أكبر رقم',
         ),
       ],
     ),
@@ -1596,7 +1740,7 @@ final LearningUnit lesson19Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex19_127',
+          id: 'ex19_145',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: سيارة',
           targetWord: 'سيارة',
@@ -1606,7 +1750,7 @@ final LearningUnit lesson19Unit = LearningUnit(
           soundEffect: 'car_horn',
         ),
         Exercise(
-          id: 'ex19_128',
+          id: 'ex19_146',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: طائرة',
           targetWord: 'طائرة',
@@ -1616,7 +1760,7 @@ final LearningUnit lesson19Unit = LearningUnit(
           soundEffect: 'airplane_engine',
         ),
         Exercise(
-          id: 'ex19_129',
+          id: 'ex19_147',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: قطار',
           targetWord: 'قطار',
@@ -1626,7 +1770,7 @@ final LearningUnit lesson19Unit = LearningUnit(
           soundEffect: 'train_horn',
         ),
         Exercise(
-          id: 'ex19_130',
+          id: 'ex19_148',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: دراجة',
           targetWord: 'دراجة',
@@ -1636,7 +1780,7 @@ final LearningUnit lesson19Unit = LearningUnit(
           soundEffect: 'bike_bell',
         ),
         Exercise(
-          id: 'ex19_131',
+          id: 'ex19_149',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'سفينة',
@@ -1645,7 +1789,7 @@ final LearningUnit lesson19Unit = LearningUnit(
           soundEffect: 'ship_horn',
         ),
         Exercise(
-          id: 'ex19_132',
+          id: 'ex19_150',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'حافلة',
@@ -1654,12 +1798,20 @@ final LearningUnit lesson19Unit = LearningUnit(
           soundEffect: 'bus_horn',
         ),
         Exercise(
-          id: 'ex19_133',
+          id: 'ex19_151',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: تطير الـــــ في السماء',
           targetWord: 'تطير الطائرة في السماء',
           options: ['الطائرة', 'القطار', 'السفينة'],
           correctAnswer: 'الطائرة',
+        ),
+        Exercise(
+          id: 'ex19_152',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'الطائرة تطير عاليا',
+          scrambledWords: ['عاليا', 'تطير', 'الطائرة'],
+          correctAnswer: 'الطائرة تطير عاليا',
         ),
       ],
     ),
@@ -1688,7 +1840,7 @@ final LearningUnit lesson20Unit = LearningUnit(
       ],
       exercises: const [
         Exercise(
-          id: 'ex20_134',
+          id: 'ex20_153',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: طبيب',
           targetWord: 'طبيب',
@@ -1697,7 +1849,7 @@ final LearningUnit lesson20Unit = LearningUnit(
           correctAnswer: '👨‍⚕️',
         ),
         Exercise(
-          id: 'ex20_135',
+          id: 'ex20_154',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: معلم',
           targetWord: 'معلم',
@@ -1706,7 +1858,7 @@ final LearningUnit lesson20Unit = LearningUnit(
           correctAnswer: '👨‍🏫',
         ),
         Exercise(
-          id: 'ex20_136',
+          id: 'ex20_155',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: شرطي',
           targetWord: 'شرطي',
@@ -1715,7 +1867,7 @@ final LearningUnit lesson20Unit = LearningUnit(
           correctAnswer: '👮',
         ),
         Exercise(
-          id: 'ex20_137',
+          id: 'ex20_156',
           type: ExerciseType.chooseImage,
           prompt: 'اختر الصورة المناسبة لكلمة: طباخ',
           targetWord: 'طباخ',
@@ -1724,7 +1876,7 @@ final LearningUnit lesson20Unit = LearningUnit(
           correctAnswer: '👨‍🍳',
         ),
         Exercise(
-          id: 'ex20_138',
+          id: 'ex20_157',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'مزارع',
@@ -1732,7 +1884,7 @@ final LearningUnit lesson20Unit = LearningUnit(
           correctAnswer: 'مزارع',
         ),
         Exercise(
-          id: 'ex20_139',
+          id: 'ex20_158',
           type: ExerciseType.listenChoose,
           prompt: 'استمع ثم اختر الكلمة الصحيحة',
           targetWord: 'عامل',
@@ -1740,12 +1892,20 @@ final LearningUnit lesson20Unit = LearningUnit(
           correctAnswer: 'عامل',
         ),
         Exercise(
-          id: 'ex20_140',
+          id: 'ex20_159',
           type: ExerciseType.fillBlank,
           prompt: 'أكمل الجملة: الـــــ يعالج المرضى',
           targetWord: 'الطبيب يعالج المرضى',
           options: ['الطبيب', 'المعلم', 'الطباخ'],
           correctAnswer: 'الطبيب',
+        ),
+        Exercise(
+          id: 'ex20_160',
+          type: ExerciseType.arrangeWords,
+          prompt: 'رتب الكلمات الثلاث لتكوين جملة صحيحة',
+          targetWord: 'المعلم يشرح الدرس',
+          scrambledWords: ['الدرس', 'يشرح', 'المعلم'],
+          correctAnswer: 'المعلم يشرح الدرس',
         ),
       ],
     ),

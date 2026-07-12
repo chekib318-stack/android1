@@ -4,8 +4,8 @@ import '../widgets/official_badge.dart';
 import 'welcome_name_screen.dart';
 
 /// شاشة تعريفية بمطوّر التطبيق وحقوق النشر، تُعرض مرة واحدة بعد شاشة
-/// الترحيب الرسمية وقبل الدخول لسؤال الاسم. تنتقل تلقائيا بعد 7 ثوانٍ،
-/// أو فورا عند الضغط على زر "متابعة".
+/// الترحيب الرسمية وقبل الدخول لسؤال الاسم. الانتقال يدوي فقط عبر زر
+/// "متابعة" (بلا مؤقت تلقائي).
 class CreditsScreen extends StatefulWidget {
   const CreditsScreen({super.key});
 
@@ -14,12 +14,6 @@ class CreditsScreen extends StatefulWidget {
 }
 
 class _CreditsScreenState extends State<CreditsScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 7), _goNext);
-  }
-
   void _goNext() {
     if (!mounted) return;
     Navigator.of(context).pushReplacement(

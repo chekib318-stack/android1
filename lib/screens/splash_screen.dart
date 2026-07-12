@@ -90,6 +90,8 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                     const SizedBox(height: 40),
                     Image.asset('assets/images/flag_tunisia.png', height: 70),
+                    const SizedBox(height: 24),
+                    Image.asset('assets/images/prepedu_logo.png', height: 150),
                     const SizedBox(height: 30),
                   ],
                 ),
@@ -108,7 +110,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 borderRadius: BorderRadius.circular(8),
               ),
               child: const Text(
-                'build v0.9.5+14',
+                'build v1.0.0+15',
                 style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w700),
               ),
             ),

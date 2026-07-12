@@ -1,7 +1,7 @@
 name: arabia_edu
 description: "Arabia Edu – العربية معي — تطبيق تعليم اللغة العربية لأبناء الجالية التونسية"
 publish_to: 'none'
-version: 1.0.7+22
+version: 1.0.8+23
 
 environment:
   sdk: '>=3.2.0 <4.0.0'

@@ -7,7 +7,7 @@ import 'official_badge.dart';
 
 /// تُعرض على كامل الشاشة عند إجابة خاطئة (فوق شريط التطبيق أيضًا)، لتثبيت
 /// الإجابة الصحيحة في ذهن المتعلم قبل المتابعة للتمرين التالي. تظهر فيها
-/// صورة "المدرس" غاضبا (assets/images/teacher_angry.png) بحركة اهتزاز
+/// صورة "الأستاذ نجيب" غاضبا (assets/images/teacher_angry.png) بحركة اهتزاز
 /// خفيفة تعبّر عن الاستياء اللطيف، بلا إحباط المتعلم الصغير.
 class WrongAnswerScreen extends StatefulWidget {
   final Exercise exercise;
@@ -61,7 +61,7 @@ class _WrongAnswerScreenState extends State<WrongAnswerScreen>
               Center(child: _animatedTeacher()),
               const SizedBox(height: 10),
               const Text(
-                'المدرس',
+                'الأستاذ نجيب',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white70,

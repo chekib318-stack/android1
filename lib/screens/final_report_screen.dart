@@ -6,7 +6,7 @@ import '../widgets/official_badge.dart';
 import 'home_screen.dart';
 
 /// شاشة تُعرض بعد إتمام كل الدروس العشرين: تلخّص الأداء الكلي عبر كل
-/// الدروس (مجموع الإجابات الصحيحة من مجموع كل الأسئلة)، مع صورة المدرس
+/// الدروس (مجموع الإجابات الصحيحة من مجموع كل الأسئلة)، مع صورة الأستاذ نجيب
 /// ضاحكا أو غاضبا حسب النسبة الإجمالية.
 class FinalReportScreen extends StatefulWidget {
   final ProgressProvider progress;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 
-/// شخصية "المدرس" — معلّم تونسي بمعطف أبيض وشارة العلم التونسي،
+/// شخصية "الأستاذ نجيب" — معلّم تونسي بمعطف أبيض وشارة العلم التونسي،
 /// بصورة حقيقية (assets/images/teacher_happy.png). تدخل البطاقة بحركة
 /// انزلاق وتلاشي، بينما تهتز صورة الشخصية بلطف باستمرار وتنبض بسرعة
 /// أثناء نطق الجملة لتبدو وكأنها "تتكلم".
@@ -79,7 +79,7 @@ class _MascotCelebrationState extends State<MascotCelebration>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'المدرس',
+                      'الأستاذ نجيب',
                       style: TextStyle(
                         color: AppColors.zellige,
                         fontWeight: FontWeight.w800,

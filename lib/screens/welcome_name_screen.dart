@@ -43,13 +43,13 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
   Future<void> _runWelcomeSequence() async {
     await AudioService.instance.speak(
       'مرحبا بك في القسم التحضيري. أنا الأستاذ محمد من وزارة التربية التونسية، '
-      'سأكون معك في كل الدروس والتمارين. فحظا موفقا',
+      'سأكون معك في كل الدروس والتمارين',
     );
     if (!mounted) return;
     setState(() => _stage = _Stage.readyToListen);
     await AudioService.instance.speak('ما اسمك؟');
     await AudioService.instance.speak(
-      'اضغط على الزر الأحمر وقرب فمك للهاتف وقل اسمك، أو انتظر 10 ثوان للمرور تلقائيا',
+      'اضغط على الزر الأحمر وقل اسمك، أو انتظر 10 ثوان للمرور تلقائيا',
     );
     // إذا لم يُسجَّل الاسم خلال 10 ثوانٍ، يمر التطبيق تلقائيا للدروس
     _autoSkipTimer = Timer(const Duration(seconds: 10), _autoSkipToHome);
@@ -129,8 +129,17 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('👋', style: TextStyle(fontSize: 72)),
-            const SizedBox(height: 20),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                'assets/images/teacher_happy.png',
+                width: 140,
+                height: 168,
+                fit: BoxFit.cover,
+                alignment: const Alignment(0.0, -0.5),
+              ),
+            ),
+            const SizedBox(height: 18),
             Text(
               'مرحبا بك في القسم التحضيري',
               textAlign: TextAlign.center,
@@ -141,7 +150,7 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
             ),
             const SizedBox(height: 14),
             Text(
-              'أنا الأستاذ محمد من وزارة التربية التونسية\nسأكون معك في كل الدروس والتمارين\nفحظا موفقا',
+              'أنا الأستاذ محمد من وزارة التربية التونسية\nسأكون معك في كل الدروس والتمارين',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
@@ -163,7 +172,7 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
             const SizedBox(height: 8),
             TextButton.icon(
               onPressed: () => AudioService.instance.speak(
-                'اضغط على الزر الأحمر وقرب فمك للهاتف وقل اسمك، أو انتظر 10 ثوان للمرور تلقائيا',
+                'اضغط على الزر الأحمر وقل اسمك، أو انتظر 10 ثوان للمرور تلقائيا',
               ),
               icon: const Icon(Icons.volume_up_rounded, color: AppColors.sidiBlue),
               label: const Text('إعادة الاستماع للسؤال', style: TextStyle(color: AppColors.sidiBlue)),
@@ -184,7 +193,7 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
             ),
             const SizedBox(height: 16),
             const Text(
-              'اضغط على الزر الأحمر وقرب فمك للهاتف وقل اسمك\nأو انتظر 10 ثوان للمرور تلقائيا',
+              'اضغط على الزر الأحمر وقل اسمك\nأو انتظر 10 ثوان للمرور تلقائيا',
               textAlign: TextAlign.center,
             ),
           ],

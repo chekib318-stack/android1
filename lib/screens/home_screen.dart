@@ -32,13 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    if (widget.announceNext) {
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        final name = context.read<ProgressProvider>().studentName;
-        final who = name.isNotEmpty ? name : 'بطل';
-        AudioService.instance.speak('اختر الدرس الموالي يا $who');
-      });
-    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final name = context.read<ProgressProvider>().studentName;
+      final who = name.isNotEmpty ? name : 'بطل';
+      final message = widget.announceNext
+          ? 'اختر الدرس الموالي يا $who'
+          : 'اختر درسا من قائمة الدروس';
+      AudioService.instance.speak(message);
+    });
   }
 
   /// كل الدروس مرتبة (كل وحدة تحتوي درسا واحدا في هذه النسخة)، لحساب

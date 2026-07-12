@@ -57,6 +57,33 @@ class _HomeScreenState extends State<HomeScreen> {
     return unlocked ? LessonNodeState.current : LessonNodeState.locked;
   }
 
+  Future<void> _confirmReset(BuildContext context) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('إعادة تصفير التقدم'),
+        content: const Text(
+          'سيتم حذف كل الدروس المكتملة والنقاط، وتصبح القائمة كأنك لم تقم '
+          'بأي درس بعد. هل تريد المتابعة؟',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('إلغاء'),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: AppColors.harissa),
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('نعم، صفّر التقدم'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed == true && context.mounted) {
+      await context.read<ProgressProvider>().resetLessonsProgress();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final progress = context.watch<ProgressProvider>();
@@ -76,6 +103,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         bottom: const OfficialAppBarBottom(),
         actions: [
+          IconButton(
+            tooltip: 'إعادة تصفير التقدم',
+            icon: const Icon(Icons.restart_alt_rounded),
+            onPressed: () => _confirmReset(context),
+          ),
           IconButton(
             tooltip: 'اختيار صوت القراءة',
             icon: const Icon(Icons.record_voice_over_outlined),

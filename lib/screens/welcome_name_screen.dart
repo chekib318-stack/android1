@@ -42,7 +42,7 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
 
   Future<void> _runWelcomeSequence() async {
     await AudioService.instance.speak(
-      'مرحبا بك في القسم التحضيري. أنا الأستاذ محمد من وزارة التربية التونسية، '
+      'مرحبا بك في القسم التحضيري. أنا الأستاذ نجيب من وزارة التربية التونسية، '
       'سأكون معك في كل الدروس والتمارين',
     );
     if (!mounted) return;
@@ -150,7 +150,7 @@ class _WelcomeNameScreenState extends State<WelcomeNameScreen> {
             ),
             const SizedBox(height: 14),
             Text(
-              'أنا الأستاذ محمد من وزارة التربية التونسية\nسأكون معك في كل الدروس والتمارين',
+              'أنا الأستاذ نجيب من وزارة التربية التونسية\nسأكون معك في كل الدروس والتمارين',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyLarge,
             ),

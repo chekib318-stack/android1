@@ -88,4 +88,22 @@ class ProgressProvider extends ChangeNotifier {
   }
 
   bool isCompleted(String lessonId) => completedLessonIds.contains(lessonId);
+
+  /// يصفّر كل تقدم الدروس (كأن التلميذ لم يقم بأي درس بعد): النقاط،
+  /// الدروس المكتملة، ومجموع الإجابات. لا يمس اسم التلميذ ولا السلسلة
+  /// اليومية (سجل النشاط العام يبقى كما هو).
+  Future<void> resetLessonsProgress() async {
+    xp = 0;
+    completedLessonIds.clear();
+    totalCorrect = 0;
+    totalPossible = 0;
+
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_keyXp, xp);
+    await prefs.setStringList(_keyCompleted, []);
+    await prefs.setInt(_keyTotalCorrect, totalCorrect);
+    await prefs.setInt(_keyTotalPossible, totalPossible);
+
+    notifyListeners();
+  }
 }

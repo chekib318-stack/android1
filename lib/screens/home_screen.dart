@@ -59,84 +59,103 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _confirmReset(BuildContext context) async {
-    final confirmed = await showDialog<bool>(
-      context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: const Text('إعادة تصفير التقدم'),
-        content: const Text(
-          'سيتم حذف كل الدروس المكتملة والنقاط، وتصبح القائمة كأنك لم تقم '
-          'بأي درس بعد. هل تريد المتابعة؟',
+    try {
+      final confirmed = await showDialog<bool>(
+        context: context,
+        builder: (dialogContext) => AlertDialog(
+          title: const Text('إعادة تصفير التقدم'),
+          content: const Text(
+            'سيتم حذف كل الدروس المكتملة والنقاط، وتصبح القائمة كأنك لم تقم '
+            'بأي درس بعد. هل تريد المتابعة؟',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(dialogContext).pop(false),
+              child: const Text('إلغاء'),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: AppColors.harissa),
+              onPressed: () => Navigator.of(dialogContext).pop(true),
+              child: const Text('نعم، صفّر التقدم'),
+            ),
+          ],
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(dialogContext).pop(false),
-            child: const Text('إلغاء'),
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: AppColors.harissa),
-            onPressed: () => Navigator.of(dialogContext).pop(true),
-            child: const Text('نعم، صفّر التقدم'),
-          ),
-        ],
-      ),
-    );
-    if (confirmed == true && context.mounted) {
-      await context.read<ProgressProvider>().resetLessonsProgress();
+      );
+      if (confirmed == true && context.mounted) {
+        await context.read<ProgressProvider>().resetLessonsProgress();
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('تم تصفير التقدم بنجاح')),
+          );
+        }
+      }
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('خطأ: $e')),
+        );
+      }
     }
   }
 
   void _showSupportDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: const Text('الاتصال بالدعم'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'المهندس شكيب الوسلاتي',
-              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+    try {
+      showDialog(
+        context: context,
+        builder: (dialogContext) => AlertDialog(
+          title: const Text('الاتصال بالدعم'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'المهندس شكيب الوسلاتي',
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+              ),
+              const SizedBox(height: 4),
+              const Text('ديوان وزير التربية'),
+              const SizedBox(height: 14),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                decoration: BoxDecoration(
+                  color: AppColors.jasmineDim,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Icon(Icons.email_outlined, size: 18, color: AppColors.sidiBlue),
+                    SizedBox(width: 8),
+                    Text('chekib318@gmail.com', style: TextStyle(fontWeight: FontWeight.w600)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () async {
+                await Clipboard.setData(const ClipboardData(text: 'chekib318@gmail.com'));
+                if (dialogContext.mounted) {
+                  ScaffoldMessenger.of(dialogContext).showSnackBar(
+                    const SnackBar(content: Text('تم نسخ البريد الإلكتروني')),
+                  );
+                }
+              },
+              child: const Text('نسخ البريد الإلكتروني'),
             ),
-            const SizedBox(height: 4),
-            const Text('ديوان وزير التربية'),
-            const SizedBox(height: 14),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-              decoration: BoxDecoration(
-                color: AppColors.jasmineDim,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Icon(Icons.email_outlined, size: 18, color: AppColors.sidiBlue),
-                  SizedBox(width: 8),
-                  Text('chekib318@gmail.com', style: TextStyle(fontWeight: FontWeight.w600)),
-                ],
-              ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(dialogContext).pop(),
+              child: const Text('إغلاق'),
             ),
           ],
         ),
-        actions: [
-          TextButton(
-            onPressed: () async {
-              await Clipboard.setData(const ClipboardData(text: 'chekib318@gmail.com'));
-              if (dialogContext.mounted) {
-                ScaffoldMessenger.of(dialogContext).showSnackBar(
-                  const SnackBar(content: Text('تم نسخ البريد الإلكتروني')),
-                );
-              }
-            },
-            child: const Text('نسخ البريد الإلكتروني'),
-          ),
-          ElevatedButton(
-            onPressed: () => Navigator.of(dialogContext).pop(),
-            child: const Text('إغلاق'),
-          ),
-        ],
-      ),
-    );
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('خطأ: $e')),
+      );
+    }
   }
 
   @override
@@ -183,7 +202,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: Icons.restart_alt_rounded,
                       label: 'تصفير التقدم',
                       color: AppColors.harissa,
-                      onTap: () => _confirmReset(context),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('تم الضغط على زر التصفير'), duration: Duration(seconds: 1)),
+                        );
+                        _confirmReset(context);
+                      },
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -205,7 +229,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: Icons.support_agent_rounded,
                       label: 'الدعم',
                       color: AppColors.zellige,
-                      onTap: () => _showSupportDialog(context),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('تم الضغط على زر الدعم'), duration: Duration(seconds: 1)),
+                        );
+                        _showSupportDialog(context);
+                      },
                     ),
                   ),
                 ],

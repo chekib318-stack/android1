@@ -32,7 +32,7 @@ final LearningUnit lesson01Unit = LearningUnit(
         Exercise(
           id: 'ex01_001',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه قطة',
+          prompt: 'اختر الصورة المناسبة هذه قطة',
           targetWord: 'قطة',
           emoji: '🐱',
           options: ['🐱', '🐶', '🐰', '🐟'],
@@ -42,7 +42,7 @@ final LearningUnit lesson01Unit = LearningUnit(
         Exercise(
           id: 'ex01_002',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا كلب',
+          prompt: 'اختر الصورة المناسبة هذا كلب',
           targetWord: 'كلب',
           emoji: '🐶',
           options: ['🐶', '🐱', '🐰', '🐟'],
@@ -52,7 +52,7 @@ final LearningUnit lesson01Unit = LearningUnit(
         Exercise(
           id: 'ex01_003',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا أرنب',
+          prompt: 'اختر الصورة المناسبة هذا أرنب',
           targetWord: 'أرنب',
           emoji: '🐰',
           options: ['🐰', '🐱', '🐶', '🐟'],
@@ -61,7 +61,7 @@ final LearningUnit lesson01Unit = LearningUnit(
         Exercise(
           id: 'ex01_004',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه سمكة',
+          prompt: 'اختر الصورة المناسبة هذه سمكة',
           targetWord: 'سمكة',
           emoji: '🐟',
           options: ['🐟', '🐱', '🐶', '🐰'],
@@ -132,7 +132,7 @@ final LearningUnit lesson02Unit = LearningUnit(
         Exercise(
           id: 'ex02_009',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه بقرة',
+          prompt: 'اختر الصورة المناسبة هذه بقرة',
           targetWord: 'بقرة',
           emoji: '🐄',
           options: ['🐄', '🐑', '🐴', '🐔'],
@@ -142,7 +142,7 @@ final LearningUnit lesson02Unit = LearningUnit(
         Exercise(
           id: 'ex02_010',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا خروف',
+          prompt: 'اختر الصورة المناسبة هذا خروف',
           targetWord: 'خروف',
           emoji: '🐑',
           options: ['🐑', '🐄', '🐴', '🐔'],
@@ -152,7 +152,7 @@ final LearningUnit lesson02Unit = LearningUnit(
         Exercise(
           id: 'ex02_011',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا حصان',
+          prompt: 'اختر الصورة المناسبة هذا حصان',
           targetWord: 'حصان',
           emoji: '🐴',
           options: ['🐴', '🐄', '🐑', '🐔'],
@@ -162,7 +162,7 @@ final LearningUnit lesson02Unit = LearningUnit(
         Exercise(
           id: 'ex02_012',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه دجاجة',
+          prompt: 'اختر الصورة المناسبة هذه دجاجة',
           targetWord: 'دجاجة',
           emoji: '🐔',
           options: ['🐔', '🐄', '🐑', '🐴'],
@@ -234,7 +234,7 @@ final LearningUnit lesson03Unit = LearningUnit(
         Exercise(
           id: 'ex03_017',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا أسد',
+          prompt: 'اختر الصورة المناسبة هذا أسد',
           targetWord: 'أسد',
           emoji: '🦁',
           options: ['🦁', '🐘', '🐆', '🦒'],
@@ -244,7 +244,7 @@ final LearningUnit lesson03Unit = LearningUnit(
         Exercise(
           id: 'ex03_018',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا فيل',
+          prompt: 'اختر الصورة المناسبة هذا فيل',
           targetWord: 'فيل',
           emoji: '🐘',
           options: ['🐘', '🦁', '🐆', '🦒'],
@@ -254,7 +254,7 @@ final LearningUnit lesson03Unit = LearningUnit(
         Exercise(
           id: 'ex03_019',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا فهد',
+          prompt: 'اختر الصورة المناسبة هذا فهد',
           targetWord: 'فهد',
           emoji: '🐆',
           options: ['🐆', '🦁', '🐘', '🦒'],
@@ -263,7 +263,7 @@ final LearningUnit lesson03Unit = LearningUnit(
         Exercise(
           id: 'ex03_020',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه زرافة',
+          prompt: 'اختر الصورة المناسبة هذه زرافة',
           targetWord: 'زرافة',
           emoji: '🦒',
           options: ['🦒', '🦁', '🐘', '🐆'],
@@ -334,7 +334,7 @@ final LearningUnit lesson04Unit = LearningUnit(
         Exercise(
           id: 'ex04_025',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا ثعلب',
+          prompt: 'اختر الصورة المناسبة هذا ثعلب',
           targetWord: 'ثعلب',
           emoji: '🦊',
           options: ['🦊', '🐺', '🐊', '🐍'],
@@ -343,7 +343,7 @@ final LearningUnit lesson04Unit = LearningUnit(
         Exercise(
           id: 'ex04_026',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا ذئب',
+          prompt: 'اختر الصورة المناسبة هذا ذئب',
           targetWord: 'ذئب',
           emoji: '🐺',
           options: ['🐺', '🦊', '🐊', '🐍'],
@@ -353,7 +353,7 @@ final LearningUnit lesson04Unit = LearningUnit(
         Exercise(
           id: 'ex04_027',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا تمساح',
+          prompt: 'اختر الصورة المناسبة هذا تمساح',
           targetWord: 'تمساح',
           emoji: '🐊',
           options: ['🐊', '🦊', '🐺', '🐍'],
@@ -362,7 +362,7 @@ final LearningUnit lesson04Unit = LearningUnit(
         Exercise(
           id: 'ex04_028',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا ثعبان',
+          prompt: 'اختر الصورة المناسبة هذا ثعبان',
           targetWord: 'ثعبان',
           emoji: '🐍',
           options: ['🐍', '🦊', '🐺', '🐊'],
@@ -433,7 +433,7 @@ final LearningUnit lesson05Unit = LearningUnit(
         Exercise(
           id: 'ex05_033',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا بيت',
+          prompt: 'اختر الصورة المناسبة هذا بيت',
           targetWord: 'بيت',
           emoji: '🏠',
           options: ['🏠', '✏️', '📖', '🚪'],
@@ -442,7 +442,7 @@ final LearningUnit lesson05Unit = LearningUnit(
         Exercise(
           id: 'ex05_034',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا قلم',
+          prompt: 'اختر الصورة المناسبة هذا قلم',
           targetWord: 'قلم',
           emoji: '✏️',
           options: ['✏️', '🏠', '📖', '🚪'],
@@ -451,7 +451,7 @@ final LearningUnit lesson05Unit = LearningUnit(
         Exercise(
           id: 'ex05_035',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا كتاب',
+          prompt: 'اختر الصورة المناسبة هذا كتاب',
           targetWord: 'كتاب',
           emoji: '📖',
           options: ['📖', '🏠', '✏️', '🚪'],
@@ -460,7 +460,7 @@ final LearningUnit lesson05Unit = LearningUnit(
         Exercise(
           id: 'ex05_036',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا باب',
+          prompt: 'اختر الصورة المناسبة هذا باب',
           targetWord: 'باب',
           emoji: '🚪',
           options: ['🚪', '🏠', '✏️', '📖'],
@@ -530,7 +530,7 @@ final LearningUnit lesson06Unit = LearningUnit(
         Exercise(
           id: 'ex06_041',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه ساعة',
+          prompt: 'اختر الصورة المناسبة هذه ساعة',
           targetWord: 'ساعة',
           emoji: '⌚',
           options: ['⌚', '🔑', '📱', '💡'],
@@ -539,7 +539,7 @@ final LearningUnit lesson06Unit = LearningUnit(
         Exercise(
           id: 'ex06_042',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا مفتاح',
+          prompt: 'اختر الصورة المناسبة هذا مفتاح',
           targetWord: 'مفتاح',
           emoji: '🔑',
           options: ['🔑', '⌚', '📱', '💡'],
@@ -548,7 +548,7 @@ final LearningUnit lesson06Unit = LearningUnit(
         Exercise(
           id: 'ex06_043',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا هاتف',
+          prompt: 'اختر الصورة المناسبة هذا هاتف',
           targetWord: 'هاتف',
           emoji: '📱',
           options: ['📱', '⌚', '🔑', '💡'],
@@ -557,7 +557,7 @@ final LearningUnit lesson06Unit = LearningUnit(
         Exercise(
           id: 'ex06_044',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا مصباح',
+          prompt: 'اختر الصورة المناسبة هذا مصباح',
           targetWord: 'مصباح',
           emoji: '💡',
           options: ['💡', '⌚', '🔑', '📱'],
@@ -626,7 +626,7 @@ final LearningUnit lesson07Unit = LearningUnit(
         Exercise(
           id: 'ex07_049',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه شمس',
+          prompt: 'اختر الصورة المناسبة هذه شمس',
           targetWord: 'شمس',
           emoji: '☀️',
           options: ['☀️', '🌙', '⭐', '☁️'],
@@ -635,7 +635,7 @@ final LearningUnit lesson07Unit = LearningUnit(
         Exercise(
           id: 'ex07_050',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا قمر',
+          prompt: 'اختر الصورة المناسبة هذا قمر',
           targetWord: 'قمر',
           emoji: '🌙',
           options: ['🌙', '☀️', '⭐', '☁️'],
@@ -644,7 +644,7 @@ final LearningUnit lesson07Unit = LearningUnit(
         Exercise(
           id: 'ex07_051',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه نجمة',
+          prompt: 'اختر الصورة المناسبة هذه نجمة',
           targetWord: 'نجمة',
           emoji: '⭐',
           options: ['⭐', '☀️', '🌙', '☁️'],
@@ -653,7 +653,7 @@ final LearningUnit lesson07Unit = LearningUnit(
         Exercise(
           id: 'ex07_052',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه سحابة',
+          prompt: 'اختر الصورة المناسبة هذه سحابة',
           targetWord: 'سحابة',
           emoji: '☁️',
           options: ['☁️', '☀️', '🌙', '⭐'],
@@ -722,7 +722,7 @@ final LearningUnit lesson08Unit = LearningUnit(
         Exercise(
           id: 'ex08_057',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا مطر',
+          prompt: 'اختر الصورة المناسبة هذا مطر',
           targetWord: 'مطر',
           emoji: '🌧️',
           options: ['🌧️', '⛰️', '🌊', '🌳'],
@@ -731,7 +731,7 @@ final LearningUnit lesson08Unit = LearningUnit(
         Exercise(
           id: 'ex08_058',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا جبل',
+          prompt: 'اختر الصورة المناسبة هذا جبل',
           targetWord: 'جبل',
           emoji: '⛰️',
           options: ['⛰️', '🌧️', '🌊', '🌳'],
@@ -740,7 +740,7 @@ final LearningUnit lesson08Unit = LearningUnit(
         Exercise(
           id: 'ex08_059',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا بحر',
+          prompt: 'اختر الصورة المناسبة هذا بحر',
           targetWord: 'بحر',
           emoji: '🌊',
           options: ['🌊', '🌧️', '⛰️', '🌳'],
@@ -749,7 +749,7 @@ final LearningUnit lesson08Unit = LearningUnit(
         Exercise(
           id: 'ex08_060',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه شجرة',
+          prompt: 'اختر الصورة المناسبة هذه شجرة',
           targetWord: 'شجرة',
           emoji: '🌳',
           options: ['🌳', '🌧️', '⛰️', '🌊'],
@@ -1006,7 +1006,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         Exercise(
           id: 'ex11_081',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه دائرة',
+          prompt: 'اختر الصورة المناسبة هذه دائرة',
           targetWord: 'دائرة',
           emoji: '⭕',
           options: ['⭕', '⬛', '🔺', '❤️'],
@@ -1015,7 +1015,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         Exercise(
           id: 'ex11_082',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا مربع',
+          prompt: 'اختر الصورة المناسبة هذا مربع',
           targetWord: 'مربع',
           emoji: '⬛',
           options: ['⬛', '⭕', '🔺', '❤️'],
@@ -1024,7 +1024,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         Exercise(
           id: 'ex11_083',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا مثلث',
+          prompt: 'اختر الصورة المناسبة هذا مثلث',
           targetWord: 'مثلث',
           emoji: '🔺',
           options: ['🔺', '⭕', '⬛', '❤️'],
@@ -1033,7 +1033,7 @@ final LearningUnit lesson11Unit = LearningUnit(
         Exercise(
           id: 'ex11_084',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا قلب',
+          prompt: 'اختر الصورة المناسبة هذا قلب',
           targetWord: 'قلب',
           emoji: '❤️',
           options: ['❤️', '⭕', '⬛', '🔺'],
@@ -1102,7 +1102,7 @@ final LearningUnit lesson12Unit = LearningUnit(
         Exercise(
           id: 'ex12_089',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه موزة',
+          prompt: 'اختر الصورة المناسبة هذه موزة',
           targetWord: 'موزة',
           emoji: '🍌',
           options: ['🍌', '🍎', '🍊', '🍇'],
@@ -1111,7 +1111,7 @@ final LearningUnit lesson12Unit = LearningUnit(
         Exercise(
           id: 'ex12_090',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه تفاحة',
+          prompt: 'اختر الصورة المناسبة هذه تفاحة',
           targetWord: 'تفاحة',
           emoji: '🍎',
           options: ['🍎', '🍌', '🍊', '🍇'],
@@ -1120,7 +1120,7 @@ final LearningUnit lesson12Unit = LearningUnit(
         Exercise(
           id: 'ex12_091',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه برتقالة',
+          prompt: 'اختر الصورة المناسبة هذه برتقالة',
           targetWord: 'برتقالة',
           emoji: '🍊',
           options: ['🍊', '🍌', '🍎', '🍇'],
@@ -1129,7 +1129,7 @@ final LearningUnit lesson12Unit = LearningUnit(
         Exercise(
           id: 'ex12_092',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا عنب',
+          prompt: 'اختر الصورة المناسبة هذا عنب',
           targetWord: 'عنب',
           emoji: '🍇',
           options: ['🍇', '🍌', '🍎', '🍊'],
@@ -1198,7 +1198,7 @@ final LearningUnit lesson13Unit = LearningUnit(
         Exercise(
           id: 'ex13_097',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا أناناس',
+          prompt: 'اختر الصورة المناسبة هذا أناناس',
           targetWord: 'أناناس',
           emoji: '🍍',
           options: ['🍍', '🍑', '🫐', '🍋'],
@@ -1207,7 +1207,7 @@ final LearningUnit lesson13Unit = LearningUnit(
         Exercise(
           id: 'ex13_098',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا خوخ',
+          prompt: 'اختر الصورة المناسبة هذا خوخ',
           targetWord: 'خوخ',
           emoji: '🍑',
           options: ['🍑', '🍍', '🫐', '🍋'],
@@ -1216,7 +1216,7 @@ final LearningUnit lesson13Unit = LearningUnit(
         Exercise(
           id: 'ex13_099',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا توت',
+          prompt: 'اختر الصورة المناسبة هذا توت',
           targetWord: 'توت',
           emoji: '🫐',
           options: ['🫐', '🍍', '🍑', '🍋'],
@@ -1225,7 +1225,7 @@ final LearningUnit lesson13Unit = LearningUnit(
         Exercise(
           id: 'ex13_100',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا ليمون',
+          prompt: 'اختر الصورة المناسبة هذا ليمون',
           targetWord: 'ليمون',
           emoji: '🍋',
           options: ['🍋', '🍍', '🍑', '🫐'],
@@ -1294,7 +1294,7 @@ final LearningUnit lesson14Unit = LearningUnit(
         Exercise(
           id: 'ex14_105',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه جزرة',
+          prompt: 'اختر الصورة المناسبة هذه جزرة',
           targetWord: 'جزرة',
           emoji: '🥕',
           options: ['🥕', '🍅', '🥔', '🥒'],
@@ -1303,7 +1303,7 @@ final LearningUnit lesson14Unit = LearningUnit(
         Exercise(
           id: 'ex14_106',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه طماطم',
+          prompt: 'اختر الصورة المناسبة هذه طماطم',
           targetWord: 'طماطم',
           emoji: '🍅',
           options: ['🍅', '🥕', '🥔', '🥒'],
@@ -1312,7 +1312,7 @@ final LearningUnit lesson14Unit = LearningUnit(
         Exercise(
           id: 'ex14_107',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه بطاطا',
+          prompt: 'اختر الصورة المناسبة هذه بطاطا',
           targetWord: 'بطاطا',
           emoji: '🥔',
           options: ['🥔', '🥕', '🍅', '🥒'],
@@ -1321,7 +1321,7 @@ final LearningUnit lesson14Unit = LearningUnit(
         Exercise(
           id: 'ex14_108',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا خيار',
+          prompt: 'اختر الصورة المناسبة هذا خيار',
           targetWord: 'خيار',
           emoji: '🥒',
           options: ['🥒', '🥕', '🍅', '🥔'],
@@ -1390,7 +1390,7 @@ final LearningUnit lesson15Unit = LearningUnit(
         Exercise(
           id: 'ex15_113',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا أب',
+          prompt: 'اختر الصورة المناسبة هذا أب',
           targetWord: 'أب',
           emoji: '🧔‍♂️',
           options: ['🧔\u200d♂️', '👩', '👦', '👧'],
@@ -1399,7 +1399,7 @@ final LearningUnit lesson15Unit = LearningUnit(
         Exercise(
           id: 'ex15_114',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه أم',
+          prompt: 'اختر الصورة المناسبة هذه أم',
           targetWord: 'أم',
           emoji: '👩',
           options: ['👩', '🧔\u200d♂️', '👦', '👧'],
@@ -1408,7 +1408,7 @@ final LearningUnit lesson15Unit = LearningUnit(
         Exercise(
           id: 'ex15_115',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا أخ',
+          prompt: 'اختر الصورة المناسبة هذا أخ',
           targetWord: 'أخ',
           emoji: '👦',
           options: ['👦', '🧔\u200d♂️', '👩', '👧'],
@@ -1417,7 +1417,7 @@ final LearningUnit lesson15Unit = LearningUnit(
         Exercise(
           id: 'ex15_116',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه أخت',
+          prompt: 'اختر الصورة المناسبة هذه أخت',
           targetWord: 'أخت',
           emoji: '👧',
           options: ['👧', '🧔\u200d♂️', '👩', '👦'],
@@ -1486,7 +1486,7 @@ final LearningUnit lesson16Unit = LearningUnit(
         Exercise(
           id: 'ex16_121',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه كرة القدم',
+          prompt: 'اختر الصورة المناسبة هذه كرة القدم',
           targetWord: 'كرة القدم',
           emoji: '⚽',
           options: ['⚽', '🏀', '🏐', '🏊'],
@@ -1495,7 +1495,7 @@ final LearningUnit lesson16Unit = LearningUnit(
         Exercise(
           id: 'ex16_122',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه كرة السلة',
+          prompt: 'اختر الصورة المناسبة هذه كرة السلة',
           targetWord: 'كرة السلة',
           emoji: '🏀',
           options: ['🏀', '⚽', '🏐', '🏊'],
@@ -1504,7 +1504,7 @@ final LearningUnit lesson16Unit = LearningUnit(
         Exercise(
           id: 'ex16_123',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه كرة الطائرة',
+          prompt: 'اختر الصورة المناسبة هذه كرة الطائرة',
           targetWord: 'كرة الطائرة',
           emoji: '🏐',
           options: ['🏐', '⚽', '🏀', '🏊'],
@@ -1513,7 +1513,7 @@ final LearningUnit lesson16Unit = LearningUnit(
         Exercise(
           id: 'ex16_124',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه السباحة',
+          prompt: 'اختر الصورة المناسبة هذه السباحة',
           targetWord: 'السباحة',
           emoji: '🏊',
           options: ['🏊', '⚽', '🏀', '🏐'],
@@ -1770,7 +1770,7 @@ final LearningUnit lesson19Unit = LearningUnit(
         Exercise(
           id: 'ex19_145',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه سيارة',
+          prompt: 'اختر الصورة المناسبة هذه سيارة',
           targetWord: 'سيارة',
           emoji: '🚗',
           options: ['🚗', '✈️', '🚆', '🚲'],
@@ -1780,7 +1780,7 @@ final LearningUnit lesson19Unit = LearningUnit(
         Exercise(
           id: 'ex19_146',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه طائرة',
+          prompt: 'اختر الصورة المناسبة هذه طائرة',
           targetWord: 'طائرة',
           emoji: '✈️',
           options: ['✈️', '🚗', '🚆', '🚲'],
@@ -1790,7 +1790,7 @@ final LearningUnit lesson19Unit = LearningUnit(
         Exercise(
           id: 'ex19_147',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا قطار',
+          prompt: 'اختر الصورة المناسبة هذا قطار',
           targetWord: 'قطار',
           emoji: '🚆',
           options: ['🚆', '🚗', '✈️', '🚲'],
@@ -1800,7 +1800,7 @@ final LearningUnit lesson19Unit = LearningUnit(
         Exercise(
           id: 'ex19_148',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذه دراجة',
+          prompt: 'اختر الصورة المناسبة هذه دراجة',
           targetWord: 'دراجة',
           emoji: '🚲',
           options: ['🚲', '🚗', '✈️', '🚆'],
@@ -1872,7 +1872,7 @@ final LearningUnit lesson20Unit = LearningUnit(
         Exercise(
           id: 'ex20_153',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا طبيب',
+          prompt: 'اختر الصورة المناسبة هذا طبيب',
           targetWord: 'طبيب',
           emoji: '👨‍⚕️',
           options: ['👨\u200d⚕️', '👨\u200d🏫', '👮', '👨\u200d🍳'],
@@ -1881,7 +1881,7 @@ final LearningUnit lesson20Unit = LearningUnit(
         Exercise(
           id: 'ex20_154',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا معلم',
+          prompt: 'اختر الصورة المناسبة هذا معلم',
           targetWord: 'معلم',
           emoji: '👨‍🏫',
           options: ['👨\u200d🏫', '👨\u200d⚕️', '👮', '👨\u200d🍳'],
@@ -1890,7 +1890,7 @@ final LearningUnit lesson20Unit = LearningUnit(
         Exercise(
           id: 'ex20_155',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا شرطي',
+          prompt: 'اختر الصورة المناسبة هذا شرطي',
           targetWord: 'شرطي',
           emoji: '👮',
           options: ['👮', '👨\u200d⚕️', '👨\u200d🏫', '👨\u200d🍳'],
@@ -1899,7 +1899,7 @@ final LearningUnit lesson20Unit = LearningUnit(
         Exercise(
           id: 'ex20_156',
           type: ExerciseType.chooseImage,
-          prompt: 'اختر الصورة المناسبة لـ هذا طباخ',
+          prompt: 'اختر الصورة المناسبة هذا طباخ',
           targetWord: 'طباخ',
           emoji: '👨‍🍳',
           options: ['👨\u200d🍳', '👨\u200d⚕️', '👨\u200d🏫', '👮'],

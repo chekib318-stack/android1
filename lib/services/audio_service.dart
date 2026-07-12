@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_tts/flutter_tts.dart';
@@ -16,10 +14,9 @@ import '../data/diacritics_dictionary.dart';
 /// (مثال: assets/audio/ex_001.mp3) — التطبيق يكتشفها تلقائيا بلا أي
 /// تعديل إضافي على الكود. راجع assets/audio/README.md للتفاصيل.
 ///
-/// ملاحظة أداء مهمة: التحقق من وجود ملف يتم مرة واحدة فقط عند بدء
-/// التطبيق (عبر فهرس الأصول AssetManifest.json)، وليس بمحاولة تحميل
-/// الملف في كل استدعاء — هذا يفادي أي بطء ملحوظ في القراءة، خاصة عندما
-/// لا توجد بعد ملفات صوتية حقيقية (الحالة الافتراضية حاليا).
+/// ملاحظة أداء: التحقق من وجود ملف يتم بتحميل فعلي مباشر (rootBundle.load)
+/// أول مرة فقط لكل مسار، ثم تُحفظ النتيجة (موجود/غير موجود) في ذاكرة
+/// مؤقتة، فلا تتكرر عملية التحقق المكلفة لنفس الملف مرة ثانية.
 class AudioService {
   AudioService._internal() {
     _init();
@@ -29,7 +26,7 @@ class AudioService {
   final FlutterTts _tts = FlutterTts();
   final AudioPlayer _player = AudioPlayer();
   bool _ready = false;
-  Set<String> _availableAssets = {};
+  final Map<String, bool> _assetExistsCache = {};
 
   static const double _defaultPitch = 1.0;
   static const double _defaultRate = 0.42;
@@ -41,22 +38,8 @@ class AudioService {
     await _tts.setSpeechRate(_defaultRate); // أبطأ قليلا لملاءمة المتعلمين الصغار
     await _tts.setPitch(_defaultPitch);
     await _tts.awaitSpeakCompletion(true); // ينتظر speak() حتى ينتهي النطق فعليا
-    await _loadAssetManifest();
     await _applySavedVoiceIfAny();
     _ready = true;
-  }
-
-  /// يحمّل فهرس كل ملفات الأصول مرة واحدة فقط عند بدء التطبيق، ليصير
-  /// التحقق من وجود ملف صوتي معين عملية فورية (بحث في Set) بدل عملية
-  /// تحميل فعلية مكلفة في كل مرة.
-  Future<void> _loadAssetManifest() async {
-    try {
-      final manifestStr = await rootBundle.loadString('AssetManifest.json');
-      final Map<String, dynamic> manifest = json.decode(manifestStr);
-      _availableAssets = manifest.keys.toSet();
-    } catch (_) {
-      _availableAssets = {};
-    }
   }
 
   Future<void> _applySavedVoiceIfAny() async {
@@ -72,7 +55,23 @@ class AudioService {
     }
   }
 
-  bool _assetExists(String assetPath) => _availableAssets.contains(assetPath);
+  /// تحقق حقيقي ومباشر من وجود ملف الأصول (بدل الاعتماد على فهرس قد لا
+  /// يتوفر بنفس الصيغة في كل نسخ Flutter). النتيجة تُخزَّن مؤقتا لكل
+  /// مسار حتى لا تتكرر عملية التحميل الفعلية أكثر من مرة واحدة.
+  Future<bool> _assetExists(String assetPath) async {
+    if (_assetExistsCache.containsKey(assetPath)) {
+      return _assetExistsCache[assetPath]!;
+    }
+    bool exists;
+    try {
+      await rootBundle.load(assetPath);
+      exists = true;
+    } catch (_) {
+      exists = false;
+    }
+    _assetExistsCache[assetPath] = exists;
+    return exists;
+  }
 
   /// يستبدل كل كلمة معروفة في القاموس بنسختها المشكولة (لتصحيح النطق)،
   /// مع مراعاة "ال" التعريف الملتصقة بالكلمة. لا يغيّر أي نص غير موجود
@@ -106,7 +105,7 @@ class AudioService {
     if (effectName == null || effectName.isEmpty) return;
     if (!_ready) await _init();
     final assetPath = 'assets/sounds/$effectName.mp3';
-    if (!_assetExists(assetPath)) return;
+    if (!await _assetExists(assetPath)) return;
     try {
       await _player.play(AssetSource('sounds/$effectName.mp3'));
     } catch (_) {
@@ -119,7 +118,7 @@ class AudioService {
   Future<void> speakForExercise(String exerciseId, String fallbackText) async {
     if (!_ready) await _init();
     final assetPath = 'assets/audio/$exerciseId.mp3';
-    if (_assetExists(assetPath)) {
+    if (await _assetExists(assetPath)) {
       try {
         await _player.stop();
         await _player.play(AssetSource('audio/$exerciseId.mp3'));
@@ -192,7 +191,7 @@ class AudioService {
   Future<void> speakWrong() async {
     if (!_ready) await _init();
     final assetPath = 'assets/audio/wrong.mp3';
-    if (_assetExists(assetPath)) {
+    if (await _assetExists(assetPath)) {
       try {
         await _player.stop();
         await _player.play(AssetSource('audio/wrong.mp3'));
